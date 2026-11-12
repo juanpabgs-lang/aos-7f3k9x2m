@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Austral OS · Fase 1</title>
+<style>:root{--ink:#141618;--ink-2:#5b6066;--ink-3:#8a8f95;--bg:#f1f1f0;--card:#fff;--soft:#f5f5f6;--soft-2:#ececee;--line:#14161817;--line-2:#14161824;--teal:#0e6b62;--teal-s:#0e6b6217;--amber:#b45f05;--amber-s:#fdf3e6;--amber-l:#b45f0559;--red:#c42b1c;--red-s:#fdeeec;--red-l:#c42b1c59;--green:#1f7a45;--green-s:#eaf5ee;--shadow:0 1px 2px #1416180a, 0 10px 28px #1416180d;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",system-ui,sans-serif;--mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace}*{box-sizing:border-box}html,body{min-height:100%;margin:0}body{font:15px/1.45 var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;background:var(--bg);overflow-x:hidden}button{font:inherit;color:inherit;cursor:pointer;background:0 0;border:0;padding:0}button[disabled]{cursor:not-allowed;opacity:.42}input,textarea,select{font:inherit;color:inherit}:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:8px}.card{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:20px}.wrap{max-width:1320px;margin:0 auto;padding:0 24px 120px}.muted{color:var(--ink-3)}.mono{font-family:var(--mono);font-size:.93em}.num{font-variant-numeric:tabular-nums}.topbar{z-index:30;-webkit-backdrop-filter:blur(18px)saturate(150%);backdrop-filter:blur(18px)saturate(150%);border-bottom:1px solid var(--line);background:#f1f1f0e0;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;padding:10px 24px;display:grid;position:sticky;top:0}.brand{align-items:baseline;gap:10px;min-width:0;display:flex}.brand b{letter-spacing:-.02em;white-space:nowrap;font-size:17px;font-weight:650}.brand span{color:var(--ink-3);white-space:nowrap;text-overflow:ellipsis;font-size:13px;overflow:hidden}.topnav{background:var(--soft-2);scrollbar-width:none;border-radius:12px;justify-self:center;gap:2px;max-width:100%;padding:3px;display:flex;overflow-x:auto}.topnav::-webkit-scrollbar{display:none}.topnav button{color:var(--ink-2);white-space:nowrap;border-radius:9px;align-items:center;gap:7px;padding:6px 10px;font-size:13.5px;font-weight:550;display:flex}.topnav button i{color:var(--ink-3);background:#1416180f;border-radius:50%;place-items:center;width:18px;height:18px;font-size:11.5px;font-style:normal;font-weight:650;display:inline-grid}.topnav button.on{color:var(--ink);background:#fff;box-shadow:0 1px 2px #1416181a}.topnav button.on i{background:var(--ink);color:#fff}.tactions{justify-self:end;align-items:center;gap:8px;display:flex}.eyebrow{color:var(--ink-3);margin:0;font-size:13px}.title{letter-spacing:-.022em;margin:2px 0 0;font-size:28px;font-weight:650;line-height:1.15}.title.sm{font-size:24px}.h2{letter-spacing:-.01em;margin:0;font-size:17px;font-weight:650}.label{color:var(--ink-3);font-size:12.5px}.phead{flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin:22px 0 16px;display:flex}.who{border:1px solid var(--line);white-space:nowrap;background:#fff;border-radius:999px;align-items:center;gap:9px;padding:4px 12px 4px 4px;font-size:13.5px;display:flex}.who b{background:var(--soft-2);border-radius:50%;place-items:center;width:28px;height:28px;font-size:12.5px;font-weight:650;display:grid}.who span{color:var(--ink-3)}.btn{background:var(--soft-2);white-space:nowrap;border-radius:12px;justify-content:center;align-items:center;gap:8px;padding:9px 16px;font-size:14px;font-weight:600;display:inline-flex}.btn:hover{background:#e3e3e6}.btn.primary{background:var(--ink);color:#fff}.btn.primary:hover{background:#2b2e31}.btn.ghost{border:1px solid var(--line-2);background:0 0}.btn.sm{border-radius:10px;padding:6px 11px;font-size:13px}.btn.lg{border-radius:14px;padding:12px 20px;font-size:15px}.btn svg{flex:none;width:16px;height:16px}.row-btns{flex-wrap:wrap;align-items:center;gap:8px;display:flex}.tag{white-space:nowrap;border-radius:999px;align-items:center;gap:5px;padding:2px 9px;font-size:12px;font-weight:600;display:inline-flex}.tag.red{background:var(--red-s);color:var(--red)}.tag.amber{background:var(--amber-s);color:var(--amber)}.tag.green{background:var(--green-s);color:var(--green)}.tag.grey{background:var(--soft-2);color:var(--ink-2)}.tag.dark{background:var(--ink);color:#fff}.dot{border-radius:50%;flex:none;width:8px;height:8px;display:inline-block}.dot.red{background:var(--red)}.dot.amber{background:var(--amber)}.dot.green{background:var(--green)}.dot.grey{background:#c5c8cc}.pills{flex-wrap:wrap;gap:6px;display:flex}.pl{color:var(--ink-2);border:1px solid var(--line);white-space:nowrap;background:#fff;border-radius:999px;align-items:center;gap:6px;padding:3px 10px;font-size:12.5px;display:inline-flex}.lnk{color:var(--ink-2);text-underline-offset:2px;font-size:13px;font-weight:600;text-decoration:underline}.lnk:hover{color:var(--ink)}.grid2{grid-template-columns:minmax(0,1fr) 380px;align-items:start;gap:16px;display:grid}.col{flex-direction:column;gap:14px;min-width:0;display:flex}.panel-h{justify-content:space-between;align-items:baseline;gap:12px;padding:16px 18px 10px;display:flex}.panel-h p{color:var(--ink-3);margin:0;font-size:13px}.pad{padding:16px 18px}.step{padding:18px 20px}.step-h{align-items:center;gap:12px;display:flex}.step-h .t{flex:1;min-width:0}.step-h .t b{letter-spacing:-.01em;font-size:16px;font-weight:650;display:block}.step-h .t span{color:var(--ink-3);font-size:13px;display:block}.sn{background:var(--ink);color:#fff;border-radius:50%;flex:none;place-items:center;width:28px;height:28px;font-size:13px;font-weight:650;display:grid}.sn.done{background:var(--green)}.sn.wait{background:var(--soft-2);color:var(--ink-3)}.sn svg{width:15px;height:15px}.step.locked{opacity:.55}.step-b{margin-top:14px}.vals{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;display:grid}.vals div{background:var(--soft);border-radius:12px;min-width:0;padding:9px 12px}.vals .label{display:block}.vals b{overflow-wrap:anywhere;font-size:14.5px;font-weight:600}.vals b.mono{font-weight:500}.foot-note{color:var(--ink-3);flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 0;font-size:13px;display:flex}.field{display:block}.field .label{margin-bottom:5px;display:block}.inp{border:1px solid var(--line-2);background:#fff;border-radius:12px;width:100%;padding:10px 12px}.inp.big{letter-spacing:-.01em;font-variant-numeric:tabular-nums;padding:10px 14px;font-size:24px;font-weight:650}.countrow{grid-template-columns:220px auto;align-items:end;gap:12px;display:grid}.result{border-radius:14px;align-items:center;gap:12px;padding:12px 14px;display:flex}.result.good{background:var(--green-s)}.result.bad{background:var(--red-s)}.result b{font-size:17px;font-weight:650}.result.good b{color:var(--green)}.result.bad b{color:var(--red)}.result .s{color:var(--ink-2);font-size:13px}.result .r{margin-left:auto}.disc{border-color:var(--red-l);box-shadow:inset 3px 0 0 var(--red),var(--shadow)}.explain{gap:12px;margin-top:14px;display:grid}.ex{grid-template-columns:24px minmax(0,1fr);align-items:start;gap:10px;display:grid}.exn{background:var(--ink);color:#fff;border-radius:50%;place-items:center;width:22px;height:22px;margin-top:1px;font-size:12px;font-weight:650;display:grid}.ex b{font-size:14px}.ex p{color:var(--ink-2);margin:2px 0 0;font-size:13.5px}.sent{background:var(--soft);color:var(--ink-2);border-radius:12px;margin-top:10px;padding:10px 12px;font-size:13.5px}.sent b{color:var(--ink)}.sent .ln{align-items:center;gap:8px;display:flex}.sent .ln+.ln{margin-top:4px}.labels{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px;display:grid}.lbl{color:#1d1f21;background:#fff;border:1.5px solid #1d1f21;border-radius:6px;min-width:0;padding:10px 11px 8px;font-family:Helvetica Neue,Arial,sans-serif}.lbl .lh{letter-spacing:.06em;border-bottom:1px solid #1d1f21;justify-content:space-between;margin-bottom:6px;padding-bottom:4px;font-size:9.5px;font-weight:700;display:flex}.lbl .lote{color:#555;letter-spacing:.04em;font-size:10px}.lbl .lote b{letter-spacing:.01em;color:#1d1f21;font-size:22px;line-height:1.05;display:block}.lbl .ld{margin:4px 0 2px;font-size:11px}.lbl .ld span{font-family:Courier New,monospace;font-size:10.5px}.lbl .lf{justify-content:space-between;margin-bottom:5px;font-size:10.5px;display:flex}.lbl svg.bc{fill:#1d1f21;width:100%;height:38px;display:block}.lbl .bt{text-align:center;letter-spacing:.08em;margin-top:2px;font-family:Courier New,monospace;font-size:10.5px}.list .item{text-align:left;align-items:center;gap:12px;width:100%;padding:11px 18px;display:flex}.list .item+.item{border-top:1px solid var(--line)}.item .t{flex:1;min-width:0}.item .t b{font-size:14.5px;font-weight:600;display:block}.item .t span{color:var(--ink-2);font-size:13px;display:block}.item.cur{background:var(--soft)}.item .meta{color:var(--ink-3);white-space:nowrap;font-size:12.5px}.hoy{padding:14px 18px 16px}.hoy h4{color:var(--ink-3);margin:0 0 8px;font-size:13px;font-weight:600}.hoy ul{color:var(--ink-2);margin:0;padding-left:18px;font-size:13.5px}.hoy li+li{margin-top:4px}.log{max-height:340px;padding:2px 0 8px;overflow-y:auto}.log .le{grid-template-columns:44px minmax(0,1fr);gap:8px;padding:7px 18px;font-size:13px;display:grid}.log .le+.le{border-top:1px solid var(--line)}.log .le time{color:var(--ink-3);font-variant-numeric:tabular-nums}.log .le b{font-weight:600}.log .le.red span{color:var(--red)}.log .le.green span{color:var(--ink)}.log .empty{color:var(--ink-3);padding:10px 18px 14px;font-size:13px}.demo{border:1px dashed var(--line-2);background:0 0;border-radius:16px;padding:14px 16px}.demo h4{color:var(--ink-3);margin:0 0 4px;font-size:12.5px;font-weight:600}.demo p{color:var(--ink-3);margin:0 0 10px;font-size:12.5px}.demo .row-btns .btn{border:1px solid var(--line-2);background:#fff}.stage3{grid-template-columns:minmax(0,1fr) 410px minmax(0,1fr);align-items:start;gap:28px;margin-top:18px;display:grid}.stage3 .side{flex-direction:column;gap:14px;min-width:0;display:flex}.stage3 .side .phead{margin:4px 0 0;display:block}.stage3 .side .who{margin-top:10px;display:inline-flex}.queue .qi{align-items:center;gap:10px;padding:8px 18px;font-size:13.5px;display:flex}.queue .qi+.qi{border-top:1px solid var(--line)}.queue .qi .n{background:var(--soft-2);width:22px;height:22px;color:var(--ink-2);border-radius:50%;flex:none;place-items:center;font-size:11.5px;font-weight:650;display:grid}.queue .qi.now{background:var(--soft)}.queue .qi.now .n{background:var(--ink);color:#fff}.queue .qi.ok .n{background:var(--green);color:#fff}.queue .qi.bad .n{background:var(--red);color:#fff}.queue .qi .n svg{width:12px;height:12px}.queue .qi .d{white-space:nowrap;text-overflow:ellipsis;flex:1;min-width:0;overflow:hidden}.queue .qi .qc{color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}.prog{background:var(--soft-2);border-radius:99px;height:6px;margin:8px 18px 14px;overflow:hidden}.prog i{background:var(--ink);border-radius:99px;height:100%;display:block}.rule{color:var(--ink-2);padding:14px 18px;font-size:13.5px}.rule b{color:var(--ink);margin-bottom:2px;font-size:14px;display:block}.phone{background:#1c1e20;border-radius:54px;width:410px;height:720px;margin:0 auto;padding:10px;position:relative;box-shadow:0 30px 60px #14161829,0 0 0 1px #14161840}.screen{background:#f4f4f3;border-radius:44px;flex-direction:column;width:390px;height:700px;display:flex;position:relative;overflow:hidden}.notch{z-index:3;background:#1c1e20;border-radius:20px;width:112px;height:30px;position:absolute;top:9px;left:50%;transform:translate(-50%)}.sbar{flex:none;justify-content:space-between;align-items:center;height:46px;padding:4px 30px 0;font-size:14px;font-weight:600;display:flex}.sbar .bat{border:1.5px solid var(--ink);vertical-align:middle;border-radius:3px;width:24px;height:11px;margin-left:6px;display:inline-block;position:relative}.sbar .bat:after{content:"";background:var(--ink);border-radius:1px;position:absolute;inset:1.5px 5px 1.5px 1.5px}.ph-h{flex:none;justify-content:space-between;align-items:center;padding:6px 18px 10px;display:flex}.ph-h b{letter-spacing:-.02em;font-size:20px;font-weight:700}.ph-h span{color:var(--ink-3);font-size:13px;font-weight:500}.pbody{flex-direction:column;flex:1;gap:10px;min-height:0;padding:0 14px 14px;display:flex;overflow-y:auto}.pfoot{border-top:1px solid var(--line);background:#f4f4f3;flex-direction:column;flex:none;gap:10px;padding:12px 14px 20px;display:flex}.pcard{border:1px solid var(--line);background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 1px 2px #1416180d}.pcard .label{display:block}.pk{color:var(--ink-3);margin-bottom:4px;font-size:12.5px;font-weight:600}.pid{font-family:var(--mono);letter-spacing:.01em;font-size:19px;font-weight:600}.pdesc{margin-top:2px;font-size:15px;font-weight:600}.pmeta{flex-wrap:wrap;gap:6px;margin-top:8px;display:flex}.pdest{letter-spacing:-.022em;font-size:27px;font-weight:700;line-height:1.12}.pdest small{color:var(--ink-3);letter-spacing:0;margin-bottom:3px;font-size:13px;font-weight:600;display:block}.pdrow{justify-content:space-between;align-items:flex-start;gap:10px;display:flex}.lv{flex-direction:column;flex:none;align-items:center;gap:3px;display:flex}.lv i{border:1.5px solid var(--ink-3);border-radius:3px;width:44px;height:14px;display:block}.lv i.on{background:var(--ink);border-color:var(--ink)}.lv span{color:var(--ink-3);margin-top:2px;font-size:11px;font-weight:600}.cmap{width:100%;height:auto;margin-top:10px;display:block}.cmap .t{font:600 10px var(--sans);fill:#8a8f95}.cmap .t2{font:600 9.5px var(--sans);fill:#5b6066}.cmap .pin{font:700 10.5px var(--mono);fill:#fff}.pbtn{background:var(--ink);color:#fff;border-radius:16px;justify-content:center;align-items:center;gap:10px;width:100%;height:56px;font-size:17px;font-weight:650;display:flex}.pbtn svg{width:20px;height:20px}.pbtn.soft{color:var(--ink);border:1px solid var(--line-2);background:#fff}.pbtn.green{background:var(--green)}.plinks{flex-wrap:wrap;justify-content:center;gap:18px;display:flex}.plinks button{color:var(--ink-2);text-underline-offset:2px;font-size:13.5px;font-weight:600;text-decoration:underline}.psteps{flex:none;grid-template-columns:repeat(3,1fr);gap:6px;display:grid}.psteps div{color:var(--ink-3);border-top:3px solid var(--soft-2);padding-top:7px;font-size:11.5px;font-weight:600}.psteps div.on{color:var(--ink);border-color:var(--ink)}.psteps div.ok{color:var(--green);border-color:var(--green)}.perr{background:var(--red-s);border:1px solid var(--red-l);border-radius:16px;padding:12px 14px}.perr b{color:var(--red);align-items:center;gap:7px;font-size:15px;display:flex}.perr p{color:var(--ink);margin:4px 0 0;font-size:13.5px}.perr b svg{flex:none;width:16px;height:16px}.pok{background:var(--green-s);text-align:center;border-radius:18px;padding:22px 16px}.pok .big{background:var(--green);color:#fff;border-radius:50%;place-items:center;width:56px;height:56px;margin:0 auto 10px;display:grid}.pok .big svg{width:28px;height:28px}.pok b{color:var(--green);font-size:20px;font-weight:700;display:block}.pok p{color:var(--ink-2);margin:4px 0 0;font-size:14px}.pchip{background:var(--green-s);color:var(--green);border-radius:999px;align-items:center;gap:6px;padding:3px 10px;font-size:12.5px;font-weight:600;display:inline-flex}.pchip svg{width:13px;height:13px}.ptype{gap:8px;display:flex}.ptype input{border:1px solid var(--line-2);min-width:0;font-family:var(--mono);text-transform:uppercase;background:#fff;border-radius:12px;flex:1;padding:10px 12px;font-size:15px}.sheet-bg{z-index:4;background:#14161859;align-items:flex-end;display:flex;position:absolute;inset:0}.sheet{background:#fff;border-radius:24px 24px 0 0;flex-direction:column;gap:10px;width:100%;padding:20px 18px 26px;display:flex}.sheet b.t{letter-spacing:-.01em;font-size:18px;font-weight:700}.sheet p{color:var(--ink-2);margin:0;font-size:14px}.pempty{text-align:center;color:var(--ink-2);padding:60px 18px}.pempty b{color:var(--ink);margin-bottom:4px;font-size:18px;display:block}.blindnote{color:var(--ink-2);background:var(--soft);border-radius:12px;align-items:flex-start;gap:8px;padding:9px 11px;font-size:13px;display:flex}.blindnote svg{flex:none;width:16px;height:16px;margin-top:1px}.pres{justify-content:space-between;align-items:center;gap:8px;padding:9px 0;font-size:14px;display:flex}.pres+.pres{border-top:1px solid var(--line)}.pres .qc{font-variant-numeric:tabular-nums;font-size:14px;font-weight:600}.bigpct{letter-spacing:-.03em;font-size:40px;font-weight:700;line-height:1}.route{grid-template-columns:repeat(8,minmax(0,1fr));padding:16px 10px 14px;display:grid;position:relative}.route .bar{background:var(--soft-2);height:2px;position:absolute;top:25px;left:6.25%;right:6.25%}.route .fill{background:var(--ink);height:2px;position:absolute;top:25px;left:6.25%}.rs{text-align:center;color:var(--ink-3);padding:0 4px;font-size:12.5px;position:relative}.rs i{z-index:1;background:#fff;border:1.5px solid #c4c7cb;border-radius:50%;width:19px;height:19px;margin:0 auto 6px;display:block;position:relative}.rs.done i{background:var(--ink);border-color:var(--ink)}.rs.done i:after{content:"";border:2px solid #fff;border-width:0 2px 2px 0;width:4px;height:8px;position:absolute;top:2.5px;left:5.5px;transform:rotate(45deg)}.rs.now i{border:2px solid var(--amber);box-shadow:0 0 0 4px var(--amber-s)}.rs b{color:var(--ink-2);font-weight:600;display:block}.rs.now b{color:var(--ink)}.rs span{font-size:12px;display:block}.opts{gap:8px;margin-top:10px;display:grid}.opt{text-align:left;border:1px solid var(--line-2);background:#fff;border-radius:14px;align-items:flex-start;gap:12px;width:100%;padding:11px 13px;display:flex}.opt.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.opt[disabled]{background:var(--soft)}.opt .t{flex:1;min-width:0}.opt b{font-size:14px;display:block}.opt small{color:var(--ink-2);margin-top:1px;font-size:13px;display:block}.radio{border:1.5px solid var(--ink-3);border-radius:50%;flex:none;width:17px;height:17px;margin-top:2px}.opt.on .radio{border:5px solid var(--ink)}.seg{background:var(--soft-2);border-radius:11px;gap:2px;padding:3px;display:inline-flex}.seg button{color:var(--ink-2);border-radius:8px;padding:6px 14px;font-size:13.5px;font-weight:600}.seg button.on{color:var(--ink);background:#fff;box-shadow:0 1px 2px #1416181f}.line-card{padding:16px 18px}.line-card+.line-card{border-top:1px solid var(--line)}.lc-h{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;display:flex}.lc-h b{font-size:15.5px}.modes{color:var(--ink-3);flex-wrap:wrap;align-items:center;gap:12px;margin-top:12px;font-size:13px;display:flex}.tbl{border-collapse:collapse;width:100%;font-size:13.5px}.tbl th{text-align:left;color:var(--ink-3);border-bottom:1px solid var(--line);white-space:nowrap;background:#fafafa;padding:9px 12px;font-size:11.5px;font-weight:600}.tbl td{border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums;padding:10px 12px}.tbl td.m{font-family:var(--mono);white-space:nowrap;font-size:12.8px}.tbl td.r,.tbl th.r{text-align:right}.tbl tr.sum td{border-bottom:0;font-weight:650}.tbl tr.ok td{color:var(--ink-3)}.tblwrap{overflow-x:auto}.checks{gap:8px;padding:4px 18px 16px;display:grid}.checks div{align-items:flex-start;gap:9px;font-size:13.5px;display:flex}.checks svg{width:17px;height:17px;color:var(--green);flex:none;margin-top:1px}.banner{background:var(--red-s);border-radius:14px;align-items:flex-start;gap:12px;padding:12px 14px;font-size:13.5px;display:flex}.banner b{color:var(--red)}.done-stats{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:0 18px 16px;display:grid}.done-stats div{background:var(--soft);border-radius:12px;padding:10px 12px}.done-stats b{letter-spacing:-.015em;font-size:20px;font-weight:650;display:block}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px;display:grid}.kpi{padding:14px 18px}.kpi .label{display:block}.kpi b{letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:2px;font-size:26px;font-weight:650;display:block}.kpi span.s{color:var(--ink-3);margin-top:2px;font-size:12.5px;display:block}.kpi .drv{flex-wrap:wrap;gap:12px;margin-top:6px;font-size:13px;display:flex}.kpi .drv div b{margin:0 2px 0 0;font-size:20px;display:inline}.mapcard{padding:6px 18px 18px}.mapcard .panel-h{flex-wrap:wrap;row-gap:8px}.mapcard .panel-h .h2{white-space:nowrap}.legend{color:var(--ink-2);flex-wrap:wrap;align-items:center;gap:14px;font-size:12.5px;display:flex}.legend span{align-items:center;gap:6px;display:inline-flex}.legend i{border-radius:3px;width:13px;height:13px;display:inline-block}.planwrap{gap:12px;margin-top:8px;display:grid}svg.plan{width:100%;height:auto;font-family:var(--sans);display:block}.plan .hall{fill:#f6f6f5;stroke:var(--ink);stroke-width:.22px;stroke-linejoin:round}.plan .room{fill:#fff;stroke:var(--ink);stroke-width:.22px;stroke-linejoin:round}.plan .aisle{fill:#f1f1f0}.plan .zone{fill:none;stroke:#1416184d;stroke-width:.1px;stroke-dasharray:.55 .4}.plan .gap{stroke:#f6f6f5;stroke-width:.5px}.plan .jamb{stroke:var(--ink);stroke-width:.22px}.plan .truck{fill:#fff;stroke:#14161873;stroke-width:.12px}.plan .mid{stroke:#14161829;stroke-width:.06px;pointer-events:none}.plan .rule{stroke:var(--ink-2);stroke-width:.14px}.plan text{fill:var(--ink-2);pointer-events:none;font-size:1.12px;font-weight:600}.plan text.t1{fill:var(--ink);font-size:1.55px;font-weight:650}.plan text.t3{fill:var(--ink-3);font-size:.98px;font-weight:500}.plan text.dn{fill:var(--ink);font-size:1.5px;font-weight:700}.plan .c{fill:#fff;stroke:#1416184d;stroke-width:.07px;cursor:pointer}.plan .c.e1{fill:#dcdee1}.plan .c.e2{fill:#b9bcc1}.plan .c.e3{fill:#8b9096}.plan .c.e4{fill:#6c7177}.plan .c.e5{fill:#50545a}.plan .c.am{fill:#e5a050}.plan .c.rd{fill:var(--red)}.plan .c:hover{stroke:var(--ink);stroke-width:.2px}.plan .c.sel{stroke:var(--ink);stroke-width:.38px}.plan .mv{fill:#fff;stroke:var(--ink);stroke-width:.13px;pointer-events:none}.plan text.antn{fill:var(--ink-2);font-size:.72px}.plan text.antn.w{fill:#fff}.planside{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0;display:grid}.planside .foot-note{align-self:center;font-size:12.5px}.pgrid{grid-template-columns:50px repeat(2,minmax(0,1fr));align-items:stretch;gap:6px;padding:2px 18px 16px;display:grid}.pgrid .ph{letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);font-size:11.5px;font-weight:650}.pgrid .n{color:var(--ink-3);align-self:center;font-size:12.5px;font-weight:600}.pc{background:var(--soft);border-radius:10px;min-width:0;padding:7px 9px;font-size:12.5px}.pc b{font-weight:600;line-height:1.25;display:block}.pc small{color:var(--ink-3);font-size:11.5px;display:block}.pc.free{box-shadow:inset 0 0 0 1px var(--line);background:0 0;align-items:center;display:grid}.pc .tag{margin-top:4px}.rm{background:var(--soft);border-radius:12px;padding:10px 12px}.rm b{font-size:14px;font-weight:650}.rm span{color:var(--ink-3);font-size:12.5px;display:block}.rm .n{color:var(--ink-2);margin-top:2px;font-size:13px}.rm .bar{background:var(--soft-2);border-radius:3px;height:6px;margin-top:7px;overflow:hidden}.rm .bar i{background:var(--ink-2);border-radius:3px;height:100%;display:block}.excgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:2px 18px 18px;display:grid}.excgrid .exc,.excgrid .exc+.exc{background:var(--soft);border-top:0;border-radius:14px;align-content:start;padding:11px 13px}.night{padding:16px 18px 18px}.night .sub{color:var(--ink-2);margin:2px 0 12px;font-size:13.5px}.night .cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;display:grid}.night .nc{background:var(--soft);border-radius:14px;padding:12px 14px}.night .nc.on{box-shadow:inset 0 0 0 1.5px var(--ink);background:#fff}.night .nc h4{letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin:0 0 9px;font-size:12px;font-weight:650}.night .nc.on h4{color:var(--ink)}.night ol{counter-reset:n;gap:7px;margin:0;padding:0;list-style:none;display:grid}.night li{color:var(--ink-2);counter-increment:n;grid-template-columns:20px minmax(0,1fr);align-items:start;gap:9px;font-size:13.5px;display:grid}.night li:before{content:counter(n);background:var(--soft-2);width:20px;height:20px;color:var(--ink-2);border-radius:50%;place-items:center;font-size:11.5px;font-weight:650;display:grid}.night .nc.on li{color:var(--ink)}.night .nc.on li:before{background:var(--ink);color:#fff}.night .evs{color:var(--ink-3);flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px;font-size:13px;display:flex}.night .ev{background:var(--soft);color:var(--ink-2);border-radius:999px;align-items:center;gap:7px;padding:4px 11px;display:inline-flex}.night .ev b{color:var(--ink);font-variant-numeric:tabular-nums}@media (width<=1180px){.excgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=760px){.planside,.excgrid,.night .cols{grid-template-columns:minmax(0,1fr)}}.exc{grid-template-columns:10px minmax(0,1fr);gap:10px;padding:12px 18px;display:grid}.exc+.exc{border-top:1px solid var(--line)}.exc .dot{margin-top:6px}.exc b{font-size:14px;font-weight:600}.exc .w{font-family:var(--mono);color:var(--ink-2);margin-left:6px;font-size:12.5px}.exc p{color:var(--ink-2);margin:2px 0 6px;font-size:13px}.exc .meta{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;display:flex}.exc .meta time{color:var(--ink-3);font-size:12px}.exc.res{opacity:.6}.posd{padding:4px 18px 16px}.posd .lvr{grid-template-columns:62px minmax(0,1fr) auto;align-items:center;gap:10px;padding:8px 0;font-size:13.5px;display:grid}.posd .lvr+.lvr{border-top:1px solid var(--line)}.posd .lvr .n{color:var(--ink-3);font-size:12.5px;font-weight:600}.posd .lvr small{color:var(--ink-3);font-size:12px;display:block}.sic-h{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px 6px;display:flex}.sic-note{color:var(--ink-3);margin:0;padding:0 18px 12px;font-size:13px}.nosig{color:var(--amber);font-size:11.5px;font-weight:650}.offbar{color:var(--amber);background:var(--amber-s);border-radius:10px;flex:none;align-items:center;gap:7px;margin:0 14px 8px;padding:6px 10px;font-size:12px;font-weight:600;display:flex}.offbar i{background:var(--amber);border-radius:50%;flex:none;width:7px;height:7px}.pwhy{color:var(--ink-2);border-top:1px solid var(--line);margin-top:8px;padding-top:8px;font-size:12.5px;line-height:1.4}.reasons{flex-wrap:wrap;gap:6px;display:flex}.reasons button{border:1px solid var(--line-2);background:#fff;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:600}.reasons button.on{background:var(--ink);color:#fff;border-color:var(--ink)}.moreacts{flex-direction:column;gap:8px;display:flex}.moreacts .pbtn{height:48px;font-size:15px}.sheet{max-height:100%;overflow-y:auto}.rsn{color:var(--ink-2);background:var(--soft-2);white-space:nowrap;border-radius:999px;margin-left:6px;padding:1px 8px;font-size:11.5px;font-weight:600}.pfooter{color:var(--ink-3);text-align:center;margin:28px 0 0;font-size:12.5px}#toast .toast{z-index:90;background:var(--ink);color:#fff;text-align:center;border-radius:999px;max-width:92vw;padding:10px 18px;font-size:14px;font-weight:500;animation:.3s drop;position:fixed;top:66px;left:50%;transform:translate(-50%);box-shadow:0 8px 24px #0000002e}@keyframes drop{0%{opacity:0;transform:translate(-50%,-14px)}to{opacity:1;transform:translate(-50%)}}.tourcap{z-index:80;width:min(860px,100vw - 32px);box-shadow:0 18px 50px #14161838,0 0 0 1px var(--line);background:#fff;border-radius:18px;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;padding:14px 18px 12px;display:grid;position:fixed;bottom:18px;left:50%;transform:translate(-50%)}.tourcap .n{color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12.5px;font-weight:650}.tourcap p{letter-spacing:-.01em;margin:0;font-size:18px;font-weight:550;line-height:1.35}.tourcap .tparts{background:var(--soft-2);border-radius:11px;grid-column:1/-1;justify-self:start;gap:2px;max-width:100%;padding:3px;display:flex;overflow-x:auto}.tourcap .tparts button{color:var(--ink-2);white-space:nowrap;border-radius:8px;padding:4px 11px;font-size:12.5px;font-weight:600}.tourcap .tparts button.on{color:var(--ink);background:#fff;box-shadow:0 1px 2px #1416181a}.tourcap .tctl button:disabled{opacity:.4}.tourcap .tplay{color:var(--green);font-weight:600}.tourcap .bar{background:var(--soft-2);border-radius:99px;grid-column:1/-1;height:3px;overflow:hidden}.tourcap .bar i{background:var(--ink);height:100%;transition:width .4s;display:block}.tour-hl{outline-offset:4px;border-radius:14px;transition:outline-color .2s;outline:3px solid var(--ink)!important}body.touring #app{pointer-events:none}body.touring .tour-hl .btn.primary,body.touring .tour-hl .pbtn,body.touring #phone .pbtn{pointer-events:auto}.tournote{z-index:79;width:316px;box-shadow:0 14px 40px #14161833,0 0 0 1px var(--line);background:#fff;border-radius:16px;padding:14px 16px;position:fixed;top:78px;right:22px}.tournote b{letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;font-size:11.5px;font-weight:650;display:block}.tournote p{color:var(--ink);margin:0;font-size:15px;line-height:1.42}.tourcap .tspeed{font-variant-numeric:tabular-nums}@keyframes fadeUp{0%{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}#audCard .list .item,#audCard .checks>div{animation:.45s both fadeUp}#audCard .list .item:nth-child(2){animation-delay:.3s}#audCard .list .item:nth-child(3){animation-delay:.6s}#audCard .list .item:nth-child(4){animation-delay:.9s}#audCard .checks>div:first-child{animation-delay:1.3s}#audCard .checks>div:nth-child(2){animation-delay:1.7s}#audCard .checks>div:nth-child(3){animation-delay:2.1s}@media (width<=1100px){.tournote{display:none}}@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}@media (width<=1180px){.stage3{grid-template-columns:minmax(0,1fr) 410px}.stage3 .side.r{grid-column:1/-1}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=980px){.topbar{grid-template-columns:minmax(0,1fr) auto;padding:10px 16px}.topnav{grid-area:2/1/auto/-1;justify-self:start}.grid2,.stage3{grid-template-columns:minmax(0,1fr)}.stage3 .phonecol{order:-1}.done-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (width<=620px){.wrap{padding:0 16px 120px}.vals,.labels,.countrow,.kpis{grid-template-columns:minmax(0,1fr)}.route{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:14px}.route .bar,.route .fill,.brand span,.tactions .btn.ghost{display:none}.phone{border-radius:46px;width:100%;max-width:410px;height:700px;padding:6px}.screen{border-radius:40px;width:100%;height:688px}.pas,.tourcap{grid-template-columns:minmax(0,1fr)}.tourcap p{font-size:15px}}.smp{flex-wrap:wrap;gap:5px;margin-top:10px;display:flex}.smp span{font-family:var(--mono);background:var(--soft-2);color:var(--ink-3);border-radius:7px;padding:3px 7px;font-size:11.5px}.smp span.on{background:var(--amber-s);color:var(--amber)}.qrow{grid-template-columns:190px minmax(0,1fr);align-items:end;gap:14px;margin-top:10px;display:grid}.qrow .label{margin-bottom:5px;display:block}.qrow .seg{flex-wrap:wrap}.ctl{gap:4px;margin-top:8px;font-size:13px;display:grid}.ctl>span{align-items:center;gap:8px;display:flex}.topnav button.f2{margin-left:6px}.topnav button.f2 i{border-radius:9px;width:auto;padding:0 6px}a.btn{color:var(--ink);text-decoration:none}.a9bg{z-index:60;background:#1416186b;place-items:center;padding:24px;display:grid;position:fixed;inset:0;overflow:auto}.a9sheet{cursor:default;background:#fff;border-radius:12px;width:min(1240px,100%);padding:0 0 18px;overflow:hidden;box-shadow:0 24px 60px #14161847}.a9bar{color:#fff;background:#1e6b3a;align-items:center;gap:12px;padding:10px 18px;display:flex}.a9bar b{font-size:14px;font-weight:650}.a9bar span{opacity:.85;font-size:12.5px}.a9bar .lnk{color:#fff;margin-left:auto}.a9scroll{padding:14px 18px 6px;overflow-x:auto}.a9x{border-collapse:collapse;table-layout:fixed;color:#000;width:100%;min-width:1100px;font-family:Calibri,Carlito,Segoe UI,Arial,sans-serif;font-size:13px}.a9x td{white-space:nowrap;text-overflow:ellipsis;border:1px solid #d9d9d9;height:22px;padding:3px 5px;overflow:hidden}.a9x td.x{border-color:#ececec}.a9x .b{font-weight:700}.a9x .c{text-align:center}.a9x .r{text-align:right}.a9x .bd{border:1px solid #000}.a9x .g{color:#fff;background:green;font-size:14px}.a9x .gr{background:silver}.a9x .rd{background:red}.a9x .yl{color:#ff0}.a9x .y{background:#ff0;font-size:14px}.a9x .lg{background:#92d050}.a9x .big{font-size:15px}.a9x .oc{color:red;font-size:20px}.a9x .red{color:red}.a9x tr.h td{text-align:center;white-space:normal;background:#9bbb59;border:1px solid #000;height:38px;font-size:10.5px;font-weight:700;line-height:1.15}.a9x tr.ln td{border:1px solid #000;height:28px;font-size:13px}.a9x tr.ln td.nav{font-size:12px}.a9x td.sm{white-space:normal;font-size:11px;line-height:1.1}.a9x td{text-overflow:clip}.a9x .g{font-size:12.5px}.a9x .gr{font-size:12px}.a9x td.sm{font-size:10px}.a9x tr.h td{padding:2px 3px;font-size:9.5px}.a9x tr.ln td{white-space:normal;font-size:12.5px;line-height:1.1}.a9x tr.ln td.nav{white-space:nowrap;font-size:11.5px}.a9x tr.ln td.obs{font-size:10.5px}.a9x td.nav{font-family:Calibri,Carlito,Segoe UI,Arial,sans-serif}.a9x td.obs{white-space:normal;font-size:11.5px;line-height:1.15}.a9x .or{background:#fcd5b4;border-bottom:1px solid #000;font-size:13.5px}.a9firmas{margin-left:18px;margin-right:18px}.a9note{padding:0 18px}.a9firmas{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:14px;display:grid}.a9firmas>div{border:1px dashed var(--line-2);border-radius:8px;padding:8px 10px}.a9firmas>div.ok{background:var(--green-s);border-style:solid}.a9firmas span{color:var(--ink-3);font-size:11px;display:block}.a9firmas b{font-size:13px}.a9firmas .ok b{color:var(--green)}.a9note{color:var(--ink-3);margin:14px 0 0;font-size:12.5px}@media (width<=720px){.a9hdr{grid-template-columns:minmax(0,1fr)}.a9firmas{grid-template-columns:repeat(2,minmax(0,1fr))}.a9sheet{overflow-x:auto}}@media (width<=1700px){.brand span{display:none}}@media (width<=720px){.qrow{grid-template-columns:minmax(0,1fr)}.route b{font-size:11px}.route span{display:none}}</style>
+  <script type="module" crossorigin src="/aos-7f3k9x2m/assets/main-NHtrocYP.js"></script>
+  <link rel="stylesheet" crossorigin href="/aos-7f3k9x2m/assets/main-DpPztKVM.css">
+</head>
+<body>
+<div id="app"></div>
+<div id="tour"></div>
+<div id="toast"></div>
+<script>
+'use strict';
+/* ============ helpers ============ */
+const ESC = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const N = x => Number(x).toLocaleString('es-MX');
+const HM = m => { const hh = Math.floor(m / 60), mm = Math.floor(m % 60); return hh + ':' + String(mm).padStart(2, '0'); };
+const DUR = s => { s = Math.round(s); return Math.floor(s / 60) + ' min ' + String(s % 60).padStart(2, '0') + ' s'; };
+let TOUR_FF = false, TOUR_GEN = 0, ANIM_X = 1; // ANIM_X: velocidad del recorrido (1 o 10) // recorrido: avance rápido al saltar a un paso; cada salto abandona la corrida anterior
+const wait = ms => { const g = TOUR_GEN; return new Promise(r => setTimeout(() => { if (g === TOUR_GEN) r(); }, (TOUR_FF || (S && S.tour && S.tour.skip)) ? 0 : ms / ANIM_X)); };
+const ICON = {
+  check: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5l3.5 3.5 7.5-8"/></svg>',
+  scan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8V5h3M17 5h3v3M20 16v3h-3M7 19H4v-3"/><path d="M8 9v6M11 9v6M14 9v6M17 9v6" stroke-width="1.6"/></svg>',
+  x: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>',
+  eye: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M2.5 10s2.8-5 7.5-5 7.5 5 7.5 5-2.8 5-7.5 5-7.5-5-7.5-5z"/><path d="M3 17L17 3"/></svg>',
+  play: '<svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4.5v11l9-5.5z"/></svg>',
+  dl: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v10M6 9l4 4 4-4M4 16h12"/></svg>'
+};
+
+/* ============ catalogue (ficticio) ============ */
+const SKU = {
+  'MZA-GLD-BOL-C1-100': { d: 'Manzana Golden bolsa', fe: 18, cpp: 49 },
+  'MZA-RED-BOL-C1-088': { d: 'Manzana Red Delicious bolsa', fe: 18, cpp: 54 },
+  'PER-ANJ-CAJ-C1-090': { d: 'Pera Anjou', fe: 20, cpp: 48 },
+  'UVA-VER-CLM-SS-018': { d: 'Uva verde sin semilla', fe: 8, cpp: 120 },
+  'UVA-ROJ-CLM-C1-018': { d: 'Uva roja', fe: 8, cpp: 120 },
+  'UVA-NEG-CLM-SS-018': { d: 'Uva negra sin semilla', fe: 8, cpp: 120 },
+  'KIW-VER-CAJ-C1-033': { d: 'Kiwi', fe: 10, cpp: 110 },
+  'NAR-VAL-CAJ-C1-072': { d: 'Naranja Valencia', fe: 18, cpp: 72 },
+  'LIM-PER-CAJ-C1-150': { d: 'Limón persa', fe: 18, cpp: 72 },
+  'AGU-HAS-CAJ-C1-048': { d: 'Aguacate Hass', fe: 10, cpp: 96 }
+};
+const FAM = { 1: ['NAR-VAL-CAJ-C1-072', 'LIM-PER-CAJ-C1-150', 'AGU-HAS-CAJ-C1-048'], 2: ['UVA-VER-CLM-SS-018', 'UVA-ROJ-CLM-C1-018', 'UVA-NEG-CLM-SS-018', 'KIW-VER-CAJ-C1-033'], 3: ['MZA-GLD-BOL-C1-100', 'MZA-RED-BOL-C1-088', 'PER-ANJ-CAJ-C1-090'] };
+const LOTES = { 'NAR-VAL-CAJ-C1-072': ['718140', '718022'], 'LIM-PER-CAJ-C1-150': ['718177', '718091'], 'AGU-HAS-CAJ-C1-048': ['718233', '718105'], 'UVA-VER-CLM-SS-018': ['718150', '718201'], 'UVA-ROJ-CLM-C1-018': ['718255', '718188'], 'UVA-NEG-CLM-SS-018': ['718120', '718049'], 'KIW-VER-CAJ-C1-033': ['718066', '718212'], 'MZA-GLD-BOL-C1-100': ['717880', '718016'], 'MZA-RED-BOL-C1-088': ['717962', '718033'], 'PER-ANJ-CAJ-C1-090': ['718010', '717991'] };
+/* Compatibilidad práctica en 3 grupos (temperatura, humedad, etileno; referencia FAO / UC Davis). */
+const CAMD = { 1: 'Grupo C · templado 7–12 °C · cítricos y aguacate', 2: 'Grupo B · frío 0–2 °C · sensibles al etileno: uva y kiwi', 3: 'Grupo A · frío 0–2 °C · productores de etileno: manzana y pera' };
+const COMPAT = {
+  3: 'Manzana y pera producen etileno: van a Cámara 3 (frío 0–2 °C), lejos del kiwi y la uva, que maduran o se dañan con él.',
+  2: 'Uva y kiwi son sensibles al etileno: van a Cámara 2 (frío 0–2 °C), separados de manzana y pera.',
+  1: 'Cítricos y aguacate se dañan con el frío: van a Cámara 1 (templado 7–12 °C).'
+};
+function camOf(sku) { for (const c of [1, 2, 3]) if (FAM[c].includes(sku)) return c; return 3; }
+const PAS = ['A', 'B', 'C', 'D'];
+// Capacidad real: C1 666, C2 510, C3 320 posiciones de tarima. Racks de 4 pisos; cada sección lleva 4 tarimas por piso:
+// 2 de frente y 2 de fondo (Mateo, llamada del 11 nov). Pasillos por cámara ESTIMADOS, por confirmar con Mateo:
+// un pasillo por cámara (JP, 12 nov): C1 2 lados × 42 columnas; C2 2 × 32; C3 2 × 20. «pos» = columnas por pasillo (los dos lados).
+// JP, 12 nov: un pasillo por cámara, todo 2 × 2 (2 de frente, 2 de fondo, 4 pisos) y las tres cámaras casi del mismo largo:
+// el largo de cada cámara sale de su capacidad real (666 / 510 / 320): C1 42 columnas por lado, C2 32, C3 20.
+const RC = { 1: { pas: ['A'], pos: 84, lv: 4, deep: 2 }, 2: { pas: ['A'], pos: 64, lv: 4, deep: 2 }, 3: { pas: ['A'], pos: 40, lv: 4, deep: 2 } };
+const DEPTHS = ['', 'T', 'U', 'V']; // '' = frente, junto al pasillo; T, U, V = las tarimas de atrás, en orden
+// Lugares que no existen, para que cuadre 666 / 510 / 320 (672 y 512 lugares de rack menos estos).
+const BLANK = new Set(['1A79-4T', '1A80-4T', '1A81-4T', '1A82-4T', '1A83-4T', '1A84-4T', '2A63-4T', '2A64-4T']);
+function slotCodes(c, p, pos) { const out = []; for (let l = 1; l <= RC[c].lv; l++) for (const d of DEPTHS.slice(0, RC[c].deep)) { const code = `${c}${p}${pos}-${l}${d}`; if (!BLANK.has(code)) out.push(code); } return out; }
+const LVS = c => Array.from({ length: RC[c].lv }, (_, i) => RC[c].lv - i);
+const DRIVER = 'Montacarguista 2 · Iván';
+const ZE = 'ANT-12';
+function parseLoc(code) { const s = String(code).toUpperCase().replace(/\s+/g, ''), m = /^([123])([A-D])(\d{1,3})-([1-5])([TUV]?)$/.exec(s); if (!m || BLANK.has(s)) return null; const r = RC[+m[1]]; if (!r.pas.includes(m[2]) || +m[3] < 1 || +m[3] > r.pos || +m[4] > r.lv || DEPTHS.indexOf(m[5]) >= r.deep) return null; return { c: +m[1], p: m[2], pos: +m[3], lvl: +m[4], t: m[5] !== '' }; }
+function isAnt(code) { return /^ANT-\d\d$/.test(code); }
+function prettyLoc(code) { if (code === ZE) return 'Zona de espera · antecámara'; if (isAnt(code)) return 'Antecámara · lugar ' + (+code.slice(4)); const q = parseLoc(code); return q ? `C${q.c} · Pasillo ${q.p} · Pos ${q.pos} · Nivel ${q.lvl}${q.t ? ' · fondo' : ''}` : code; }
+function shortLoc(code) { if (code === ZE) return 'Zona de espera'; if (isAnt(code)) return 'Antecámara ' + (+code.slice(4)); const q = parseLoc(code); return q ? `${q.c}${q.p}${q.pos} · nivel ${q.lvl}${q.t ? ' · fondo' : ''}` : code; }
+function normCode(s) { s = String(s || '').toUpperCase().replace(/\s+/g, ''); const m = /^([123][A-D]\d{1,3})[-·N]*([1-5])$/.exec(s.replace('NIVEL', '-')); if (m && !s.startsWith('P-')) return m[1] + '-' + m[2]; return s; }
+const REASONS = ['Pasillo bloqueado', 'Tarima dañada o inestable', 'Producto no corresponde', 'Otro'];
+/* Etiquetas por caja: no hay ID de tarima. La tarima se arma en el arribo al escanear las cajas de cada montón;
+   cualquier caja escaneada lleva a su tarima. */
+/* Muestra de Calidad: una caja por tarima, al azar, hasta 15; cada caja regresa a la misma tarima (Mateo, 11 nov). */
+const ARR = '20417', SAMPLE_PAL = [3, 11, 1, 2, 4, 5, 6, 8, 9, 12, 14, 15, 17, 18, 20], SAMPLE_OFF = [2, 10, 17, 33, 8, 41, 25, 12, 37, 5, 29, 44, 20, 14, 31];
+const SAMPLE_BOX = SAMPLE_PAL.map((pn, i) => (pn - 1) * 49 + SAMPLE_OFF[i]), SAMPLE_N = SAMPLE_BOX.length;
+/* Arribo con diferencia: por cantidad o por calidad; responde el transportista o el proveedor (compras lo investiga). */
+const RESP = { transportista: 'Transportista', proveedor: 'Proveedor en origen', investigar: 'Por investigar' };
+const boxCode = (arr, n) => 'CJ-' + arr + '-' + String(n).padStart(4, '0');
+function parseBox(code) { const m = /^CJ-?(\d{5})-?(\d{4})$/.exec(String(code).toUpperCase().replace(/\s+/g, '')); return m ? { arr: m[1], n: +m[2] } : null; }
+function inPal(code, t) { const b = parseBox(code); return !!b && b.arr === t.arr && b.n >= t.b0 && b.n < t.b0 + t.span; }
+function boxMid(t) { return boxCode(t.arr, t.b0 + Math.floor(t.span / 2)); }
+function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+/* ============ state ============ */
+let S, LOC;
+function buildLoc() {
+  const r = rng(20261111), L = {};
+  for (let c = 1; c <= 3; c++) for (const p of RC[c].pas) for (let pos = 1; pos <= RC[c].pos; pos++) for (const code of slotCodes(c, p, pos)) {
+    if (r() < 0.68) { const f = FAM[c], sku = f[Math.floor(r() * f.length)], lo = LOTES[sku], cpp = SKU[sku].cpp; L[code] = { sku, lote: lo[Math.floor(r() * lo.length)], cajas: r() < 0.8 ? cpp : Math.max(6, Math.round(cpp * (0.3 + r() * 0.6))) }; }
+    else L[code] = null;
+  }
+  for (let i = 1; i <= 12; i++) L['ANT-' + String(i).padStart(2, '0')] = null;
+  const set = (code, sku, lote, cajas) => { L[code] = { sku, lote, cajas }; };
+  ['3A23-2', '3A25-1', '3A27-1', '3A29-2', '2A20-3'].forEach(c => { L[c] = null; });
+  set('3A23-1', 'MZA-GLD-BOL-C1-100', '717880', 49); set('3A23-3', 'PER-ANJ-CAJ-C1-090', '718010', 48); set('3A25-2', 'MZA-RED-BOL-C1-088', '718033', 54);
+  set('2A14-1', 'UVA-VER-CLM-SS-018', '718290', 120); set('2A18-2', 'UVA-VER-CLM-SS-018', '718290', 120); set('ANT-04', 'UVA-VER-CLM-SS-018', '718290', 66);
+  set('2A30-1', 'UVA-VER-CLM-SS-018', '718311', 120); set('2A32-1', 'UVA-VER-CLM-SS-018', '718311', 120); set('2A34-2', 'UVA-VER-CLM-SS-018', '718311', 120);
+  set('3A12-1', 'MZA-RED-BOL-C1-088', '717962', 120);
+  set('3A34-1', 'MZA-GLD-BOL-C1-100', '717880', 49);
+  set('2A10-1', 'UVA-ROJ-CLM-C1-018', '718255', 96); set('2A12-2', 'UVA-NEG-CLM-SS-018', '718120', 110); set('2A40-1', 'KIW-VER-CAJ-C1-033', '718066', 110);
+  set('2A16-2', 'UVA-NEG-CLM-SS-018', '718120', 84); set('3A20-1', 'MZA-GLD-BOL-C1-100', '717880', 49); set('1A13-1', 'NAR-VAL-CAJ-C1-072', '718140', 72);
+  set('ANT-01', 'KIW-VER-CAJ-C1-033', '718066', 110); set('ANT-02', 'UVA-NEG-CLM-SS-018', '718120', 96); set('ANT-07', 'UVA-ROJ-CLM-C1-018', '718255', 120);
+  return L;
+}
+function putDests(L) {
+  const d = ['3A23-2', '3A25-1', '3A29-2'], reserved = ['3A27-1', '3A25-2'];
+  for (const p of ['A']) for (let pos = 12; pos <= 40 && d.length < 21; pos++) for (let l = 1; l <= 4 && d.length < 21; l++) {
+    const code = `3${p}${pos}-${l}`; if (!L[code] && !d.includes(code) && !reserved.includes(code)) d.push(code);
+  }
+  return d;
+}
+function fresh() {
+  LOC = buildLoc();
+  S = {
+    view: 'arribo', clock: 14 * 60 + 32,
+    arr: { counted: '', registered: false, notified: false, notT: 0, mcSeen: false, printed: false, delivered: false, sample: 0, sampleT: 0, sampleRes: null, sampleResT: 0, qn: '', qresp: 'investigar', qOpen: false },
+    put: { i: 0, phase: 'pallet', err: null, sheet: null, typed: '', showType: false, tasks: buildTasks(putDests(LOC)), placed: [], labelTyped: '', reason: null, alt: null },
+    sur: { stage: 1, qc: { L1: { oc: null, mode: null }, L2: { oc: null, mode: null } }, returned: null, retOpen: false, retText: '', pk: { i: 0, phase: 'loc', err: null, showType: false, typed: '', left: [] }, t0: 0, chk: null, chkScan: 0, chkErr: null, embT: 0 },
+    f2: { step: 0, t: 0, tInv: 0, sheet: false },
+    cnt: { i: 0, phase: 'loc', err: null, showType: false, typed: '', val: '', res: [] },
+    torre: { sel: '3A23' },
+    flags: { '3A34-1': 'red', 'ANT-07': 'amber', '2A10-1': 'amber', '2A12-2': 'amber', '2A40-1': 'amber' },
+    moved: {},
+    exc: [
+      { id: 'e1', sev: 'red', title: 'Ubicación no coincide', where: '3A34-1', text: 'El sistema espera Manzana Golden bolsa (OC 717880). Al surtir se encontró Uva roja.', t: 13 * 60 + 48, act: 'Mandar a conteo', state: '' },
+      { id: 'e2', sev: 'amber', title: 'Tarima sin ubicación', where: 'ANT-07', text: 'Uva roja del arribo 20416 lleva 52 min en antecámara sin tarea de acomodo.', t: 13 * 60 + 40, act: 'Asignar a montacarguista', state: '' },
+      { id: 'e3', sev: 'amber', title: 'Conteo pendiente', where: '2A10-1', text: '3 posiciones de Cámara 2 sin contar esta semana: 2A10, 2A12 y 2A40.', t: 12 * 60 + 0, act: 'Ir a conteo cíclico', state: '' },
+      { id: 'n2', ctl: true, sev: 'red', title: 'Salida sin pedido', where: 'Andén A', text: 'A las 3:40 se escanearon en el andén A 2 tarimas de Kiwi para cargar y ningún A9 las pide. El sistema lo marcó al momento.', t: 3 * 60 + 40, act: 'Avisar al jefe de turno', after: 'Jefe de turno avisado', state: '' },
+      { id: 'n1', ctl: true, sev: 'red', title: 'Arribo sin aviso', where: 'Andén C', text: 'A las 2:14 se escaneó en el andén C un arribo que ninguna prevalidación anunciaba. El sistema lo marcó al momento.', t: 2 * 60 + 14, act: 'Pedir validación a mesa de control', after: 'Mesa de control avisada', state: '' }
+    ],
+    sicCap: { s2: 11 * 60 + 42 }, sicExp: {},
+    log: [],
+    kpi: { accOk: 286, accN: 296, putN: 16, putAvg: 134, putNew: [], search: 31, m1: 24, m2: 17 },
+    tour: null, hl: null
+  };
+  log('torre', 'Sistema', 'Turno 2 abierto: 2 de 3 montacarguistas presentes.');
+}
+function log(area, who, txt, kind) { S.log.unshift({ t: S.clock, area, who, txt, kind: kind || '' }); }
+function tick(sec) { S.clock += sec / 60; }
+function addExc(e) { e.id = 'e' + (S.exc.length + 1) + '_' + Math.round(S.clock * 60); e.t = S.clock; e.state = e.state || ''; S.exc.unshift(e); return e; }
+
+/* ============ derived ============ */
+function buildTasks(dests) { const t = []; for (let n = 1; n <= 21; n++) t.push({ id: 'Tarima ' + String(n).padStart(2, '0'), n, arr: ARR, b0: (n - 1) * 49 + 1, span: 49, cajas: 49, sku: 'MZA-GLD-BOL-C1-100', lote: '718204', dest: dests[n - 1] }); return t; }
+function lastCajas() { const total = S.arr.registered ? (+S.arr.counted || 1029) : 1029; return Math.max(1, Math.min(49, total - 980)); }
+function putPallet(i) { const t = S.put.tasks[i]; if (t && t.n === 21 && !t.fixed) { t.cajas = lastCajas(); t.span = t.cajas; } return t; }
+function adjustPal(pn, d) {
+  const t = S.put.tasks.find(x => x.n === pn && !x.part); if (!t) return;
+  t.cajas += d; const pl = S.put.placed.find(x => x.n === pn && !x.part); if (pl) { pl.cajas += d; if (LOC[pl.loc]) LOC[pl.loc].cajas += d; }
+}
+function putDest(i) { return S.put.tasks[i].dest; }
+function tasksN() { return S.put.tasks.length; }
+function labelBox(n) { return { code: boxCode(ARR, n), n, total: S.arr.registered ? (+S.arr.counted || 1029) : 1029, sku: 'MZA-GLD-BOL-C1-100', lote: '718204' }; }
+function travelSec(code) { const q = parseLoc(code); if (!q) return 70; return 62 + q.pos * 0.55 + PAS.indexOf(q.p) * 9 + (q.lvl - 1) * 14; }
+function distM(code) { const q = parseLoc(code); if (!q) return 15; return Math.round(12 + q.pos * 0.36 + PAS.indexOf(q.p) * 4); }
+function nearestFree(code, exclude) {
+  const q = parseLoc(code); exclude = exclude || [];
+  for (let d = 2; d < 40; d += 2) for (const pos of [q.pos + d, q.pos - d]) for (let l = 1; l <= RC[q.c].lv; l++) {
+    if (pos < 1 || pos > RC[q.c].pos) continue; const c = `${q.c}${q.p}${pos}-${l}`;
+    if (!LOC[c] && !exclude.includes(c) && !S.put.tasks.some(t => t.dest === c) && !S.flags[c]) return c;
+  }
+  return '3A38-1';
+}
+const OCS = {
+  L1: [
+    { oc: '718311', sug: true, arr: '3 nov', days: 8, cond: 'Inspección 10 nov: buena condición', avail: 360, where: '2A30, 2A32, 2A34' },
+    { oc: '718290', arr: '28 oct', days: 14, cond: 'Inspección 10 nov: punto de pudrición leve', avail: 306, where: 'Antecámara 4, 2A14, 2A18' }
+  ],
+  L2: [
+    { oc: '717962', sug: true, arr: '29 oct', days: 13, cond: 'Inspección 9 nov: buena condición', avail: 120, where: '3A12' },
+    { oc: '718204', arr: 'hoy', days: 0, cond: 'Llegó hoy; calidad aún no inspecciona', avail: 0, where: 'En acomodo', dis: true }
+  ]
+};
+function pickList() {
+  const q = S.sur.qc; const l1 = q.L1.oc === '718311'
+    ? [{ loc: '2A30-1', lote: '718311', cajas: 120, surtir: 120, arr: '20391', b0: 1 }, { loc: '2A32-1', lote: '718311', cajas: 120, surtir: 120, arr: '20391', b0: 121 }, { loc: '2A34-2', lote: '718311', cajas: 120, surtir: 60, arr: '20391', b0: 241 }]
+    : [{ loc: 'ANT-04', lote: '718290', cajas: 66, surtir: 66, arr: '20371', b0: 1 }, { loc: '2A14-1', lote: '718290', cajas: 120, surtir: 120, arr: '20371', b0: 67 }, { loc: '2A18-2', lote: '718290', cajas: 120, surtir: 114, arr: '20371', b0: 187 }];
+  l1.forEach(r => { r.sku = 'UVA-VER-CLM-SS-018'; r.line = 'L1'; r.mode = q.L1.mode; });
+  const l2 = [{ loc: '3A12-1', sku: 'MZA-RED-BOL-C1-088', lote: '717962', cajas: 120, surtir: 120, arr: '20356', b0: 1, line: 'L2', mode: q.L2.mode }];
+  return l1.concat(l2).map(r => { Object.assign(r, { sobran: r.cajas - r.surtir, span: r.cajas }); r.box = boxMid(r); return r; });
+}
+function whName(code) { if (isAnt(code)) return '09 ANTECAMARA'; const q = parseLoc(code); return 'Cámara ' + q.c; }
+function sicRows() {
+  const rows = [
+    { id: 's1', t: 7 * 60 + 58, tipo: 'Arribo', ref: 'Arribo 20416', oc: '718255', sku: 'UVA-ROJ-CLM-C1-018', cajas: 1140, from: 'Recibo y embarques', to: 'Cámara 2', scans: 19, by: 'Montacarguista 1', ready: true },
+    { id: 's2', t: 11 * 60 + 20, tipo: 'Salida', ref: 'A9 3465', oc: '718140', sku: 'NAR-VAL-CAJ-C1-072', cajas: 240, from: 'Cámara 1', to: '1EMBARQUES', scans: 8, by: 'Montacarguista 1', ready: true },
+    { id: 's3', t: 12 * 60 + 5, tipo: 'Selección', ref: 'A9 3466', oc: '718066', sku: 'KIW-VER-CAJ-C1-033', cajas: 330, from: 'Cámara 2', to: 'Producción', scans: 6, by: 'Montacarguista 2', ready: true }
+  ];
+  const pl = S.put.placed;
+  if (pl.length) {
+    const all = pl.length >= tasksN(), byWh = {};
+    pl.forEach(p => { const w = whName(p.loc); (byWh[w] = byWh[w] || { cajas: 0, n: 0, t: 0 }); byWh[w].cajas += p.cajas; byWh[w].n++; byWh[w].t = p.t; });
+    Object.entries(byWh).forEach(([w, g], i) => rows.push({ id: 's4' + i, t: g.t, tipo: 'Arribo', ref: 'Arribo 20417', oc: '718204', sku: 'MZA-GLD-BOL-C1-100', cajas: g.cajas, from: 'Recibo y embarques', to: w, scans: g.n * 2, by: DRIVER, ready: all, note: all ? '' : `En curso: ${pl.length} de ${tasksN()} tarimas ubicadas. Se cierra con la última.` }));
+  }
+  if (S.sur.stage >= 5) {
+    const groups = {};
+    pickList().forEach(r => { const to = r.mode === 'seleccion' ? 'Producción' : '1EMBARQUES'; const k = whName(r.loc) + '|' + to + '|' + r.lote; (groups[k] = groups[k] || { from: whName(r.loc), to, oc: r.lote, sku: r.sku, cajas: 0, scans: 0, line: r.line }); groups[k].cajas += r.surtir; groups[k].scans += 2; });
+    Object.values(groups).forEach((g, i) => rows.push({ id: 's5' + i, t: S.sur.tEnd, tipo: g.to === 'Producción' ? 'Selección' : 'Salida', ref: 'A9 3471 · ' + (g.line === 'L1' ? 'L1' : 'L2'), oc: g.oc, sku: g.sku, cajas: g.cajas, from: g.from, to: g.to, scans: g.scans, by: DRIVER, ready: true }));
+  }
+  return rows;
+}
+function kpiAcc() { return S.kpi.accOk / S.kpi.accN * 100; }
+function kpiPut() { const k = S.kpi; const sum = k.putN * k.putAvg + k.putNew.reduce((a, b) => a + b, 0); return sum / (k.putN + k.putNew.length); }
+
+/* ============ small renderers ============ */
+function who(role, name) { return `<div class="who"><b>${ESC(name[0])}</b>${ESC(role)}<span>· ${ESC(name)}</span></div>`; }
+function barcode(text) {
+  const w = []; w.push(2, 1, 1, 1);
+  for (const ch of text) { const c = ch.charCodeAt(0); w.push(1 + (c & 1), 1 + ((c >> 1) & 1), 1 + ((c >> 2) % 3), 1 + ((c >> 4) & 1)); }
+  w.push(2, 1, 1, 2);
+  const total = w.reduce((a, b) => a + b, 0), W = 240, H = 40, u = W / total; let x = 0, r = '';
+  w.forEach((wd, i) => { if (i % 2 === 0) r += `<rect x="${(x * u).toFixed(2)}" y="0" width="${(wd * u).toFixed(2)}" height="${H}"/>`; x += wd; });
+  return `<svg class="bc" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${r}</svg>`;
+}
+function label(p) {
+  const s = SKU[p.sku];
+  return `<div class="lbl"><div class="lh"><span>AUSTRAL · RECIBO</span><span>11/11/2026</span></div>
+    <div class="lote">CAJA<b style="font-size:17px">${p.code}</b></div><div class="lf" style="margin-top:3px"><span>Lote/OC <b>${p.lote}</b></span></div>
+    <div class="ld">${ESC(s.d)}<br><span>${p.sku}</span></div>
+    <div class="lf"><span>Caja ${String(p.n).padStart(4, '0')} de ${N(p.total)}</span><span>Arribo 20417</span></div>
+    ${barcode(p.code)}<div class="bt">${p.code}</div></div>`;
+}
+function camSvg(code, extra) {
+  if (isAnt(code)) {
+    const n = +code.slice(4); let s = `<svg viewBox="0 0 356 120" class="cmap" role="img" aria-label="Mapa de antecámara"><rect x="1" y="1" width="354" height="118" rx="12" fill="#fff" stroke="rgba(20,22,24,.14)"/>`;
+    s += `<text x="16" y="22" class="t">ANTECÁMARA</text>`;
+    for (let i = 1; i <= 12; i++) { const x = 16 + (i - 1) * 27.5, on = i === n; s += `<rect x="${x}" y="34" width="22" height="34" rx="3" fill="${on ? '#141618' : '#e6e7e9'}"/><text x="${x + 11}" y="82" text-anchor="middle" class="t">${i}</text>`; }
+    const x = 16 + (n - 1) * 27.5 + 11; s += `<path d="M16 104 L${x} 104 L${x} 72" fill="none" stroke="#141618" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="104" r="5" fill="#fff" stroke="#141618" stroke-width="2"/><text x="26" y="100" class="t2">Andén</text>`;
+    return s + '</svg>';
+  }
+  const q = parseLoc(code); const W = 356, H = 196, X0 = 40, X1 = W - 10, top = 26, band = (H - top - 28) / Math.max(2, RC[q.c].pas.length), rowH = 8, cw = (X1 - X0) / (RC[q.c].pos / 2);
+  let s = `<svg viewBox="0 0 ${W} ${H}" class="cmap" role="img" aria-label="Ruta a ${ESC(code)}"><rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="12" fill="#fff" stroke="rgba(20,22,24,.14)"/>`;
+  s += `<text x="${X0}" y="17" class="t">CÁMARA ${q.c}</text><text x="${X1}" y="17" text-anchor="end" class="t">pos. 1 → ${RC[q.c].pos}</text>`;
+  RC[q.c].pas.forEach((p, i) => { const y = top + i * band; s += `<rect x="${X0}" y="${y}" width="${X1 - X0}" height="${rowH}" rx="2" fill="#e6e7e9"/><rect x="${X0}" y="${y + band - rowH - 6}" width="${X1 - X0}" height="${rowH}" rx="2" fill="#e6e7e9"/><text x="${X0 - 12}" y="${y + band / 2}" text-anchor="end" class="${p === q.p ? 't2' : 't'}">${p}</text>`; });
+  const i = PAS.indexOf(q.p), y = top + i * band, laneY = y + (band - 6) / 2 + 1, col = Math.ceil(q.pos / 2), cx = X0 + (col - 0.5) * cw, odd = q.pos % 2 === 1, ry = odd ? y : y + band - rowH - 6;
+  const sx = X0 - 5, sy = H - 14;
+  s += `<rect x="${cx - cw / 2 - 1}" y="${ry - 1}" width="${cw + 2}" height="${rowH + 2}" rx="1.5" fill="#141618"/>`;
+  s += `<path d="M${sx} ${sy} L${sx} ${laneY} L${cx} ${laneY} L${cx} ${odd ? ry + rowH : ry}" fill="none" stroke="#141618" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+  s += `<circle cx="${sx}" cy="${sy}" r="4.5" fill="#fff" stroke="#141618" stroke-width="2"/><text x="${sx + 9}" y="${sy + 3.5}" class="t2">Entrada desde antecámara</text>`;
+  const lx = Math.min(Math.max(cx, 40), W - 40), ly = odd ? laneY + 8 : laneY - 26;
+  s += `<rect x="${lx - 26}" y="${ly}" width="52" height="18" rx="9" fill="#141618"/><text x="${lx}" y="${ly + 12.5}" text-anchor="middle" class="pin">${q.p}${q.pos}·N${q.lvl}</text>`;
+  return s + '</svg>';
+}
+function levels(code) { const q = parseLoc(code); if (!q) return ''; return `<div class="lv" aria-label="Nivel ${q.lvl}">${LVS(q.c).map(l => `<i class="${l === q.lvl ? 'on' : ''}"></i>`).join('')}<span>Nivel ${q.lvl}</span></div>`; }
+function logCard(area, title) {
+  const items = S.log.filter(e => area.includes(e.area)).slice(0, 14);
+  return `<section class="card"><div class="panel-h"><b class="h2">${title || 'Queda registrado'}</b><p>Cada escaneo, con hora</p></div>
+  <div class="log">${items.length ? items.map(e => `<div class="le ${e.kind}"><time>${HM(e.t)}</time><div><b>${ESC(e.who)}</b> <span>${ESC(e.txt)}</span></div></div>`).join('') : '<div class="empty">Todavía no hay movimientos en esta pantalla.</div>'}</div></section>`;
+}
+function phone(head, sub, body, foot, sheet, offline) {
+  const m = body.match(/<div class="perr"[^]*?<\/p><\/div>/); if (m) { body = body.replace(m[0], ''); body = body.replace(/(<div class="psteps">[^]*?<\/div><\/div>)/, '$1' + m[0]); }
+  return `<div class="phone" id="phone"><div class="screen"><div class="notch"></div>
+    <div class="sbar"><span>${HM(S.clock)}</span><span>${offline ? '<span class="nosig">Sin señal</span>' : '4G'} <i class="bat"></i></span></div>
+    <div class="ph-h"><b>${head}</b><span>${sub || ''}</span></div>
+    ${offline ? '<div class="offbar" id="offbar"><i></i>Sin señal — validación local</div>' : ''}
+    <div class="pbody">${body}</div>${foot ? `<div class="pfoot">${foot}</div>` : ''}${sheet || ''}</div></div>`;
+}
+function typeBox(phaseAct, val, ph) { return `<div class="ptype"><input id="typeIn" data-in="typed" data-enter="${phaseAct}" value="${ESC(val)}" placeholder="${ph}" autocomplete="off" spellcheck="false" aria-label="Escribir código"><button class="btn primary" data-a="${phaseAct}" data-v="__typed">Validar</button></div>`; }
+
+/* ============ top bar ============ */
+const VIEWS = [['arribo', 'Arribo'], ['acomodo', 'Acomodo'], ['surtido', 'Surtido'], ['conteo', 'Conteo cíclico'], ['torre', 'Torre de control']];
+function topbar() {
+  const f2 = S.view === 'fase2', tz = S.view === 'traza';
+  return `<header class="topbar"><div class="brand"><b>Austral OS</b><span>${tz ? 'Fases siguientes · Trazabilidad · propuesta' : f2 ? 'Fase 2 · A9 y facturas · propuesta' : 'Fase 1 · El piso del almacén'}</span></div>
+  <nav class="topnav" aria-label="Pantallas">${VIEWS.map(([k, t], i) => `<button class="${S.view === k ? 'on' : ''}" data-a="go" data-v="${k}" id="nav-${k}"><i>${i + 1}</i>${t}</button>`).join('')}<button class="f2 ${f2 ? 'on' : ''}" data-a="go" data-v="fase2" id="nav-fase2"><i>F2</i>A9 y facturas</button><button class="f2 ${tz ? 'on' : ''}" data-a="traza" id="nav-traza" style="margin-left:0"><i>F3</i>Trazabilidad</button></nav>
+  <div class="tactions"><button class="btn ghost sm" data-a="reset" id="btnReset">Reiniciar</button><button class="btn primary sm" data-a="tourStart" id="btnTour">${ICON.play} Recorrido guiado</button></div></header>`;
+}
+
+/* ============ 1 · ARRIBO ============ */
+function vArribo() {
+  const a = S.arr, exp = 1029, cnt = +a.counted, diff = a.registered ? cnt - exp : 0;
+  const sn = (state, n) => `<span class="sn ${state}">${state === 'done' ? ICON.check : n}</span>`;
+  const total = a.registered ? (cnt || exp) : exp, boxes = [labelBox(1), labelBox(2), labelBox(total)];
+  const smp = a.sample, sp = SAMPLE_PAL.map(n => String(n).padStart(2, '0'));
+  const chips = `<div class="smp" id="smpChips">${SAMPLE_BOX.map((n, i) => `<span class="${i < smp ? 'on' : ''}" title="${boxCode(ARR, n)}">T${sp[i]} · ${String(n).padStart(4, '0')}</span>`).join('')}</div>`;
+  const sampleBody = smp < SAMPLE_N ? `<div class="row-btns"><button class="btn ${a.printed ? 'primary' : ''}" data-a="sampleScan" id="btnSample" ${a.printed ? '' : 'disabled'}>Escanear caja de muestra ${smp + 1} de ${SAMPLE_N}</button>${smp ? `<button class="btn" data-a="sampleAll" id="btnSampleAll">Escanear las ${SAMPLE_N - smp} que faltan</button>` : ''}</div>${a.printed ? `${chips}<p class="foot-note">El sistema propone una caja por tarima, al azar, hasta ${SAMPLE_N}. Calidad escanea cada caja que se lleva y queda anotado de qué tarima salió.</p>` : '<p class="foot-note">Primero se imprimen las etiquetas.</p>'}`
+    : a.sampleRes ? `<div class="result good"><div><b>Devueltas a su tarima</b><div class="s">Las ${SAMPLE_N} cajas regresaron a la tarima de la que salieron. Cerrado a las ${HM(a.sampleResT)}.</div></div></div>`
+    : `<div class="sent"><div class="ln"><span class="dot amber"></span><span>Apartadas a las <b>${HM(a.sampleT)}</b>: ${SAMPLE_N} cajas, una de cada tarima</span></div><div class="ln"><span class="dot amber"></span><span><b>Recordatorio:</b> estas ${SAMPLE_N} cajas son de Calidad. Cada una regresa a la misma tarima de la que salió.</span></div></div>${chips}<div class="row-btns" style="margin-top:10px"><button class="btn primary" data-a="sampleClose" data-v="devolver" id="btnSampleBack">Devolver cada caja a su tarima</button></div><p class="foot-note">Mientras estén fuera, esas ${SAMPLE_N} tarimas cuentan una caja menos. Calidad registra su revisión en su propia aplicación, con un folio por orden de compra.</p>`;
+  const sampleCard = `<section class="card step ${a.printed ? '' : 'locked'}" id="sampleStep"><div class="step-h">${sn(a.sampleRes ? 'done' : (a.printed ? '' : 'wait'), 4)}<div class="t"><b>Muestra de Calidad: una caja por tarima, hasta ${SAMPLE_N}</b><span>Rosa aparta ${SAMPLE_N} cajas para inspección</span></div>${a.sampleRes ? '<span class="tag green">Devueltas</span>' : (smp === SAMPLE_N ? '<span class="tag amber">Sin cerrar</span>' : (smp ? `<span class="tag amber">${smp} de ${SAMPLE_N}</span>` : ''))}</div><div class="step-b">${sampleBody}</div></section>`;
+  const qn = +a.qn || 0, lock = a.notified ? 'disabled' : '';
+  const respHint = { transportista: 'Por ejemplo, falló el frío del camión en ruta. El transportista tiene su registro de temperatura: se pide con el aviso.', proveedor: 'Por ejemplo, el producto ya venía dañado o incompleto desde origen.', investigar: 'Compras investiga si fue el proveedor o el transportista y lo deja anotado aquí.' }[a.qresp];
+  const discCard = a.registered && (diff || a.qOpen) ? `<section class="card step disc" id="discStep"><div class="step-h"><span class="sn" style="background:var(--red)">!</span><div class="t"><b>Diferencia en el arribo</b><span>Por cantidad o por calidad. Se resuelve aquí mismo, no por correo</span></div>${a.notified ? '<span class="tag grey">Avisada</span>' : '<span class="tag red">Sin avisar</span>'}</div>
+      <div class="explain">
+        <div class="ex"><span class="exn">1</span><div><b>Qué pasa</b><p>${diff ? `Por cantidad: llegaron ${N(cnt)} cajas y la prevalidación dice ${N(exp)}. ${diff < 0 ? 'Faltan' : 'Sobran'} ${N(Math.abs(diff))}.` : 'Por cantidad: lo contado cuadra con la prevalidación.'}</p>
+          <div class="qrow"><label class="field"><span class="label">Por calidad: cajas con daño</span><input class="inp" id="qIn" inputmode="numeric" data-in="qInput" value="${ESC(a.qn)}" placeholder="0" autocomplete="off" ${lock}></label>
+            <div><span class="label">Quién responde</span><div class="seg" id="respSeg">${Object.entries(RESP).map(([k, t]) => `<button class="${a.qresp === k ? 'on' : ''}" data-a="qResp" data-v="${k}" id="resp-${k}" ${lock}>${t}</button>`).join('')}</div></div></div>
+          <p style="margin-top:8px">${respHint}</p></div></div>
+        <div class="ex"><span class="exn">2</span><div><b>Por qué importa</b><p>Si no se corrige, Siconet arranca con cajas que no existen y el inventario ya no cuadra desde el arribo. Y sin dejar anotado quién responde, la reclamación se queda en correos y pláticas.</p></div></div>
+        <div class="ex"><span class="exn">3</span><div><b>Qué hacer</b><p>Un clic avisa a mesa de control y a compras con el arribo, la OC, la cantidad, el daño y quién responde ya escritos. Compras registra la diferencia en Siconet.</p>
+          ${a.notified ? `<div class="sent"><div class="ln"><span class="dot green"></span><span>Aviso enviado a las <b>${HM(a.notT)}</b> · mesa de control (Lucía) y compras${qn ? ` · ${N(qn)} cajas con daño` : ''} · responde: ${RESP[a.qresp].toLowerCase()}</span></div>${a.mcSeen ? `<div class="ln"><span class="dot green"></span><span><b>Compras lo recibió</b> y registra la diferencia de la OC 718204 en Siconet.</span></div>` : `<div class="ln"><span class="dot grey"></span><span>Esperando que compras lo abra…</span></div>`}</div>`
+          : `<div class="row-btns" style="margin-top:10px"><button class="btn primary" data-a="notify" id="btnNotify">Avisar a mesa de control y compras</button></div>`}
+        </div></div>
+      </div></section>` : '';
+  return `<div class="phead"><div><p class="eyebrow">Recibo · Miércoles 11 de noviembre · Turno 2</p><h1 class="title">Arribo 20417 · Manzana Golden bolsa</h1>
+    <div class="pills" style="margin-top:8px"><span class="pl">Transportista C · tráiler</span><span class="pl">Andén B</span><span class="pl">Llegó 14:10</span><span class="pl">Liberar antes de 16:10 (tráiler: 2 h)</span><span class="pl">Importado: se etiqueta en recibo</span></div></div>
+    ${who('Analista de recibo', 'Andrés')}</div>
+  <div class="grid2"><div class="col">
+    <section class="card step" id="prevalid"><div class="step-h">${sn('done', 1)}<div class="t"><b>Prevalidación de mesa de control</b><span>Lo que debe llegar, publicado en pantalla</span></div><span class="tag green">Validada</span></div>
+      <div class="step-b"><div class="vals">
+        <div><span class="label">Orden de compra (= lote)</span><b class="mono">718204</b></div>
+        <div><span class="label">SKU</span><b class="mono">MZA-GLD-BOL-C1-100</b></div>
+        <div><span class="label">Producto</span><b>Manzana Golden bolsa</b></div>
+        <div><span class="label">Cajas esperadas</span><b class="num">1,029</b></div>
+        <div><span class="label">Tarimas</span><b class="num">21</b></div>
+        <div><span class="label">F.E (kg por caja)</span><b class="num">18</b></div>
+      </div><p class="foot-note"><span class="dot green"></span>Publicada por Lucía, mesa de control, a las 13:55. Sin correo de por medio.</p></div></section>
+
+    <section class="card step" id="countStep"><div class="step-h">${sn(a.registered ? 'done' : '', 2)}<div class="t"><b>Conteo al bajar el camión</b><span>Recibo cuenta lo que realmente llegó</span></div>${a.registered ? (diff ? '<span class="tag red">Con diferencia</span>' : '<span class="tag green">Cuadra</span>') : '<span class="tag amber">Te toca</span>'}</div>
+      <div class="step-b">${!a.registered ? `<div class="countrow"><label class="field"><span class="label">Cajas contadas (21 tarimas bajadas)</span><input class="inp big" id="countIn" inputmode="numeric" data-in="countInput" data-enter="registerCount" value="${ESC(a.counted)}" placeholder="0" autocomplete="off"></label><div class="row-btns"><button class="btn primary lg" data-a="registerCount" id="btnCount">Registrar conteo</button></div></div>`
+        : diff ? `<div class="result bad"><div><b>${N(cnt)} de ${N(exp)} cajas</b><div class="s">${diff < 0 ? `Faltan ${N(-diff)}` : `Sobran ${N(diff)}`} · ${diff < 0 && -diff < 49 ? `la tarima 21 trae ${49 + diff} en vez de 49` : 'revisar tarimas'}</div></div><button class="lnk r" data-a="editCount">Corregir conteo</button></div>`
+        : `<div class="result good"><div><b>${N(cnt)} de ${N(exp)} cajas</b><div class="s">Todo lo prevalidado llegó.</div></div><span class="r" style="display:flex;gap:14px"><button class="lnk" data-a="qOpen" id="btnQOpen">Reportar daño de calidad</button><button class="lnk" data-a="editCount">Corregir conteo</button></span></div>`}</div></section>
+
+    ${discCard}
+
+    <section class="card step ${a.registered ? '' : 'locked'}" id="labelStep"><div class="step-h">${sn(a.printed ? 'done' : (a.registered ? '' : 'wait'), 3)}<div class="t"><b>Etiquetas por caja</b><span>Una etiqueta por caja; la OC va como lote. La tarima no lleva número propio</span></div>${a.printed ? `<span class="tag green">${N(cnt)} impresas</span>` : ''}</div>
+      <div class="step-b">${a.printed ? `<div class="labels">${boxes.map(label).join('')}</div><p class="foot-note">Se muestran las cajas 1, 2 y ${N(total)}. Al escanear las cajas de cada montón en el andén, el sistema arma las 21 tarimas: la tarima 1 son las cajas 0001–0049 y la tarima 21, las 0981–${String(total).padStart(4, '0')}. Ninguna etiqueta lleva el número de tarima.</p>`
+        : `<button class="btn ${a.registered ? 'primary' : ''}" data-a="printLabels" id="btnPrint" ${a.registered ? '' : 'disabled'}>Imprimir ${a.registered ? N(cnt) + ' ' : ''}etiquetas</button>${a.registered ? '' : '<p class="foot-note">Primero registra el conteo.</p>'}`}</div></section>
+
+    ${sampleCard}
+
+    <section class="card step ${a.printed ? '' : 'locked'}" id="deliverStep"><div class="step-h">${sn(a.delivered ? 'done' : (a.printed ? '' : 'wait'), 5)}<div class="t"><b>Entregar al almacén</b><span>Cada tarima entra a la cola de acomodo con su destino</span></div>${a.delivered ? '<span class="tag green">Entregado</span>' : ''}</div>
+      <div class="step-b">${a.delivered ? `<div class="result good"><div><b>21 tarimas en la cola de acomodo</b><div class="s">Primer destino: ${prettyLoc(putDest(0))}</div></div><button class="btn sm r" data-a="go" data-v="acomodo">Ver acomodo</button></div>`
+        : `<button class="btn ${a.printed ? 'primary' : ''}" data-a="deliver" id="btnDeliver" ${a.printed ? '' : 'disabled'}>Entregar 21 tarimas al almacén</button>`}<p class="foot-note">Destino sugerido: Cámara 3. ${COMPAT[3]}</p></div></section>
+  </div>
+  <aside class="col">
+    <section class="card"><div class="panel-h"><b class="h2">Arribos de hoy</b><p>4 de 5 posibles</p></div><div class="list">
+      <div class="item" id="arrUnk"><span class="dot red"></span><div class="t"><b>Sin aviso · andén C</b><span>Ninguna prevalidación lo anunciaba · marcado al escanear</span></div><span class="meta">02:14</span></div>
+      <div class="item"><span class="dot green"></span><div class="t"><b>20416 · Uva roja</b><span>1,140 cajas · recibido y acomodado</span></div><span class="meta">07:40</span></div>
+      <div class="item cur"><span class="dot amber"></span><div class="t"><b>20417 · Manzana Golden bolsa</b><span>1,029 cajas · en andén B</span></div><span class="meta">14:10</span></div>
+      <div class="item"><span class="dot grey"></span><div class="t"><b>20418 · Pera Anjou</b><span>864 cajas · programado</span></div><span class="meta">16:30</span></div>
+      <div class="item"><span class="dot grey"></span><div class="t"><b>20419 · Kiwi</b><span>1,320 cajas · programado</span></div><span class="meta">18:00</span></div>
+    </div></section>
+    <section class="card hoy"><h4>Hoy, sin el sistema</h4><ul><li>La prevalidación llega por correo.</li><li>La diferencia viaja por correo: recibo → mesa de control → compras.</li><li>Las ubicaciones se anotan a mano y se recapturan en Excel.</li></ul></section>
+    ${logCard(['arr'], 'Actividad del arribo')}
+  </aside></div>`;
+}
+
+/* ============ 2 · ACOMODO ============ */
+function vAcomodo() {
+  const P = S.put, total = tasksN(), done = P.placed.length;
+  const qitems = []; for (let k = Math.max(0, P.i - 1); k < Math.min(total, P.i + 5); k++) qitems.push(k);
+  const left = `<div class="side"><div class="phead"><p class="eyebrow">Almacén · Turno 2</p><h1 class="title sm">Acomodo dirigido</h1>${who('Montacarguista 2', 'Iván')}</div>
+    <section class="card queue" id="putQueue"><div class="panel-h"><b class="h2">Cola del turno</b><p>${S.arr.delivered ? `Arribo 20417 · ${done} de ${total}` : 'Sin entregar'}</p></div>
+      <div class="prog"><i style="width:${done / total * 100}%"></i></div>
+      ${S.arr.delivered ? qitems.map(k => { const p = putPallet(k), st = k < done ? 'ok' : (k === P.i ? 'now' : ''); return `<div class="qi ${st}"><span class="n">${k < done ? ICON.check : p.n}</span><span class="d">${p.id} · ${p.cajas} cajas</span><span class="qc">${shortLoc(putDest(k))}</span></div>`; }).join('') : '<div class="rule">Recibo todavía no entrega el arribo 20417.</div>'}
+    </section>
+    <section class="card rule"><b>Una tarea a la vez</b>La siguiente tarea solo aparece cuando el escaneo confirma la ubicación correcta. Cada paso queda con hora y con quién lo hizo.</section>
+    <section class="card rule" id="phonesCard"><b>Quién lleva el teléfono</b>Sugerencia para Frigo: empezar con 3 teléfonos, uno por jefe de turno, para arribos, conteos y dónde va cada tarima. Después, uno fijo en cada montacargas, porque el bloqueo de ubicación equivocada solo sirve donde se deja la tarima. En total, unos 7 equipos compartidos entre turnos.</section>
+    <section class="card rule"><b>Funciona sin señal</b>Dentro de las cámaras el Wi-Fi es débil. El teléfono guarda la lista de ubicaciones y valida ahí mismo; sincroniza al recuperar señal.</section>
+    <section class="card hoy"><h4>Hoy, sin el sistema</h4><ul><li>El montacarguista acomoda donde ve un hueco.</li><li>El error se descubre hasta que se surte.</li><li>La ubicación se escribe en papel y otro la recaptura.</li></ul></section></div>`;
+  const right = `<div class="side r">${logCard(['put'])}
+    <section class="demo"><h4>Controles del demo</h4><p>No son parte del producto: simulan lo que pasa en el piso.</p><div class="row-btns">
+      ${S.arr.delivered ? `<button class="btn sm" data-a="putWrong" id="demoWrong">Escaneo equivocado</button><button class="btn sm" data-a="putRest" id="demoRest" ${done >= total ? 'disabled' : ''}>Acomodar el resto de la cola</button>` : `<button class="btn sm" data-a="arrShortcut" id="demoArr">Recibir el arribo 20417</button>`}</div></section></div>`;
+  return `<div class="stage3">${left}<div class="phonecol">${putPhone()}</div>${right}</div>`;
+}
+function putPhone() {
+  const P = S.put;
+  if (!S.arr.delivered) return phone('Acomodo', DRIVER.split(' · ')[0], `<div class="pempty"><b>No hay tareas por ahora</b>Recibo todavía no entrega el arribo 20417. Cuando lo entregue, aquí aparece tu primera tarea.</div>`, '');
+  if (P.i >= tasksN()) return phone('Acomodo', 'Cola terminada', `<div class="pok"><div class="big">${ICON.check}</div><b>Cola terminada</b><p>${tasksN()} de ${tasksN()} tareas del arribo 20417 terminadas.</p></div>`, '');
+  const p = putPallet(P.i), dest = putDest(P.i), q = parseLoc(dest);
+  const why = dest === ZE ? 'Zona de espera: la tarima queda en antecámara hasta que la torre de control le asigne ubicación.' : COMPAT[q.c] + ' Libre y lo más cerca posible de la entrada.';
+  const steps = `<div class="psteps"><div class="${P.phase === 'pallet' ? 'on' : 'ok'}">1 · Toma la tarima</div><div class="${P.phase === 'route' ? 'on' : (P.phase === 'done' ? 'ok' : '')}">2 · Llévalo</div><div class="${P.phase === 'done' ? 'ok' : ''}">3 · Confirmado</div></div>`;
+  const sub = `Tarea ${P.i + 1} de ${tasksN()}`;
+  let body = steps, foot = '', sheet = '';
+  const reasonSheet = (title, text, buttons) => `<div class="sheet-bg"><div class="sheet"><b class="t">${title}</b><p>${text}</p>${buttons}<button class="pbtn soft" data-a="putSheet" data-v="">Cancelar</button></div></div>`;
+  if (P.phase === 'pallet') {
+    body += `<div class="pcard"><div class="pk">Toma esta tarima</div><div class="pid">${p.id}</div><div class="pdesc">${SKU[p.sku].d}</div><div class="pmeta"><span class="tag grey">Lote/OC ${p.lote}</span><span class="tag grey">${p.cajas} cajas</span><span class="tag grey">Andén B</span></div><div style="font-size:13.5px;color:var(--ink-2);margin-top:8px">Escanea cualquier caja de la tarima: el sistema sabe cuál es por el arribo.</div></div>
+      <div class="pcard"><div class="pk">Va a</div><div class="pdest" style="font-size:22px">${prettyLoc(dest)}</div><div class="pwhy">${why}</div></div>`;
+    if (P.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Esa caja no es de esta tarima</b><p>${ESC(P.err)}</p></div>`;
+    foot = `${P.showType ? typeBox('putScanPallet', P.typed, 'CJ-20417-…') : ''}<button class="pbtn" data-a="putScanPallet" id="pScan">${ICON.scan} Escanear una caja de la tarima</button><div class="plinks"><button data-a="putType">${P.showType ? 'Ocultar teclado' : 'Escribir código'}</button><button data-a="putSheet" data-v="label" id="pLabel">Etiqueta dañada</button><button data-a="putSheet" data-v="more" id="pMore">Otra opción</button></div>`;
+    if (P.sheet === 'label') sheet = reasonSheet('Etiqueta dañada', 'Si no se lee la etiqueta de esa caja, escanea otra de la misma tarima: todas tienen la suya. Si no se lee ninguna, escribe el código de una caja o pide que recibo la reimprima.', `<input class="inp big" id="labelIn" data-in="labelTyped" data-enter="putLabelOk" value="${ESC(P.labelTyped)}" placeholder="CJ-20417-…" autocomplete="off" style="font-family:var(--mono);text-transform:uppercase"><button class="pbtn" data-a="putLabelOk">Continuar con este código</button><button class="pbtn soft" data-a="putReprint" id="pReprint">Pedir reimpresión a recibo</button>`);
+  } else if (P.phase === 'route') {
+    const destTxt = dest === ZE ? 'Zona de espera<br>Antecámara' : `C${q.c} · Pasillo ${q.p}<br>Pos ${q.pos} · Nivel ${q.lvl}`;
+    body += `<div class="pcard" id="pDest"><div class="pdrow"><div class="pdest"><small>Llévalo a</small>${destTxt}</div>${levels(dest)}</div>${camSvg(dest)}
+      <div class="pmeta"><span class="pchip">${ICON.check} ${p.id}</span><span class="tag grey">≈ ${distM(dest)} m · ~${Math.max(1, Math.round(travelSec(dest) / 60))} min</span><span class="tag grey mono">${dest}</span></div><div class="pwhy">${why}</div></div>`;
+    if (P.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Ubicación equivocada</b><p>${ESC(P.err)}</p></div>`;
+    foot = `${P.showType ? typeBox('putScanLoc', P.typed, dest) : ''}<button class="pbtn" data-a="putScanLoc" id="pScan">${ICON.scan} Escanear ubicación</button><div class="plinks"><button data-a="putType">${P.showType ? 'Ocultar teclado' : 'Escribir código'}</button>${dest === ZE ? '' : '<button data-a="putSheet" data-v="full" id="pFull">Ubicación llena</button>'}<button data-a="putSheet" data-v="more" id="pMore">Otra opción</button></div>`;
+    if (P.sheet === 'full' && P.alt) { const qa = parseLoc(P.alt); sheet = reasonSheet(`${shortLoc(dest)} está llena`, `Alternativa en la misma zona: <b>${prettyLoc(P.alt)}</b>. Mismo grupo (${CAMD[qa.c].split(' · ').slice(1).join(' · ')}); nivel libre con capacidad para 1 tarima de ${p.cajas} cajas. Queda el motivo «Ubicación llena» y la torre de control revisa ${shortLoc(dest)}.`, `<button class="pbtn" data-a="putFull" id="pFullYes">Usar ${shortLoc(P.alt)}</button>`); }
+  } else {
+    const last = P.placed[P.placed.length - 1];
+    body += `<div class="pok" id="pOk"><div class="big">${ICON.check}</div><b>Acomodado</b><p>${last.id} en ${shortLoc(last.loc)}</p><p>${DUR(last.sec)} · registrado ${HM(last.t)}</p></div>
+      <div class="pcard"><div class="pk">Queda en el sistema</div><div style="font-size:14px">Ubicación, tarima, lote, cajas, hora y quién lo hizo. Nadie recaptura nada.</div></div>`;
+    foot = `<button class="pbtn" data-a="putNext" id="pNext">${P.i + 1 < tasksN() ? `Siguiente tarea (${P.i + 2} de ${tasksN()})` : 'Terminar cola'}</button>`;
+  }
+  if (P.sheet === 'more' && P.phase !== 'done') sheet = reasonSheet('Otra opción', 'Turno sin supervisor: eliges un motivo, queda registrado y se revisa mañana en la torre de control.',
+    `<div class="reasons">${REASONS.map(r => `<button class="${P.reason === r ? 'on' : ''}" data-a="putReason" data-v="${r}">${r}</button>`).join('')}</div>
+     <div class="moreacts"><button class="pbtn soft" data-a="putSkip" id="pSkip" ${P.reason ? '' : 'disabled'}>Saltar: va al final de la cola</button><button class="pbtn soft" data-a="putSplit" id="pSplit" ${P.reason ? '' : 'disabled'}>Dividir la tarima en dos</button><button class="pbtn soft" data-a="putHold" id="pHold" ${P.reason ? '' : 'disabled'}>Mandar a zona de espera</button></div>`);
+  return phone('Acomodo', sub, body, foot, sheet, P.phase === 'route');
+}
+/* ============ 3 · SURTIDO ============ */
+const SUR_PEOPLE = { 1: ['Calidad', 'Rosa'], 2: ['Capturista de almacén', 'Carlos'], 3: ['Supervisor de turno', 'Rodrigo'], 4: ['Montacarguista 2', 'Iván'], 5: ['Supervisor de turno', 'Rodrigo'] };
+function surCur() { const U = S.sur; return U.stage >= 5 ? 7 : U.chk === 'aud' ? 6 : U.chk === 'emb' ? 5 : U.stage; }
+function vSurtido() {
+  const st = S.sur.stage, chk = S.sur.chk, cur = surCur();
+  const [r, n] = chk === 'emb' ? ['Embarques', 'Sergio'] : chk === 'aud' ? ['Auditoría', 'Elena'] : SUR_PEOPLE[st];
+  const stops = [['Ventas', 'Manda el A9', 'Ventas'], ['Calidad', 'Elige OC y cómo sale', 'Rosa'], ['Capturista', 'Propone el surtido', 'Carlos'], ['Supervisor', 'Aprueba', 'Rodrigo'], ['Montacarguista', 'Surte posición por posición', 'Iván'], ['Embarques', 'Verifica contra el A9', 'Sergio'], ['Auditoría', 'Libera la salida', 'Elena'], ['Listo', 'Cargado', '']];
+  const route = `<section class="card route" id="surRoute"><div class="bar"></div><div class="fill" style="width:${cur / 7 * 87.5}%"></div>${stops.map((s, i) => `<div class="rs ${i < cur || cur === 7 ? 'done' : (i === cur ? 'now' : '')}"><i></i><b>${s[0]}</b><span>${i === 0 ? 'A9 a las 13:05' : (i === cur && cur < 7 ? s[1] : (s[2] ? 'Con ' + s[2] : ''))}</span></div>`).join('')}</section>`;
+  const head = `<div class="phead"><div><p class="eyebrow">Salida · A9 3471 · Walmart, CEDIS Norte · cita jueves 12 nov, 05:30</p><h1 class="title">Surtido del A9 3471</h1></div>${who(r, n)}</div>`;
+  if (st === 4 && !chk) return surPickStage();
+  let body = '';
+  if (st === 1) body = surQC(); else if (st === 2) body = surCap(); else if (st === 3) body = surSup(); else if (st === 4) body = surCheck(); else body = surDone();
+  return head + route + `<div class="grid2" style="margin-top:16px"><div class="col">${body}</div><aside class="col">
+    <section class="card hoy"><h4>Hoy, sin el sistema</h4><ul><li>El A9 es un Excel que viaja por correo.</li><li>El capturista arma la orden de salida a mano desde el Excel de ubicaciones.</li><li>Nadie revisa la orden antes de que llegue al montacarguista.</li><li>Los sobrantes se anotan a mano en «nueva ubicación».</li><li>La salida se revisa a mano en Embarques y Auditoría la vuelve a contar, con papel y pluma.</li></ul></section>
+    ${chk === 'emb' ? `<section class="demo"><h4>Controles del demo</h4><p>No son parte del producto.</p><div class="row-btns"><button class="btn sm" data-a="embWrong" id="demoEmbWrong">Escanear una tarima que el A9 no pide</button></div></section>` : ''}
+    ${logCard(['sur'], 'Actividad del A9')}</aside></div>`;
+}
+function surCheck() {
+  const rows = pickList(), U = S.sur, emb = U.chk === 'emb', n = emb ? U.chkScan : rows.length, tot = rows.reduce((a, r) => a + r.surtir, 0);
+  const list = `<div class="list">${rows.map((r, i) => `<div class="item"><span class="dot ${i < n ? 'green' : 'grey'}"></span><div class="t"><b>${r.surtir} cajas · ${SKU[r.sku].d}</b><span>OC ${r.lote} · línea ${r.line === 'L1' ? 1 : 2} del A9 · ${r.mode === 'seleccion' ? 'pasó por selección' : 'original'} · salió de ${shortLoc(r.loc)}</span></div><span class="meta">${i < n ? 'Coincide con el A9' : 'Sin escanear'}</span></div>`).join('')}</div>`;
+  if (emb) return `<section class="card" id="embCard"><div class="panel-h"><b class="h2">Embarques verifica la salida</b><p>${n} de ${rows.length} tarimas</p></div>
+    <p class="sic-note">Embarques escanea una caja de cada tarima que llegó al andén. El sistema la compara con el A9: producto, orden de compra y cajas. Ya no se cuenta a mano.</p>
+    ${list}
+    ${U.chkErr ? `<div class="banner" id="embErr" style="margin:12px 18px 0"><div><b>Esa tarima no sale</b><br>${ESC(U.chkErr)}</div></div>` : ''}
+    <div class="pad" style="border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn ${n < rows.length ? 'primary' : ''}" data-a="embScan" id="btnEmbScan" ${n < rows.length ? '' : 'disabled'}>${n < rows.length ? `Escanear tarima ${n + 1} de ${rows.length}` : 'Tarimas escaneadas'}</button><button class="btn ${n < rows.length ? '' : 'primary'}" data-a="embOk" id="btnEmbOk" ${n < rows.length ? 'disabled' : ''}>Pasar a Auditoría</button><span class="muted" style="font-size:13px">El camión no se carga hasta que Auditoría libere.</span></div></section>`;
+  return `<section class="card" id="audCard"><div class="panel-h"><b class="h2">Auditoría libera la salida</b><p>Verificado por Sergio, ${HM(U.embT)}</p></div>
+    <p class="sic-note">Auditoría ya no vuelve a contar con papel y pluma: ve lo que Embarques escaneó, contra el A9, y libera.</p>
+    ${list}
+    <div class="checks" style="padding-top:14px">
+      <div>${ICON.check}<span>Total ${tot} cajas = lo que pide el A9 3471.</span></div>
+      <div>${ICON.check}<span>Cada tarima sale con la OC que eligió Calidad.</span></div>
+      <div>${ICON.check}<span>Ninguna tarima fuera del A9 sale.</span></div></div>
+    <div class="pad" style="border-top:1px solid var(--line)"><div class="row-btns"><button class="btn primary" data-a="audOk" id="btnAudOk">Liberar la salida y cargar el camión</button></div></div></section>`;
+}
+function a9Table() {
+  return `<div class="tblwrap"><table class="tbl"><thead><tr><th>Línea</th><th>Producto</th><th class="r">Cajas</th><th>OC sugerida por ventas</th></tr></thead><tbody>
+    <tr><td>1</td><td>Uva verde sin semilla<br><span class="muted mono">UVA-VER-CLM-SS-018</span></td><td class="r">300</td><td class="m">718311</td></tr>
+    <tr><td>2</td><td>Manzana Red Delicious bolsa<br><span class="muted mono">MZA-RED-BOL-C1-088</span></td><td class="r">120</td><td class="m">717962</td></tr></tbody></table></div>`;
+}
+function surQC() {
+  const q = S.sur.qc; const ready = q.L1.oc && q.L1.mode && q.L2.oc && q.L2.mode;
+  const line = (k, title, cajas) => `<div class="line-card" id="qc-${k}"><div class="lc-h"><b>Línea ${k === 'L1' ? 1 : 2} · ${title} · ${cajas} cajas</b>${q[k].oc && q[k].mode ? '<span class="tag green">Decidida</span>' : '<span class="tag amber">Por decidir</span>'}</div>
+    <div class="opts">${OCS[k].map(o => `<button class="opt ${q[k].oc === o.oc ? 'on' : ''}" data-a="qcOc" data-v="${k}|${o.oc}" ${o.dis ? 'disabled' : ''} id="opt-${o.oc}"><span class="radio"></span><span class="t"><b>OC ${o.oc} ${o.sug ? '<span class="tag grey">Sugerida por ventas</span>' : ''}</b><small>Llegó ${o.arr}${o.days ? ` (hace ${o.days} días)` : ''} · ${o.cond}</small><small>${o.avail ? `${o.avail} cajas en ${o.where}` : o.where}</small></span></button>`).join('')}</div>
+    <div class="modes"><span>Cómo sale:</span><div class="seg"><button class="${q[k].mode === 'original' ? 'on' : ''}" data-a="qcMode" data-v="${k}|original" id="mode-${k}-o">Original</button><button class="${q[k].mode === 'seleccion' ? 'on' : ''}" data-a="qcMode" data-v="${k}|seleccion" id="mode-${k}-s">Selección</button></div><span>${q[k].mode === 'seleccion' ? 'Pasa a producción a revisarse antes de embarcar.' : q[k].mode === 'original' ? 'Sale como está almacenado.' : ''}</span></div></div>`;
+  return `<section class="card"><div class="panel-h"><b class="h2">Lo que pidió Ventas</b><p>Llegó a las 13:05</p></div>${a9Table()}</section>
+  <section class="card" id="qcCard"><div class="panel-h"><b class="h2">Decisión de calidad</b><p>Qué OC sale y cómo</p></div>
+    ${line('L1', 'Uva verde sin semilla', 300)}${line('L2', 'Manzana Red Delicious bolsa', 120)}
+    <div class="pad" style="border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn primary" data-a="qcSend" id="btnQc" ${ready ? '' : 'disabled'}>Enviar instrucción al almacén</button><span class="muted" style="font-size:13px">${ready ? 'El capturista recibe la instrucción con la OC ya elegida.' : 'Elige la OC y cómo sale en cada línea.'}</span></div></section>`;
+}
+function odsTable(rows, opts) {
+  opts = opts || {}; const tot = rows.reduce((a, r) => a + r.surtir, 0);
+  return `<div class="tblwrap"><table class="tbl" id="odsTable"><thead><tr><th>Ubicación</th><th>SKU</th><th>Lote</th><th class="r">Cajas</th><th class="r">Surtir</th><th class="r">Sobran</th><th>Nueva ubicación</th><th>Observaciones</th></tr></thead><tbody>
+  ${rows.map((r, i) => `<tr class="${opts.doneUpTo > i ? 'ok' : ''}"><td class="m">${isAnt(r.loc) ? 'Antecámara 4' : r.loc.replace('-', ' · N')}</td><td class="m">${r.sku}</td><td class="m">${r.lote}</td><td class="r">${r.cajas}</td><td class="r"><b>${r.surtir}</b></td><td class="r">${r.sobran || 0}</td><td class="m">${r.sobran ? (opts.left && opts.left[i] ? opts.left[i].replace('-', ' · N') : '<span class="muted" style="font-family:var(--sans)">Se asigna al escanear</span>') : '—'}</td><td>${r.mode === 'seleccion' ? 'Selección' : 'Original'}</td></tr>`).join('')}
+  <tr class="sum"><td colspan="4">Total</td><td class="r">${tot}</td><td colspan="3"></td></tr></tbody></table></div>`;
+}
+function surCap() {
+  const rows = pickList(), ret = S.sur.returned;
+  return `${ret ? `<div class="banner" id="retBanner"><div><b>Rodrigo lo regresó a las ${HM(ret.t)}</b><br>«${ESC(ret.text)}»</div></div>` : ''}
+  <section class="card" id="capCard"><div class="panel-h"><b class="h2">Propuesta de surtido · ODS 3471</b><p>Armada desde las ubicaciones reales</p></div>
+    <p class="sic-note">El sistema toma la OC que eligió calidad, de lo más antiguo a lo más nuevo, y ordena las paradas por la ruta más corta.</p>
+    ${odsTable(rows)}
+    <div class="pad" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><button class="btn primary" data-a="capSend" id="btnCap">${ret ? 'Corregir y reenviar al supervisor' : 'Enviar al supervisor'}</button><span class="muted" style="font-size:13px">No llega al montacarguista hasta que el supervisor lo apruebe.</span></div></section>`;
+}
+function surSup() {
+  const rows = pickList(), q = S.sur.qc;
+  return `<section class="card" id="supCard"><div class="panel-h"><b class="h2">Revisar antes de mandar al piso</b><p>Propuesta de Carlos, ${HM(S.sur.capT || S.clock)}</p></div>
+    ${odsTable(rows)}
+    <div class="checks" style="padding-top:14px">
+      <div>${ICON.check}<span>Las OC coinciden con la instrucción de calidad: línea 1 OC ${q.L1.oc} (${q.L1.mode === 'seleccion' ? 'selección' : 'original'}), línea 2 OC ${q.L2.oc} (${q.L2.mode === 'seleccion' ? 'selección' : 'original'}).</span></div>
+      <div>${ICON.check}<span>Cada ubicación tiene la tarima que dice, según su último escaneo.</span></div>
+      <div>${ICON.check}<span>Total ${rows.reduce((a, r) => a + r.surtir, 0)} cajas = lo que pide el A9.</span></div></div>
+    <div class="pad" style="border-top:1px solid var(--line)">${S.sur.retOpen ? `<label class="field"><span class="label">Qué debe corregir Carlos</span><textarea class="inp" id="retIn" rows="2" data-in="retText" placeholder="Ej. toma primero la tarima de antecámara">${ESC(S.sur.retText)}</textarea></label>
+      <div class="row-btns" style="margin-top:10px"><button class="btn primary" data-a="supReturn" id="btnRetSend">Regresar con este comentario</button><button class="btn" data-a="supRetCancel">Cancelar</button></div>`
+      : `<div class="row-btns"><button class="btn primary" data-a="supApprove" id="btnApprove">Aprobar y mandar al montacarguista</button><button class="btn" data-a="supRetOpen" id="btnRet">Regresar al capturista</button></div>`}</div></section>`;
+}
+function surPickStage() {
+  const rows = pickList(), K = S.sur.pk;
+  const left = `<div class="side"><div class="phead"><p class="eyebrow">Salida · A9 3471 · Walmart, CEDIS Norte</p><h1 class="title sm">Surtido del A9 3471</h1>${who('Montacarguista 2', 'Iván')}</div>
+    <section class="card rule" style="padding:12px 18px"><b>Paso 5 de 8</b>Calidad eligió la OC, Carlos propuso, Rodrigo aprobó. Ahora surte el montacarguista. Después verifican Embarques y Auditoría.</section>
+    <section class="card queue" id="pickList"><div class="panel-h"><b class="h2">ODS 3471 · paradas</b><p>${Math.min(K.i, rows.length)} de ${rows.length}</p></div>
+    <div class="prog"><i style="width:${Math.min(K.i, rows.length) / rows.length * 100}%"></i></div>
+    ${rows.map((r, i) => `<div class="qi ${i < K.i ? 'ok' : (i === K.i ? 'now' : '')}"><span class="n">${i < K.i ? ICON.check : i + 1}</span><span class="d">Surtir ${r.surtir}${r.sobran ? ` · sobran ${r.sobran}` : ''}</span><span class="qc">${shortLoc(r.loc)}</span></div>`).join('')}</section>
+    <section class="card rule"><b>Posición por posición</b>El montacarguista no busca el producto en la cámara: va a la posición, escanea, toma lo que dice y sigue.</section></div>`;
+  const right = `<div class="side r">${logCard(['sur'])}<section class="demo"><h4>Controles del demo</h4><p>No son parte del producto.</p><div class="row-btns"><button class="btn sm" data-a="pkWrong" id="demoPkWrong">Escaneo equivocado</button></div></section></div>`;
+  return `<div class="stage3">${left}<div class="phonecol">${pickPhone()}</div>${right}</div>`;
+}
+function pickPhone() {
+  const rows = pickList(), K = S.sur.pk;
+  if (K.i >= rows.length) {
+    const body = `<div class="pok"><div class="big">${ICON.check}</div><b>Surtido completo</b><p>${rows.reduce((a, r) => a + r.surtir, 0)} de ${rows.reduce((a, r) => a + r.surtir, 0)} cajas</p></div>
+      <div class="pcard"><div class="pk">Entrega</div><div style="font-size:15px;font-weight:600">Línea 1 → ${S.sur.qc.L1.mode === 'seleccion' ? 'Producción · andén P1' : 'Embarques · andén E3'}</div><div style="font-size:15px;font-weight:600">Línea 2 → ${S.sur.qc.L2.mode === 'seleccion' ? 'Producción · andén P1' : 'Embarques · andén E3'}</div></div>`;
+    return phone('Surtido', 'ODS 3471', body, `<button class="pbtn green" data-a="pkDeliver" id="pkDeliver">Entregado en Embarques</button>`);
+  }
+  const r = rows[K.i], sub = `Parada ${K.i + 1} de ${rows.length}`;
+  const steps = `<div class="psteps"><div class="${K.phase === 'loc' ? 'on' : 'ok'}">1 · Ubicación</div><div class="${K.phase === 'pal' ? 'on' : (K.phase === 'loc' ? '' : 'ok')}">2 · Caja</div><div class="${K.phase === 'left' ? 'on' : ''}">3 · ${r.sobran ? 'Sobrantes' : 'Tomar'}</div></div>`;
+  let body = steps, foot = '';
+  const destCard = code => { const q = parseLoc(code); return `<div class="pcard" id="pkDest"><div class="pdrow"><div class="pdest"><small>Ve a</small>${isAnt(code) ? 'Antecámara<br>Lugar ' + (+code.slice(4)) : `C${q.c} · Pasillo ${q.p}<br>Pos ${q.pos} · Nivel ${q.lvl}`}</div>${levels(code)}</div>${camSvg(code)}</div>`; };
+  if (K.phase === 'loc') {
+    body += destCard(r.loc) + `<div class="pcard"><div class="pk">Vas a tomar</div><div class="pdesc">${r.surtir} cajas · ${SKU[r.sku].d}</div><div class="pmeta"><span class="tag grey">OC ${r.lote}</span>${r.sobran ? `<span class="tag amber">Sobran ${r.sobran}</span>` : '<span class="tag grey">Tarima completa</span>'}</div></div>`;
+    if (K.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Ubicación equivocada</b><p>${ESC(K.err)}</p></div>`;
+    foot = `${K.showType ? typeBox('pkScanLoc', K.typed, r.loc) : ''}<button class="pbtn" data-a="pkScanLoc" id="pScan">${ICON.scan} Escanear ubicación</button><div class="plinks"><button data-a="pkType">${K.showType ? 'Ocultar teclado' : 'Escribir código'}</button></div>`;
+  } else if (K.phase === 'pal') {
+    body += `<div class="pcard"><div class="pk">Escanea una caja de la tarima de ${shortLoc(r.loc)}</div><div class="pid">Tarima de ${shortLoc(r.loc)}</div><div class="pdesc">${SKU[r.sku].d}</div><div class="pmeta"><span class="pchip">${ICON.check} Ubicación correcta</span><span class="tag grey">OC ${r.lote}</span></div></div>
+      <div class="pcard"><div class="pk">Toma</div><div class="pdest">${r.surtir} cajas</div>${r.sobran ? `<div style="font-size:14px;color:var(--ink-2);margin-top:4px">De ${r.cajas}. Quedan ${r.sobran} en la tarima.</div>` : '<div style="font-size:14px;color:var(--ink-2);margin-top:4px">Tarima completa.</div>'}</div>`;
+    if (K.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Esa caja no es de la tarima</b><p>${ESC(K.err)}</p></div>`;
+    foot = `${K.showType ? typeBox('pkScanPal', K.typed, r.box) : ''}<button class="pbtn" data-a="pkScanPal" id="pScan">${ICON.scan} Escanear una caja y tomar ${r.surtir}</button><div class="plinks"><button data-a="pkType">${K.showType ? 'Ocultar teclado' : 'Escribir código'}</button></div>`;
+  } else {
+    const sug = nearestFree(r.loc.startsWith('ANT') ? '2A20-3' : r.loc, []);
+    body += `<div class="pcard" id="pkLeft"><div class="pk">Quedaron ${r.sobran} cajas en la tarima. Déjalas en:</div><div class="pdest" style="font-size:22px">${prettyLoc(sug)}</div>${camSvg(sug)}</div>
+      <div class="pwhy" style="border:0;padding:0;margin:0 4px">Libre más cercana, misma cámara y mismo grupo (${CAMD[parseLoc(sug).c].split(' · ').slice(1, 2).join('')}). Sirve otra libre de la zona: lo que escanees queda como nueva ubicación. El sistema ya sabe cuáles son las cajas que sobran; no hace falta escanearlas una por una.</div>`;
+    if (K.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Esa posición no está libre</b><p>${ESC(K.err)}</p></div>`;
+    foot = `${K.showType ? typeBox('pkLeft', K.typed, sug) : ''}<button class="pbtn" data-a="pkLeft" id="pScan">${ICON.scan} Escanear nueva ubicación</button><div class="plinks"><button data-a="pkType">${K.showType ? 'Ocultar teclado' : 'Escribir código'}</button></div>`;
+  }
+  return phone('Surtido', sub, body, foot, '', true);
+}
+function surDone() {
+  const rows = pickList(), tot = rows.reduce((a, r) => a + r.surtir, 0), sic = sicRows().filter(r => r.ref.startsWith('A9 3471'));
+  return `<section class="card" id="surDone"><div class="panel-h"><b class="h2">Salida liberada</b><p>Embarques ${HM(S.sur.embT)} · Auditoría ${HM(S.sur.tEnd)}</p></div>
+    <div class="done-stats"><div><span class="label">Cajas</span><b>${tot} de ${tot}</b></div><div><span class="label">Fill rate</span><b>100%</b></div><div><span class="label">Paradas</span><b>${rows.length}</b></div><div><span class="label">Búsquedas</span><b>0</b></div><div><span class="label">Tiempo</span><b>${Math.round((S.sur.tEnd - S.sur.t0))} min</b></div></div>
+    ${odsTable(rows, { doneUpTo: rows.length, left: S.sur.pk.left })}</section>
+  <section class="card"><div class="panel-h"><b class="h2">Para Siconet</b><p>Armado desde los escaneos</p></div><div class="list">${sic.map(r => `<div class="item"><span class="dot green"></span><div class="t"><b>${r.from} → ${r.to}</b><span>${r.ref} · OC ${r.oc} · ${N(r.cajas)} cajas · ${N(r.cajas * SKU[r.sku].fe)} kg</span></div></div>`).join('')}</div>
+    <p class="sic-note">El movimiento de sobrantes se queda dentro de la cámara: cambia la ubicación, no el almacén de Siconet.</p>
+    <div class="pad" style="padding-top:0"><div class="row-btns"><button class="btn primary" data-a="traza" id="btnToTraza">Seguir el camión hasta el cliente</button><button class="btn" data-a="go" data-v="torre" id="btnToTorre">Ver en la torre de control</button></div></div></section>`;
+}
+
+/* ============ 4 · TORRE ============ */
+function cellClass(base) {
+  let n = 0, cls = '', flag = ''; const b = /^([123])([A-D])(\d+)$/.exec(base);
+  for (const c of (b ? slotCodes(+b[1], b[2], +b[3]) : [])) { if (LOC[c]) n++; if (S.flags[c] === 'red') flag = 'rd'; else if (S.flags[c] === 'amber' && flag !== 'rd') flag = 'am'; if (S.moved[c] && !cls) cls = ' nw'; }
+  return (flag || (n ? 'e' + Math.max(1, Math.round(n * 5 / (RC[+b[1]].lv * RC[+b[1]].deep))) : '')) + cls + (S.torre.sel === base ? ' sel' : ''); // más oscuro = más tarimas en la columna
+}
+/* Plano 2D del almacén, en metros, visto desde arriba y apaisado: la entrada a la izquierda, las cámaras hacia la derecha. Mismas medidas que el almacén 3D (combinado/jp-layout.ts): la nave termina a la izquierda junto a la Cámara 1,
+   la Cámara 2 queda en la esquina derecha y la Cámara 3 más a la derecha, por un pasillo corto al fondo del muro de andenes;
+   las tres puertas están en la misma línea de muro. */
+const PLAN = { hall: [-2.5, 17, 34], room: { 1: [-2.2, 7.0], 2: [10, 19.2], 3: [22.2, 31.4] }, door: { 1: 2.4, 2: 14.6, 3: 26.8 }, pasillo: [31.7, 6],
+  front: 4, bay: 1.35, rackD: 2.4, side: 0.6, docks: [['C', 7, 12, 'Camión'], ['B', 12, 24, 'Arribo 20417'], ['A', 24, 34, 'A9 3471']], dockX0: 10.4,
+  strip: [-2.5, 0, 17, 7], park: [[-1.2, 2.6], [-1.2, 5.6]], emb: [5.2, 24, 10.4, 34], work: [-2.5, 7, 5.0, 26],
+  antX: [6.1, 9.5], antZ: [8.5, 10.5, 12.5, 14.5, 16.5, 18.5] }; // medidas del croquis de JP (12 nov); antecámara: 2 columnas × 6 filas, con carril en medio
+function roomStats(c) { let occ = 0, tot = 0; for (const p of RC[c].pas) for (let pos = 1; pos <= RC[c].pos; pos++) for (const code of slotCodes(c, p, pos)) { tot++; if (LOC[code]) occ++; } return { occ, tot, pct: Math.round(occ / tot * 100) }; }
+function planSvg() {
+  // Plano apaisado para que quepa a lo ancho: la entrada a la izquierda, el muro del fondo vertical y las cámaras hacia la
+  // derecha, cada una con su largo real. Arriba queda el muro izquierdo de la nave (Cámara 1); abajo, los andenes.
+  const P = PLAN, f = n => (+n).toFixed(2), [hx0, hx1, hd] = P.hall, [px1, pz1] = P.pasillo;
+  const zBack = c => -(P.front + RC[c].pos / 2 * P.bay + 1);
+  const R = (cls, x0, z0, x1, z1, extra) => `<rect class="${cls}" x="${f(-z1)}" y="${f(x0)}" width="${f(z1 - z0)}" height="${f(x1 - x0)}" ${extra || ''}/>`;
+  const Ln = (cls, xa, za, xb, zb) => `<line class="${cls}" x1="${f(-za)}" y1="${f(xa)}" x2="${f(-zb)}" y2="${f(xb)}"/>`;
+  const T = (cls, x, z, txt, extra) => `<text class="${cls}" x="${f(-z)}" y="${f(x)}" text-anchor="middle" ${extra || ''}>${txt}</text>`;
+  const TV = (cls, x, z, txt) => T(cls, x, z, txt, `transform="rotate(-90 ${f(-z)} ${f(x)})"`);
+  const right = -Math.min(zBack(1), zBack(2), zBack(3)) + 1.4;
+  let s = `<svg class="plan" id="plan" viewBox="${f(-hd - 2.6)} ${f(hx0 - 2.9)} ${f(right + hd + 2.6)} ${f(px1 + 3.2 - (hx0 - 2.9))}" role="img" aria-label="Plano del almacén">`;
+  // la nave y el pasillo corto a la Cámara 3
+  s += R('hall', hx1, 0, px1, pz1) + R('hall', hx0, 0, hx1, hd) + Ln('gap', hx1, 0.45, hx1, pz1 - 0.45);
+  // zonas de la nave
+  s += R('zone', ...P.strip) + R('zone', ...P.work) + R('zone', ...P.emb);
+  for (const [x, z] of P.park) s += R('truck', x - 0.6, z - 1.0, x + 0.6, z + 1.0, 'rx=".2"');
+  s += T('t3', 0.75, 4.1, 'Montacargas');
+  P.docks.forEach(([L, z0, z1, truck]) => {
+    const zc = (z0 + z1) / 2;
+    s += R('zone', P.dockX0, z0, hx1, z1) + T(z1 - z0 < 6 ? 't3' : '', (P.dockX0 + hx1) / 2 + 0.4, zc, 'Andén ' + L) + Ln('gap', hx1, zc - 1.7, hx1, zc + 1.7) + Ln('jamb', hx1 - 0.45, zc - 1.7, hx1 + 0.45, zc - 1.7) + Ln('jamb', hx1 - 0.45, zc + 1.7, hx1 + 0.45, zc + 1.7);
+    if (truck) s += R('truck', hx1 + 0.3, zc - 1.25, hx1 + 11.4, zc + 1.25, 'rx=".25"') + R('truck', hx1 + 11.6, zc - 1.15, hx1 + 13.6, zc + 1.15, 'rx=".35"') + TV('t3', hx1 + 5.9, zc - 0.35, truck);
+  });
+  s += T('', 8.2, 29, 'Embarques') + T('t3', 8.9, 3.6, 'Maniobras') + T('', 0.7, 16.5, 'Calidad, selección') + T('', 2.2, 16.5, 'y reempaque') + T('t3', 8.15, 13.5, 'Antecámara');
+  s += TV('t3', (hx1 + px1) / 2, pz1 - 1.1, 'Pasillo a Cámara 3');
+  // cámaras: un pasillo, rack de dos tarimas de fondo a cada lado; posición 1 junto a la puerta
+  for (const c of [1, 2, 3]) {
+    const [x0, x1] = P.room[c], zb = zBack(c), xc = (x0 + x1) / 2, st = roomStats(c), n = RC[c].pos, dx = P.door[c];
+    s += R('room', x0, zb, x1, 0) + R('aisle', x0 + P.side + P.rackD, zb + 0.2, x1 - P.side - P.rackD, -0.2);
+    for (const p of RC[c].pas) for (let pos = 1; pos <= n; pos++) {
+      const b = `${c}${p}${pos}`, cls = cellClass(b), k = Math.ceil(pos / 2) - 1, odd = pos % 2 === 1;
+      const rx0 = odd ? x0 + P.side : x1 - P.side - P.rackD, z1 = -(P.front + k * P.bay), z0 = z1 - P.bay;
+      s += `<rect class="c ${cls}" x="${f(-z1 + 0.06)}" y="${f(rx0 + 0.04)}" width="${f(P.bay - 0.12)}" height="${f(P.rackD - 0.08)}" rx=".12" data-a="cell" data-v="${b}"><title>${b}</title></rect>`;
+      if (/ nw/.test(cls)) s += `<circle class="mv" cx="${f(-z1 + P.bay / 2)}" cy="${f(rx0 + P.rackD / 2)}" r=".3"/>`;
+    }
+    for (const rx of [x0 + P.side + P.rackD / 2, x1 - P.side - P.rackD / 2]) s += Ln('mid', rx, -P.front, rx, -(P.front + n / 2 * P.bay));
+    s += T('t3', xc + 0.35, (zb - P.front) / 2, 'Pasillo A');
+    s += `<text class="t1" x="0.4" y="${f(x0 - 0.75)}">Cámara ${c}</text><text class="t3" x="9.6" y="${f(x0 - 0.75)}">${st.pct}% ocupada · ${n / 2} columnas por lado</text>`;
+    // la puerta: hueco en el muro del fondo y su número
+    s += Ln('gap', dx - 1.7, 0, dx + 1.7, 0) + Ln('jamb', dx - 1.7, -0.45, dx - 1.7, 0.45) + Ln('jamb', dx + 1.7, -0.45, dx + 1.7, 0.45) + T('dn', dx + 0.55, 1.9, c);
+  }
+  // antecámara: 11 lugares y la zona de espera, en dos filas con carril en medio
+  for (let i = 1; i <= 12; i++) {
+    const code = 'ANT-' + String(i).padStart(2, '0'), fl = S.flags[code], x = P.antX[(i - 1) % 2], z = P.antZ[Math.floor((i - 1) / 2)];
+    const cls = (fl === 'red' ? 'rd' : fl === 'amber' ? 'am' : (LOC[code] ? 'e3' : '')) + (S.torre.sel === code ? ' sel' : '');
+    s += `<rect class="c ${cls}" x="${f(-z - 0.7)}" y="${f(x - 0.8)}" width="1.4" height="1.6" rx=".15" data-a="cell" data-v="${code}"><title>${i === 12 ? 'Zona de espera' : 'Antecámara ' + i}</title></rect>` + T('antn' + (/rd|e3/.test(cls) ? ' w' : ''), x + 0.27, z, i === 12 ? 'E' : i);
+  }
+  // entrada y escala
+  s += TV('t3', (hx0 + hx1) / 2, hd + 1.1, 'Entrada') + Ln('rule', px1 + 1.9, hd, px1 + 1.9, hd - 10) + Ln('rule', px1 + 1.5, hd, px1 + 2.3, hd) + Ln('rule', px1 + 1.5, hd - 10, px1 + 2.3, hd - 10) + `<text class="t3" x="${f(-hd + 10.7)}" y="${f(px1 + 2.25)}">10 m</text>`;
+  return s + '</svg>';
+}
+function vTorre() {
+  const k = S.kpi, acc = kpiAcc(), put = kpiPut();
+  const kpis = `<div class="kpis" id="kpis">
+    <div class="card kpi"><span class="label">Exactitud de inventario</span><b>${acc.toFixed(1)}%</b><span class="s">${N(k.accOk)} de ${N(k.accN)} posiciones contadas cuadran (conteo cíclico)</span></div>
+    <div class="card kpi"><span class="label">Tiempo medio de acomodo</span><b>${DUR(put).replace(' min ', ':').replace(' s', '')} min</b><span class="s">${k.putN + k.putNew.length} acomodos hoy, de escaneo a escaneo</span></div>
+    <div class="card kpi"><span class="label">Búsquedas evitadas hoy</span><b>${k.search}</b><span class="s">Surtidos que encontraron la tarima en su posición al primer escaneo</span></div>
+    <div class="card kpi"><span class="label">Tareas por montacarguista · turno</span><div class="drv"><div><b>${k.m1}</b>M1</div><div><b>${k.m2}</b>M2</div><div><b class="muted">—</b>M3</div></div><span class="s">M3 no se presentó: 2 de 3 en turno</span></div></div>`;
+  let antOcc = 0; for (let i = 1; i <= 12; i++) if (LOC['ANT-' + String(i).padStart(2, '0')]) antOcc++;
+  const pend = S.arr.printed ? Math.max(0, tasksN() - S.put.placed.length) : 0;
+  const side = `<div class="planside">${[1, 2, 3].map(c => { const r = roomStats(c); return `<div class="rm"><b>Cámara ${c}</b><span>${CAMD[c].split(' · ').slice(1).join(' · ')}</span><div class="n">${N(r.occ)} tarimas en ${N(r.tot)} posiciones (${r.pct}% ocupada)</div><div class="bar"><i style="width:${r.pct}%"></i></div></div>`; }).join('')}
+    <div class="rm"><b>Antecámara</b><span>Piso, 11 lugares + zona de espera</span><div class="n">${antOcc} de 12 con tarima</div></div>
+    <div class="rm"><b>Andén B</b><div class="n">${pend ? `${pend} tarimas del arribo 20417 esperan acomodo` : (S.arr.printed ? 'Sin tarimas en espera' : 'Arribo 20417 en recibo')}</div></div>
+    <p class="foot-note" style="margin:0">Cada rectángulo del plano es una columna de rack: 4 pisos, con una tarima al frente y otra al fondo en cada piso. Toca una para ver qué hay en cada lugar.</p></div>`;
+  const excs = S.exc.slice().sort((a, b) => (a.state ? 1 : 0) - (b.state ? 1 : 0) || ({ red: 0, amber: 1, grey: 2 }[a.sev] - { red: 0, amber: 1, grey: 2 }[b.sev]) || b.t - a.t);
+  const open = excs.filter(e => !e.state).length;
+  return `<div class="phead"><div><p class="eyebrow">Miércoles 11 de noviembre · Turno 2 · 14:00 a 22:00</p><h1 class="title">Torre de control</h1></div>${who('Jefe de almacén', 'Daniel')}</div>
+  ${kpis}
+  <div class="grid2"><div class="col">
+    <section class="card mapcard" id="mapCard"><div class="panel-h" style="padding-left:0;padding-right:0"><b class="h2">Plano del almacén</b><div class="legend"><span><i style="background:#fff;box-shadow:inset 0 0 0 1px rgba(20,22,24,.2)"></i>Libre</span><span><i style="background:#dcdee1"></i><i style="background:#b9bcc1;margin-left:-4px"></i><i style="background:#8b9096;margin-left:-4px"></i>Ocupada (más oscuro = más tarimas en la columna)</span><span><i style="background:#e5a050"></i>Revisar</span><span><i style="background:var(--red)"></i>No coincide</span><span><i style="background:#fff;box-shadow:inset 0 0 0 1.5px var(--ink);border-radius:50%;width:9px;height:9px"></i>Movida este turno</span></div></div>
+      <div class="planwrap">${planSvg()}${side}</div></section>
+  </div><aside class="col">
+    ${S.torre.sel ? posDetail(S.torre.sel) : `<section class="card" id="posCard"><div class="panel-h"><b class="h2">Posición</b></div><p class="sic-note" style="padding-bottom:16px">Toca una columna del plano para ver qué hay en cada uno de sus lugares.</p></section>`}
+  </aside></div>
+  ${nightCard()}
+  <section class="card" id="excCard" style="margin-top:16px"><div class="panel-h"><b class="h2">Excepciones</b><p>${open} abiertas</p></div><p class="sic-note" style="padding-bottom:10px">Los turnos sin supervisor no esperan aprobación: el montacarguista elige un motivo y aquí se revisa a la mañana siguiente.</p>
+    <div class="excgrid">${excs.map(e => `<div class="exc ${e.state ? 'res' : ''}"><span class="dot ${e.state ? 'grey' : e.sev}"></span><div><b>${ESC(e.title)}</b><span class="w">${ESC(e.where.startsWith('ANT') ? shortLoc(e.where) : e.where)}</span><p>${ESC(e.text)}${e.reason ? `<br><span class="rsn" style="margin:4px 0 0;display:inline-block">Motivo: ${ESC(e.reason)} · revisión de mañana</span>` : ''}</p>
+      <div class="meta"><time>${HM(e.t)}${e.state ? ' · ' + ESC(e.state) : ''}</time><div class="row-btns">${/^[123][A-D]\d|^ANT/.test(e.where) ? `<button class="btn sm" data-a="excMap" data-v="${e.id}">Ver en mapa</button>` : ''}${e.act && !e.state ? `<button class="btn sm primary" data-a="excAct" data-v="${e.id}">${ESC(e.act)}</button>` : ''}</div></div></div></div>`).join('')}</div></section>
+  <section class="demo" style="margin-top:16px"><h4>Controles del demo</h4><p>No son parte del producto: simulan lo que pasa en el piso.</p><div class="row-btns"><button class="btn sm" data-a="ctlArr" id="demoCtlArr">Llega un camión sin aviso</button><button class="btn sm" data-a="ctlOut" id="demoCtlOut">Sale una tarima sin pedido</button></div></section>
+  ${sicPanel()}`;
+}
+function nightCard() {
+  const ev = S.exc.filter(e => e.ctl).sort((a, b) => a.t - b.t);
+  return `<section class="card night" id="nightCard" style="margin-top:16px"><b class="h2">Controles a cualquier hora</b>
+    <p class="sub">Si llega o sale algo que nadie anunció, el sistema lo detecta en el primer escaneo, a las 3 de la mañana igual que a mediodía.</p>
+    <div class="cols">
+      <div class="nc"><h4>Hoy</h4><ol><li>De madrugada llega un camión que nadie anunció, o sale una carga que ningún pedido pide.</li><li>A esa hora no hay controles: nadie lo nota.</li><li>Se descubre horas después, cuando ya es un problema.</li></ol></div>
+      <div class="nc on"><h4>Con Austral OS</h4><ol><li>Se escanea la primera caja en el andén.</li><li>El sistema no encuentra una prevalidación para ese arribo, o ningún A9 que pida esa salida.</li><li>Lo marca en ese momento y avisa al jefe de turno y a mesa de control.</li></ol></div>
+    </div>
+    ${ev.length ? `<div class="evs"><span>Ejemplos en el demo:</span>${ev.map(e => `<span class="ev"><span class="dot ${e.state ? 'grey' : 'red'}"></span><b>${HM(e.t)}</b> ${ESC(e.title)} · ${ESC(e.where)}${e.state ? ' · ' + ESC(e.state) : ''}</span>`).join('')}</div>` : ''}</section>`;
+}
+function posDetail(base) {
+  if (isAnt(base)) {
+    const v = LOC[base]; return `<section class="card" id="posCard"><div class="panel-h"><b class="h2">${prettyLoc(base)}</b><button class="lnk" data-a="cell" data-v="">Cerrar</button></div><div class="posd">
+      <div class="lvr"><span class="n">Piso</span><div>${v ? `${SKU[v.sku].d}<small>${v.sku} · OC ${v.lote}</small>` : '<span class="muted">Libre</span>'}</div><span>${v ? '1 tarima · ' + v.cajas + ' cajas' : ''}</span></div>
+      ${S.flags[base] ? `<div class="lvr"><span class="n">Alerta</span><div>${S.flags[base] === 'red' ? 'No coincide' : 'Revisar'}</div><span></span></div>` : ''}</div></section>`;
+  }
+  const c = base[0], p = base[1], pos = base.slice(2);
+  const place = code => { if (BLANK.has(code)) return '<div class="pc free"><span class="muted">No existe</span></div>'; const v = LOC[code], m = S.moved[code], f = S.flags[code]; return `<div class="pc ${v ? '' : 'free'}">${v ? `<b>${SKU[v.sku].d}</b><small>OC ${v.lote}</small><small>1 tarima · ${v.cajas} cajas</small>` : '<span class="muted">Libre</span>'}${m ? `<small>${ESC(m)}</small>` : ''}${f ? `<span class="tag ${f === 'red' ? 'red' : 'amber'}">${f === 'red' ? 'No coincide' : 'Revisar'}</span>` : ''}</div>`; };
+  return `<section class="card" id="posCard"><div class="panel-h"><b class="h2">C${c} · Pasillo ${p} · Pos ${pos}</b><button class="lnk" data-a="cell" data-v="">Cerrar</button></div>
+    <div class="pgrid"><span></span><span class="ph">Frente</span><span class="ph">Fondo</span>${LVS(c).map(l => `<span class="n">Nivel ${l}</span>${DEPTHS.slice(0, RC[c].deep).map(d => place(base + '-' + l + d)).join('')}`).join('')}</div></section>`;
+}
+function sicPanel() {
+  const rows = sicRows(), ready = rows.filter(r => r.ready && !S.sicCap[r.id] && !S.sicExp[r.id]);
+  return `<section class="card" id="sicCard" style="margin-top:16px"><div class="sic-h"><div><b class="h2">Para Siconet</b><div class="muted" style="font-size:13px">Traspasos del día armados desde los escaneos. Mesa de control exporta en lugar de recapturar.</div></div>
+    <div class="row-btns"><button class="btn primary" data-a="sicExport" id="btnCsv" ${ready.length ? '' : 'disabled'}>${ICON.dl} ${ready.length ? `Exportar CSV (${ready.length} listos)` : 'Nada nuevo por exportar'}</button></div></div>
+    <div class="tblwrap"><table class="tbl"><thead><tr><th>Hora</th><th>Movimiento</th><th>Referencia</th><th>OC / lote</th><th>Producto</th><th class="r">Cajas</th><th class="r">F.E</th><th class="r">Kilos</th><th>Origen → destino</th><th>Escaneos · quién</th><th>Estado</th></tr></thead><tbody>
+    ${rows.map(r => { const fe = SKU[r.sku].fe, cap = S.sicCap[r.id]; return `<tr><td>${HM(r.t)}</td><td>${r.tipo}</td><td>${ESC(r.ref)}</td><td class="m">${r.oc}</td><td>${SKU[r.sku].d}</td><td class="r">${N(r.cajas)}</td><td class="r">${fe}</td><td class="r">${N(r.cajas * fe)}</td><td style="white-space:nowrap">${r.from} → ${r.to}</td><td style="white-space:nowrap">${r.scans} · ${ESC(r.by.split(' · ')[0].replace('Montacarguista ', 'M'))}</td>
+      <td>${cap ? `<span class="tag grey">Capturado ${HM(cap)}</span>` : r.ready ? `<span class="row-btns" style="flex-wrap:nowrap">${S.sicExp[r.id] ? `<span class="tag grey">Exportado ${HM(S.sicExp[r.id])}</span>` : '<span class="tag green">Listo</span>'}<button class="lnk" data-a="sicMark" data-v="${r.id}">Marcar capturado</button></span>` : `<span class="tag amber" title="${ESC(r.note || '')}">En curso</span>`}</td></tr>`; }).join('')}</tbody></table></div>
+    <p class="sic-note" style="padding-top:10px">Solo van a Siconet los cambios de almacén (recibo → cámara, cámara → embarques o producción). Las ubicaciones se quedan en Austral OS, porque Siconet no las maneja.${rows.some(r => !r.ready) ? ' «En curso» se cierra cuando la última tarima queda ubicada.' : ''}</p></section>`;
+}
+
+/* ============ 5 · CONTEO ============ */
+const CNT = [{ loc: '2A10-1', arr: '20398', b0: 1, span: 96, why: 'Conteo pendiente' }, { loc: '2A12-2', arr: '20401', b0: 1, span: 110, why: 'Conteo pendiente' }, { loc: '2A16-2', arr: '20388', b0: 1, span: 84, why: 'Rotación alta' }, { loc: '3A20-1', arr: '20366', b0: 1, span: 49, why: 'Rotación alta' }, { loc: '1A13-1', arr: '20379', b0: 1, span: 72, why: 'Toca por calendario' }];
+CNT.forEach(x => { x.box = boxMid(x); });
+function vConteo() {
+  const C = S.cnt;
+  const left = `<div class="side"><div class="phead"><p class="eyebrow">Almacén · Turno 2</p><h1 class="title sm">Conteo cíclico</h1>${who('Almacenista', 'Marta')}</div>
+    <section class="card queue" id="cntList"><div class="panel-h"><b class="h2">Conteo de hoy</b><p>${C.res.length} de ${CNT.length}</p></div><div class="prog"><i style="width:${C.res.length / CNT.length * 100}%"></i></div>
+    ${CNT.map((x, i) => { const r = C.res[i]; return `<div class="qi ${r ? (r.ok ? 'ok' : 'bad') : (i === C.i ? 'now' : '')}"><span class="n">${r ? (r.ok ? ICON.check : '!') : i + 1}</span><span class="d">${r ? (r.ok ? 'Cuadra' : `Diferencia ${r.diff > 0 ? '+' : ''}${r.diff}`) : x.why}</span><span class="qc">${shortLoc(x.loc)}</span></div>`; }).join('')}</section>
+    <section class="card rule"><b>A ciegas</b>El teléfono no muestra cuántas cajas debería haber. Se cuenta lo que hay; el sistema compara después.</section>
+    <section class="card rule"><b>Con qué teléfono</b>Para empezar, los conteos se hacen con el teléfono del jefe de turno.</section>
+    <section class="card hoy"><h4>Hoy, sin el sistema</h4><ul><li>El cuadre por turno casi no se hace: no da tiempo.</li><li>Cuando se hace, se compara contra papeles que llegan tarde.</li></ul></section></div>`;
+  const right = `<div class="side r">${logCard(['cnt'])}<section class="demo"><h4>Controles del demo</h4><p>No son parte del producto.</p><div class="row-btns"><button class="btn sm" data-a="cntSim" id="demoCnt" ${C.i >= CNT.length ? 'disabled' : ''}>Simular el conteo de esta posición</button></div></section></div>`;
+  return `<div class="stage3">${left}<div class="phonecol">${cntPhone()}</div>${right}</div>`;
+}
+function cntPhone() {
+  const C = S.cnt;
+  if (C.i >= CNT.length) {
+    const ok = C.res.filter(r => r.ok).length;
+    const body = `<div class="pcard" id="cntResult" style="text-align:center"><div class="pk">Exactitud de este conteo</div><div class="bigpct">${Math.round(ok / CNT.length * 100)}%</div><div style="font-size:14px;color:var(--ink-2);margin-top:4px">${ok} de ${CNT.length} posiciones cuadran</div></div>
+      <div class="pcard">${C.res.map((r, i) => `<div class="pres"><span class="qc">${shortLoc(CNT[i].loc)}</span><span>${r.ok ? `<span class="tag green">Cuadra · ${r.got}</span>` : `<span class="tag red">Contaste ${r.got}, sistema ${r.exp}</span>`}</span></div>`).join('')}</div>
+      <div class="pcard"><div class="pk">Exactitud del inventario</div><div class="pdest">${kpiAcc().toFixed(1)}%</div><div style="font-size:13.5px;color:var(--ink-2)">Acumulado del mes. Las diferencias pasan a recuento del supervisor.</div></div>`;
+    return phone('Conteo', 'Terminado', body, `<button class="pbtn soft" data-a="go" data-v="torre">Ver en la torre de control</button>`);
+  }
+  const x = CNT[C.i], v = LOC[x.loc], sub = `Posición ${C.i + 1} de ${CNT.length}`;
+  const steps = `<div class="psteps"><div class="${C.phase === 'loc' ? 'on' : 'ok'}">1 · Ubicación</div><div class="${C.phase === 'pal' ? 'on' : (C.phase === 'count' ? 'ok' : '')}">2 · Caja</div><div class="${C.phase === 'count' ? 'on' : ''}">3 · Contar</div></div>`;
+  let body = steps, foot = '';
+  if (C.phase === 'loc') {
+    const q = parseLoc(x.loc);
+    body += `<div class="pcard"><div class="pdrow"><div class="pdest"><small>Ve a</small>C${q.c} · Pasillo ${q.p}<br>Pos ${q.pos} · Nivel ${q.lvl}</div>${levels(x.loc)}</div>${camSvg(x.loc)}</div>`;
+    if (C.err) body += `<div class="perr" id="pErr"><b>${ICON.x} Ubicación equivocada</b><p>${ESC(C.err)}</p></div>`;
+    foot = `${C.showType ? typeBox('cntScanLoc', C.typed, x.loc) : ''}<button class="pbtn" data-a="cntScanLoc" id="pScan">${ICON.scan} Escanear ubicación</button><div class="plinks"><button data-a="cntType">${C.showType ? 'Ocultar teclado' : 'Escribir código'}</button></div>`;
+  } else if (C.phase === 'pal') {
+    body += `<div class="pcard"><div class="pk">Escanea una caja de la tarima de ${shortLoc(x.loc)}</div><div class="pid">Tarima de ${shortLoc(x.loc)}</div><div class="pmeta"><span class="pchip">${ICON.check} Ubicación correcta</span></div></div>`;
+    foot = `${C.showType ? typeBox('cntScanPal', C.typed, x.box) : ''}<button class="pbtn" data-a="cntScanPal" id="pScan">${ICON.scan} Escanear una caja</button><div class="plinks"><button data-a="cntType">${C.showType ? 'Ocultar teclado' : 'Escribir código'}</button></div>`;
+  } else {
+    body += `<div class="pcard"><div class="pk">${shortLoc(x.loc)} · tarima</div><div class="pdesc">${SKU[v.sku].d}</div><div class="pmeta"><span class="tag grey">OC ${v.lote}</span><span class="pchip">${ICON.check} Tarima correcta</span></div></div>
+      <div class="pcard"><label class="field"><span class="pk" style="display:block">¿Cuántas cajas hay?</span><input class="inp big" id="cntIn" inputmode="numeric" data-in="cntVal" data-enter="cntRecord" value="${ESC(C.val)}" placeholder="0" autocomplete="off" style="font-size:34px;text-align:center"></label></div>
+      <div class="blindnote">${ICON.eye}<span>Conteo a ciegas: el sistema no muestra la cantidad esperada.</span></div>`;
+    foot = `<button class="pbtn" data-a="cntRecord" id="pCount">Registrar conteo</button>`;
+  }
+  return phone('Conteo', sub, body, foot, '', true);
+}
+
+/* ============ FASE 2 · A9 y factura (propuesta) ============ */
+/* Dos números distintos se llaman OC: la OC de la cadena (su pedido, con ella se factura) y la OC de compra de Austral (el lote que se surte). */
+const F2 = { cadena: 'Walmart · CEDIS Norte', ocCadena: '4500118236', cons: '3471', cita: 'jueves 12 nov, 05:30', t0: 13 * 60 + 4,
+  lines: [{ n: 1, sku: 'UVA-VER-CLM-SS-018', cajas: 300, oc: '718311', where: '2A30, 2A32 y 2A34', avail: 360, cond: 'Llegó 3 nov · inspección 10 nov: buena condición' }, { n: 2, sku: 'MZA-RED-BOL-C1-088', cajas: 120, oc: '717962', where: '3A12', avail: 120, cond: 'Llegó 29 oct · inspección 9 nov: buena condición' }] };
+function vFase2() {
+  const f = S.f2, U = S.sur, out = U.stage >= 5, tot = F2.lines.reduce((a, l) => a + l.cajas, 0), kg = F2.lines.reduce((a, l) => a + l.cajas * SKU[l.sku].fe, 0);
+  const sn = (state, n) => `<span class="sn ${state}">${state === 'done' ? ICON.check : n}</span>`;
+  const ocOf = l => (out && U.qc['L' + l.n].oc) || l.oc;
+  const track = [['Pedido de la cadena recibido', true, HM(F2.t0)], ['A9 generado', f.step >= 1, f.step >= 1 ? HM(f.t) : ''], ['Calidad eligió la orden de compra', U.stage >= 2, ''], ['Surtido en el piso', out || !!U.chk, ''], ['Embarques y Auditoría liberaron la salida', out, out ? HM(U.tEnd) : ''], ['Factura lista para Dito', f.step >= 2, f.step >= 2 ? HM(f.tInv) : '']];
+  const c1 = `<section class="card step" id="f2Order"><div class="step-h">${sn('done', 1)}<div class="t"><b>Llega el pedido de la cadena</b><span>Con el número que la cadena le da a su propio pedido</span></div><span class="tag green">Recibido ${HM(F2.t0)}</span></div>
+    <div class="step-b"><div class="vals">
+      <div><span class="label">Cadena</span><b>${F2.cadena}</b></div>
+      <div><span class="label">OC de la cadena</span><b class="mono">${F2.ocCadena}</b></div>
+      <div><span class="label">Cita de entrega</span><b>${F2.cita}</b></div>
+      <div><span class="label">Consecutivo de Austral</span><b class="mono">${F2.cons}</b></div>
+      <div><span class="label">Líneas</span><b class="num">${F2.lines.length}</b></div>
+      <div><span class="label">Cajas pedidas</span><b class="num">${tot}</b></div></div>
+    <p class="foot-note">Hoy el consecutivo se lleva en el chat «Pedidos» de Teams. Para empezar, el sistema lo lee de ahí; después lo asigna él mismo.</p></div></section>`;
+  const c2 = `<section class="card step" id="f2A9"><div class="step-h">${sn(f.step >= 1 ? 'done' : '', 2)}<div class="t"><b>El A9 se arma solo</b><span>Desde el pedido, amarrado a la existencia escaneada en el piso</span></div>${f.step >= 1 ? '<span class="tag green">A9 3471 generado</span>' : '<span class="tag amber">Te toca</span>'}</div>
+    <div class="step-b">${f.step >= 1 ? `<div class="done-stats"><div><span class="label">Hoy, a mano</span><b>≈ 39 min</b></div><div><span class="label">Con el motor</span><b>≈ 5 s</b></div><div><span class="label">Líneas</span><b>${F2.lines.length}</b></div><div><span class="label">Cajas</span><b>${tot}</b></div></div>
+      <div class="tblwrap" style="margin-top:12px"><table class="tbl" id="f2A9Tbl"><thead><tr><th>Línea</th><th>Producto</th><th class="r">Cajas</th><th class="r">Kilos</th><th>OC de compra sugerida</th><th>Existencia escaneada</th></tr></thead><tbody>
+      ${F2.lines.map(l => `<tr><td>${l.n}</td><td>${SKU[l.sku].d}<br><span class="muted mono">${l.sku}</span></td><td class="r">${l.cajas}</td><td class="r">${N(l.cajas * SKU[l.sku].fe)}</td><td class="m">${l.oc}<br><span class="muted" style="font-family:var(--sans)">${l.cond}</span></td><td>${l.avail} cajas en ${l.where}</td></tr>`).join('')}</tbody></table></div>
+      <p class="foot-note">Dos números distintos se llaman OC: la OC de la cadena es su pedido y con ella se factura; la OC de compra es el lote de Austral que se surte.</p>
+      <div class="row-btns" style="margin-top:12px"><button class="btn primary" data-a="go" data-v="surtido" id="f2ToSur">Ver su surtido en el piso</button><button class="btn" data-a="f2Sheet" id="f2Open">Ver el A9 generado</button></div>`
+      : `<button class="btn primary" data-a="f2Gen" id="btnF2Gen">Generar el A9 del pedido</button><p class="foot-note">El motor del A9 existe desde el verano y sigue siendo su propia aplicación. Aquí se ve cómo se conecta con el piso.</p>`}</div></section>`;
+  const c3 = `<section class="card" id="f2Track"><div class="panel-h"><b class="h2">¿Cómo va mi pedido?</b><p>Consecutivo ${F2.cons}</p></div><div class="list">${track.map(([t, ok, h]) => `<div class="item"><span class="dot ${ok ? 'green' : 'grey'}"></span><div class="t"><b style="${ok ? '' : 'color:var(--ink-3);font-weight:500'}">${t}</b></div><span class="meta">${h}</span></div>`).join('')}</div>
+    <p class="sic-note" style="padding-bottom:14px">Cada pedido se sigue por su consecutivo, del A9 a la factura. La respuesta sale de los escaneos del piso.</p></section>`;
+  const c4 = `<section class="card step ${f.step >= 1 ? '' : 'locked'}" id="f2Inv"><div class="step-h">${sn(f.step >= 2 ? 'done' : (f.step >= 1 ? '' : 'wait'), 3)}<div class="t"><b>Factura lista para Dito</b><span>Armada una sola vez, con lo que salió escaneado</span></div><span class="tag amber">Propuesta</span></div>
+    <div class="step-b">${f.step >= 2 ? `<div class="vals"><div><span class="label">Cliente</span><b>${F2.cadena}</b></div><div><span class="label">OC de la cadena</span><b class="mono">${F2.ocCadena}</b></div><div><span class="label">Consecutivo</span><b class="mono">${F2.cons}</b></div></div>
+      <div class="tblwrap" style="margin-top:12px"><table class="tbl" id="f2InvTbl"><thead><tr><th>Renglón</th><th>Clave</th><th>Descripción</th><th class="r">Cajas</th><th class="r">F.E</th><th class="r">Kilos</th><th>Lote / OC de compra</th></tr></thead><tbody>
+      ${F2.lines.map(l => `<tr><td>${l.n}</td><td class="m">${l.sku}</td><td>${SKU[l.sku].d}</td><td class="r">${l.cajas}</td><td class="r">${SKU[l.sku].fe}</td><td class="r">${N(l.cajas * SKU[l.sku].fe)}</td><td class="m">${ocOf(l)}</td></tr>`).join('')}
+      <tr class="sum"><td colspan="3">Total</td><td class="r">${tot}</td><td></td><td class="r">${N(kg)}</td><td></td></tr></tbody></table></div>
+      <p class="foot-note">${out ? 'Cantidades tomadas de lo que Embarques y Auditoría liberaron.' : 'En el demo, cantidades del A9. En operación se toman de lo que Embarques y Auditoría liberaron.'} Los precios salen de la lista acordada con la cadena; no se muestran en el demo.</p>
+      <p class="foot-note">Dito no recibe archivos, así que la factura queda armada y revisada para capturarse una sola vez. Lo mismo se puede hacer con cada documento que hoy se llena a mano.</p>`
+      : `<button class="btn ${f.step >= 1 ? 'primary' : ''}" data-a="f2Inv" id="btnF2Inv" ${f.step >= 1 ? '' : 'disabled'}>Preparar la factura</button>${f.step >= 1 ? '' : '<p class="foot-note">Primero se genera el A9.</p>'}`}</div></section>`;
+  // The A9 in Austral's own format (layout of the A9 template: LISTA DE PRODUCTO, CONSECUTIVO, REGISTRO NAV, DESTINO, OC, CLIENTE,
+  // DIA/HORA, FILL RATE% and the line columns). Operational version: the price columns are not shown. Fictional data.
+  const A9L = { 'UVA-VER-CLM-SS-018': { nav: 'UVA  VER  C 018CLM  CT1', cli: '186', esp: 'UVA KG', vr: 'VERDE SIN SEMILLA', bar: '240186' }, 'MZA-RED-BOL-C1-088': { nav: 'MZA  RED  C 088BOL  XFA', cli: '12088', esp: 'MANZANA', vr: 'RED DELICIOUS BOLSA', bar: '240418' } };
+  const whereOf = l => out ? pickList().filter(r => r.line === 'L' + l.n).map(r => isAnt(r.loc) ? 'ANTECÁMARA ' + (+r.loc.slice(4)) : r.loc.split('-')[0]).join(', ') : l.where.replace(' y ', ', '); // once it left, where it really came from
+  const firmas = [['Ventas', true], ['Calidad', U.stage >= 2], ['Almacén', out || !!U.chk], ['Embarques', out || U.chk === 'aud'], ['Auditoría', out]];
+  const e = n => '<td class="x"></td>'.repeat(n);
+  const sheet = f.sheet && f.step >= 1 ? `<div class="a9bg" id="a9Sheet" data-a="f2Sheet"><div class="a9sheet" data-a="noop" role="dialog" aria-label="A9 3471">
+    <div class="a9bar"><b>A9 3471.xlsx</b><span>Generado por el sistema · versión operativa, sin columnas de precio</span><button class="lnk" data-a="f2Sheet" id="a9Close">Cerrar</button></div>
+    <div class="a9scroll"><table class="a9x"><colgroup><col style="width:13.5%"><col style="width:6%"><col style="width:8%"><col style="width:11%"><col style="width:7.5%"><col style="width:5%"><col style="width:5%"><col style="width:5.4%"><col style="width:7.6%"><col style="width:5%"><col style="width:5.6%"><col style="width:6.4%"><col style="width:5.6%"><col style="width:8.4%"></colgroup><tbody>
+      <tr>${e(11)}<td class="b c" colspan="2">N. de Hojas</td>${e(1)}</tr>
+      <tr>${e(10)}<td class="b r">1 DE :</td><td class="b c">1</td>${e(2)}</tr>
+      <tr>${e(1)}<td class="g b c bd" colspan="2">LISTA DE PRODUCTO  **</td><td class="g b c bd" colspan="5">12/11/2026</td>${e(6)}</tr>
+      <tr>${e(9)}<td class="gr b c bd" colspan="2">CONSECUTIVO:</td><td class="b c bd big">${F2.cons}</td>${e(2)}</tr>
+      <tr>${e(9)}<td class="rd b c bd" colspan="2">REGISTRO NAV</td><td class="rd yl b c bd">VR53471</td>${e(2)}</tr>
+      <tr>${e(6)}<td class="lg bd" colspan="3" rowspan="2"></td><td class="gr b c bd" colspan="2">LAY OUT</td>${e(3)}</tr>
+      <tr>${e(6)}${e(5)}</tr>
+      <tr>${e(1)}<td class="gr b c bd">DESTINO:</td><td class="y b c bd" colspan="2">CEDIS NORTE</td>${e(2)}<td class="b c bd" rowspan="3">A</td><td class="c bd" rowspan="2">OC</td><td class="b c bd oc" colspan="3" rowspan="2">${F2.ocCadena}</td><td class="gr b c bd sm" rowspan="3">FILL RATE%</td>${e(2)}</tr>
+      <tr>${e(6)}${e(2)}</tr>
+      <tr>${e(1)}<td class="gr b c bd">CLIENTE:</td><td class="y b c bd" colspan="2">WALMART</td>${e(2)}<td class="c bd sm">DIA/HORA:</td><td class="y b c bd" colspan="2">12/11/2026</td><td class="b c bd sm">05:30 a.m.</td>${e(2)}</tr>
+      <tr>${e(14)}</tr>
+      <tr class="h"><td>SKU NAV</td><td>SKU CLIENTE</td><td>DESCRIPCION-ESPECIE</td><td>VARIEDAD</td><td>CODIGO DE BARRAS</td><td>ETIQUETA</td><td>CALIBRE</td><td>CALIDAD</td><td>OC</td><td>FE</td><td>UM</td><td>KILOS</td><td>CAJAS PEDIDAS</td><td>OBSERVACIONES</td></tr>
+      ${F2.lines.map(l => { const a = A9L[l.sku]; return `<tr class="ln"><td class="nav">${a.nav.replace(/ /g, '&nbsp;')}</td><td class="b c red">${a.cli}</td><td>${a.esp}</td><td>${a.vr}</td><td class="c">${a.bar}</td><td class="c">${a.nav.slice(15, 18)}</td><td class="c">${a.nav.slice(12, 15)}</td><td class="c">${a.nav.slice(20, 23)}</td><td class="c">${F2.ocCadena}</td><td class="c">${SKU[l.sku].fe}</td><td class="c">KG</td><td class="c">${N(l.cajas * SKU[l.sku].fe)}</td><td class="c">${l.cajas}</td><td class="obs">LOTE ${ocOf(l)} · ${whereOf(l)}</td></tr>`; }).join('')}
+      <tr class="tt">${e(10)}<td class="or b red">TOTAL</td><td class="or b c red">${N(kg)}</td><td class="or b c red">${tot}</td>${e(1)}</tr>
+    </tbody></table></div>
+    <div class="a9firmas">${firmas.map(([t, ok]) => `<div class="${ok ? 'ok' : ''}"><span>${t}</span><b>${ok ? 'Listo' : 'Pendiente'}</b></div>`).join('')}</div>
+    <p class="a9note">El mismo formato de A9 que Austral usa hoy, llenado por el sistema en unos 5 segundos desde el pedido de la cadena. En OBSERVACIONES queda el lote y la posición de donde sale cada línea, tomados de la existencia escaneada. Datos ficticios; el motor del A9 construido en verano es su propia aplicación.</p>
+  </div></div>` : '';
+  return `${sheet}<div class="phead"><div><p class="eyebrow">Fase 2 · Propuesta · datos ficticios</p><h1 class="title">Del pedido de la cadena al A9 y a la factura</h1></div></div>
+  <div class="grid2"><div class="col">${c1}${c2}${c4}</div><aside class="col">${c3}
+    <section class="card hoy"><h4>Hoy, sin el sistema</h4><ul><li>El consecutivo de cada pedido se lleva en un chat de Teams.</li><li>El A9 es un Excel que viaja por correo.</li><li>Cada factura se teclea en Dito, renglón por renglón; no se pueden subir archivos.</li><li>Después se revisa otra vez en Siconet. Nada se timbra en Siconet.</li><li>Son cerca de 3,000 documentos fiscales al mes, unos 6 minutos cada uno.</li></ul></section>
+    <section class="card rule"><b>Fase 2 es una propuesta</b>Todavía no está cerrada: se confirma con el equipo de Austral antes de construir.</section>
+  </aside></div>`;
+}
+
+/* Trazabilidad: la pantalla completa (camión que sale en 3D, ruta en vivo, temperatura) vive en combinado/traza.ts.
+   Esto es lo que se ve si el archivo se abre solo, sin el servidor del demo. */
+function vTrazaFile() {
+  return `<div class="phead"><div><p class="eyebrow">Fases siguientes · Propuesta · datos ficticios</p><h1 class="title">Trazabilidad hasta el cliente</h1></div></div>
+  <section class="card rule"><b>Se ve con el demo completo</b>El camión que sale del andén en 3D, su ruta en vivo, lo que lleva y su temperatura se abren con el servidor del demo (npm run dev).</section>`;
+}
+
+/* ============ actions ============ */
+const A = {
+  go(v) { S.view = v; window.scrollTo(0, 0); },
+  reset() { fresh(); window.scrollTo(0, 0); toast('Demo reiniciado'); },
+  typed(v) { const k = S.view === 'acomodo' ? S.put : S.view === 'surtido' ? S.sur.pk : S.cnt; k.typed = v; return 'skip'; },
+  // arribo
+  countInput(v) { S.arr.counted = v.replace(/[^\d]/g, ''); return 'skip'; },
+  registerCount() { const n = +S.arr.counted; if (!n) { toast('Escribe cuántas cajas contaste'); return; } S.arr.registered = true; tick(60); const d = n - 1029; log('arr', 'Andrés', `registró ${N(n)} cajas contadas${d ? ` (${d > 0 ? '+' : ''}${d} vs prevalidación)` : ' · cuadra'}.`, d ? 'red' : ''); if (d) addExc({ sev: 'amber', title: 'Diferencia de arribo', where: '20417', text: `Llegaron ${N(n)} de 1,029 cajas (OC 718204). Sin avisar todavía.` }); },
+  editCount() { S.arr.registered = false; S.arr.notified = false; S.arr.mcSeen = false; S.exc = S.exc.filter(e => e.title !== 'Diferencia de arribo'); },
+  qInput(v) { S.arr.qn = v.replace(/[^\d]/g, ''); return 'skip'; },
+  qResp(v) { if (!S.arr.notified && RESP[v]) S.arr.qresp = v; },
+  qOpen() { S.arr.qOpen = true; },
+  notify() {
+    const a = S.arr, n = +a.counted, d = n - 1029, qn = +a.qn || 0; if (!d && !qn) { toast('Escribe cuántas cajas llegaron con daño'); return; }
+    a.notified = true; tick(40); a.notT = S.clock;
+    const what = [d ? `llegaron ${N(n)} de 1,029 cajas` : '', qn ? `${N(qn)} cajas con daño de calidad` : ''].filter(Boolean).join(' y '), resp = RESP[a.qresp].toLowerCase();
+    log('arr', 'Andrés', `avisó a mesa de control y compras: ${what}. Responde: ${resp}.`);
+    let e = S.exc.find(x => x.title === 'Diferencia de arribo'); if (!e) e = addExc({ sev: 'amber', title: 'Diferencia de arribo', where: '20417', text: '' });
+    e.text = `OC 718204: ${what}. Responde: ${resp}. Mesa de control y compras avisados.`; e.sev = 'grey'; e.state = 'Avisada';
+    toast('Aviso enviado a mesa de control y compras'); const gen = S;
+    setTimeout(() => { if (S !== gen || !S.arr.notified) return; S.arr.mcSeen = true; tick(50); log('arr', 'Compras', 'recibió el aviso y registra la diferencia en Siconet.'); render(); }, 1400);
+  },
+  printLabels() { if (!S.arr.registered) return; S.arr.printed = true; tick(90); log('arr', 'Andrés', `imprimió ${N(+S.arr.counted)} etiquetas: una por caja, con la OC 718204 como lote. La tarima no lleva número propio.`); toast(`${N(+S.arr.counted)} etiquetas enviadas a la impresora de recibo`); },
+  deliver() { if (!S.arr.printed) return; S.arr.delivered = true; tick(120); log('arr', 'Andrés', 'entregó 21 tarimas al almacén.'); log('put', 'Sistema', `21 tareas en la cola de ${DRIVER}.`); toast('21 tarimas en la cola de acomodo'); },
+  arrShortcut() { if (!S.arr.counted) S.arr.counted = '1026'; A.registerCount(); if (+S.arr.counted !== 1029) A.notify(); A.printLabels(); A.sampleAll(); A.deliver(); },
+  sampleScan() {
+    const a = S.arr; if (!a.printed || a.sample >= SAMPLE_N) return;
+    const n = SAMPLE_BOX[a.sample], pn = SAMPLE_PAL[a.sample]; a.sample++; tick(30); adjustPal(pn, -1);
+    log('arr', 'Rosa', `(calidad) apartó la caja ${boxCode(ARR, n)} de la tarima ${String(pn).padStart(2, '0')} para inspección.`);
+    let e = S.exc.find(x => x.title === 'Cajas de muestra sin cerrar'); if (!e) e = addExc({ sev: 'amber', title: 'Cajas de muestra sin cerrar', where: '20417', text: '', act: 'Ir al arribo' });
+    e.text = `Calidad tiene ${a.sample} ${a.sample === 1 ? 'caja' : 'cajas'} del arribo 20417 fuera de su tarima, una por tarima. Cada una regresa a la misma tarima de la que salió.`;
+    if (a.sample === SAMPLE_N) a.sampleT = S.clock;
+  },
+  sampleAll() { const a = S.arr; while (a.printed && a.sample < SAMPLE_N) A.sampleScan(); },
+  sampleClose() {
+    const a = S.arr; if (a.sample < SAMPLE_N || a.sampleRes) return; a.sampleRes = 'devolver'; a.sampleResT = S.clock; tick(45);
+    SAMPLE_PAL.forEach(pn => adjustPal(pn, 1));
+    log('arr', 'Rosa', `(calidad) devolvió las ${SAMPLE_N} cajas de muestra, cada una a su tarima.`, 'green');
+    const e = S.exc.find(x => x.title === 'Cajas de muestra sin cerrar'); if (e) { e.state = 'Devueltas a su tarima'; e.sev = 'grey'; }
+    toast('Muestra devuelta: cada caja en su tarima');
+  },
+  // acomodo
+  putType() { S.put.showType = !S.put.showType; S.put.typed = ''; },
+  putScanPallet(v) {
+    const P = S.put, p = putPallet(P.i); if (P.phase !== 'pallet') return; const code = v === '__typed' ? normCode(P.typed) : (v || boxMid(p));
+    if (!inPal(code, p)) {
+      const other = parseBox(code) && P.tasks.find(t => inPal(code, t));
+      P.err = other ? `Escaneaste la caja ${code}, que es de la ${other.id}. Tu tarea es la ${p.id} (${SKU[p.sku].d}, OC ${p.lote}).` : `Escaneaste ${code}. No es una etiqueta de caja de este arribo. Tu tarea es la ${p.id} (OC ${p.lote}).`;
+      tick(10); log('put', 'Iván', `escaneó ${code}: no es de la tarea. Bloqueado.`, 'red'); return;
+    }
+    P.err = null; P.phase = 'route'; P.typed = ''; P.showType = false; P.t0 = S.clock; tick(25); log('put', 'Iván', `escaneó la caja ${code}: ${p.id} (${p.cajas} cajas) en andén B.`);
+  },
+  putScanLoc(v) {
+    const P = S.put, p = putPallet(P.i), dest = putDest(P.i); if (P.phase !== 'route') return; const code = v === '__typed' ? normCode(P.typed) : (v || dest);
+    if (code !== dest) {
+      const q = parseLoc(code), qd = parseLoc(dest); let hint = '';
+      if (q && qd && q.c === qd.c && q.p === qd.p) { const d = qd.pos - q.pos; hint = d ? ` Está ${Math.abs(d) / 2 >= 1 ? Math.ceil(Math.abs(d) / 2) + (Math.ceil(Math.abs(d) / 2) === 1 ? ' posición' : ' posiciones') : 'a un lado'} ${d < 0 ? 'atrás' : 'adelante'} en el mismo pasillo${q.lvl !== qd.lvl ? `, nivel ${qd.lvl}` : ''}.` : (q.lvl !== qd.lvl ? ` Misma posición, nivel ${qd.lvl}.` : ''); }
+      if (q && qd && q.c !== qd.c) hint = ' ' + COMPAT[qd.c];
+      P.err = `Escaneaste ${q ? shortLoc(code) : code}. Tu tarea es ${shortLoc(dest)}.${hint} No avanzas hasta escanear la correcta.`;
+      tick(15); log('put', 'Iván', `intentó dejar ${p.id} en ${q ? shortLoc(code) : code}. Bloqueado.`, 'red');
+      addExc({ sev: 'grey', title: 'Ubicación equivocada bloqueada', where: q ? code : dest, text: `${p.id} iba a ${shortLoc(dest)}; se escaneó ${q ? shortLoc(code) : code}. Corregido en el momento.`, state: 'Bloqueado a tiempo' });
+      return;
+    }
+    const sec = Math.round(travelSec(dest)); tick(sec - 25);
+    LOC[dest] = { sku: p.sku, lote: p.lote, cajas: p.cajas }; S.moved[dest] = `Acomodado ${HM(S.clock)} · ${DRIVER}`;
+    P.placed.push({ id: p.id, n: p.n, part: p.part, loc: dest, t: S.clock, sec, cajas: p.cajas }); P.err = null; P.phase = 'done'; P.typed = ''; P.showType = false;
+    S.kpi.putNew.push(sec); S.kpi.m2++;
+    log('put', 'Iván', `dejó ${p.id} en ${shortLoc(dest)} · ${DUR(sec)} · validado en el teléfono sin señal.`, 'green');
+  },
+  putWrong() { const P = S.put; if (P.i >= tasksN()) return; if (P.phase === 'pallet') A.putScanPallet(boxMid(P.tasks[(P.i + 1) % P.tasks.length])); else if (P.phase === 'route') { const q = parseLoc(putDest(P.i)); A.putScanLoc(`${q.c}${q.p}${Math.min(RC[q.c].pos, q.pos + 2)}-${q.lvl}`); } else toast('Primero pasa a la siguiente tarea'); },
+  putNext() { const P = S.put; if (P.phase !== 'done') return; P.i++; P.phase = 'pallet'; P.err = null; tick(20); },
+  putSheet(v) { const P = S.put; P.sheet = v || null; P.labelTyped = ''; if (v === 'full' && P.i < tasksN()) P.alt = nearestFree(putDest(P.i), [putDest(P.i)]); if (v === 'more') P.reason = null; },
+  putFull() {
+    const P = S.put, dest = putDest(P.i), nd = P.alt || nearestFree(dest, [dest]);
+    S.flags[dest] = 'amber'; P.tasks[P.i].dest = nd; P.sheet = null; P.err = null; P.alt = null; tick(20);
+    log('put', 'Iván', `motivo «Ubicación llena» en ${shortLoc(dest)}. Nuevo destino en la misma zona: ${shortLoc(nd)}.`, 'red');
+    addExc({ sev: 'amber', title: 'Ubicación llena sin registro', where: dest, text: `${DRIVER} encontró ${shortLoc(dest)} llena; el sistema la tenía libre. Se usó ${shortLoc(nd)}. Hay que contarla.`, act: 'Mandar a conteo', reason: 'Ubicación llena' });
+    toast('Nuevo destino: ' + prettyLoc(nd));
+  },
+  labelTyped(v) { S.put.labelTyped = v; return 'skip'; },
+  putLabelOk() {
+    const P = S.put, p = putPallet(P.i), code = normCode(P.labelTyped);
+    if (!inPal(code, p)) { toast('Ese código no es de una caja de esta tarima. Escanea otra caja o pide reimpresión.'); return; }
+    P.sheet = null; P.phase = 'route'; P.err = null; tick(40);
+    log('put', 'Iván', `motivo «Etiqueta dañada»: usó otra caja de la ${p.id} (${code}).`, 'red');
+    addExc({ sev: 'amber', title: 'Etiqueta dañada', where: p.id, text: `${p.id}: no se leyó la etiqueta de una caja; se identificó con otra caja de la misma tarima. Reimprimir la dañada.`, act: 'Reimpresa', reason: 'Etiqueta dañada' });
+  },
+  putReprint() {
+    const P = S.put, p = putPallet(P.i); P.sheet = null; P.phase = 'route'; P.err = null; tick(90);
+    log('put', 'Iván', `motivo «Etiqueta dañada»: recibo reimprimió la etiqueta de esa caja (${p.id}) y la pegó.`, 'red');
+    addExc({ sev: 'grey', title: 'Etiqueta reimpresa', where: p.id, text: `${p.id}: etiqueta de una caja dañada, reimpresa en recibo durante el acomodo.`, state: 'Resuelta en el turno', reason: 'Etiqueta dañada' });
+  },
+  putReason(v) { S.put.reason = v; },
+  putSkip() {
+    const P = S.put; if (!P.reason) { toast('Elige un motivo'); return; } const t = P.tasks.splice(P.i, 1)[0]; P.tasks.push(t);
+    tick(15); log('put', 'Iván', `saltó ${t.id} (motivo: ${P.reason}). Pasa al final de la cola.`, 'red');
+    addExc({ sev: 'amber', title: 'Tarea saltada', where: t.id, text: `${t.id} → ${shortLoc(t.dest)} pasó al final de la cola.`, reason: P.reason, act: 'Revisado' });
+    P.sheet = null; P.phase = 'pallet'; P.err = null; P.reason = null;
+  },
+  putSplit() {
+    const P = S.put; if (!P.reason) { toast('Elige un motivo'); return; } const t = P.tasks[P.i], half = Math.ceil(t.cajas / 2), rest = t.cajas - half;
+    const oldSpan = t.span; t.cajas = half; t.span = half; t.fixed = true; const nid = t.id + ' · parte 2', nd = nearestFree(t.dest, [t.dest]);
+    P.tasks.splice(P.i + 1, 0, { id: nid, n: t.n, part: 2, arr: t.arr, b0: t.b0 + half, span: oldSpan - half, cajas: rest, sku: t.sku, lote: t.lote, dest: nd, fixed: true });
+    tick(60); log('put', 'Iván', `dividió la ${t.id}: ${half} cajas a ${shortLoc(t.dest)} y ${rest} a ${shortLoc(nd)}. Las cajas conservan su etiqueta; no hay etiqueta nueva (motivo: ${P.reason}).`, 'red');
+    addExc({ sev: 'amber', title: 'Tarima dividida', where: t.id, text: `${t.id} se dividió en dos: ${half} y ${rest} cajas. Sin etiqueta nueva: la segunda parte se identifica al escanear una de sus cajas.`, reason: P.reason, act: 'Revisado' });
+    P.sheet = null; P.reason = null; toast(`Segunda parte: ${rest} cajas, sin etiqueta nueva`);
+  },
+  putHold() {
+    const P = S.put; if (!P.reason) { toast('Elige un motivo'); return; } const t = P.tasks[P.i], from = t.dest; t.dest = ZE;
+    tick(15); log('put', 'Iván', `mandó ${t.id} a zona de espera (motivo: ${P.reason}).`, 'red');
+    addExc({ sev: 'amber', title: 'Tarima en zona de espera', where: ZE, text: `${t.id} (iba a ${shortLoc(from)}) quedó en zona de espera. Asignarle ubicación.`, reason: P.reason, act: 'Asignar a montacarguista' });
+    P.sheet = null; P.reason = null; toast('Destino: zona de espera, en antecámara');
+  },
+  putRest() {
+    const P = S.put; if (!S.arr.delivered) return; let k = 0;
+    if (P.phase === 'done') P.i++;
+    while (P.i < tasksN()) { const p = putPallet(P.i), dest = putDest(P.i), sec = Math.round(travelSec(dest)); tick(sec); LOC[dest] = { sku: p.sku, lote: p.lote, cajas: p.cajas }; S.moved[dest] = `Acomodado ${HM(S.clock)} · ${DRIVER}`; P.placed.push({ id: p.id, n: p.n, part: p.part, loc: dest, t: S.clock, sec, cajas: p.cajas }); S.kpi.putNew.push(sec); S.kpi.m2++; P.i++; k++; }
+    P.phase = 'pallet'; P.err = null; log('put', 'Iván', `acomodó ${k} tarimas más. Arribo 20417 completo.`, 'green'); toast('Cola terminada: traspaso del arribo listo para Siconet');
+  },
+  // surtido
+  qcOc(v) { const [k, oc] = v.split('|'); S.sur.qc[k].oc = oc; },
+  qcMode(v) { const [k, m] = v.split('|'); S.sur.qc[k].mode = m; },
+  qcSend() { const q = S.sur.qc; if (!(q.L1.oc && q.L1.mode && q.L2.oc && q.L2.mode)) return; S.sur.stage = 2; if (!S.sur.t0) S.sur.t0 = S.clock; tick(60); log('sur', 'Rosa', `(calidad) eligió OC ${q.L1.oc} · ${q.L1.mode === 'seleccion' ? 'selección' : 'original'} y OC ${q.L2.oc} · ${q.L2.mode === 'seleccion' ? 'selección' : 'original'}.`); window.scrollTo(0, 0); },
+  capSend() { S.sur.stage = 3; S.sur.retOpen = false; tick(90); S.sur.capT = S.clock; log('sur', 'Carlos', `mandó la propuesta de surtido (${pickList().length} paradas) al supervisor.`); window.scrollTo(0, 0); },
+  supRetOpen() { S.sur.retOpen = true; },
+  supRetCancel() { S.sur.retOpen = false; },
+  retText(v) { S.sur.retText = v; return 'skip'; },
+  supReturn() { const t = S.sur.retText.trim(); if (!t) { toast('Escribe qué debe corregir'); return; } S.sur.returned = { text: t, t: S.clock }; S.sur.retText = ''; S.sur.retOpen = false; S.sur.stage = 2; tick(40); log('sur', 'Rodrigo', `regresó la propuesta: «${t}».`, 'red'); window.scrollTo(0, 0); },
+  supApprove() { S.sur.stage = 4; S.sur.returned = null; tick(45); log('sur', 'Rodrigo', 'aprobó el surtido y lo mandó al montacarguista.', 'green'); log('sur', 'Sistema', `ODS 3471 en la cola de ${DRIVER}.`); window.scrollTo(0, 0); },
+  pkType() { const K = S.sur.pk; K.showType = !K.showType; K.typed = ''; },
+  pkScanLoc(v) {
+    const K = S.sur.pk, r = pickList()[K.i]; if (!r || K.phase !== 'loc') return; const code = v === '__typed' ? normCode(K.typed) : (v || r.loc);
+    if (code !== r.loc) { K.err = `Escaneaste ${parseLoc(code) || isAnt(code) ? shortLoc(code) : code}. La parada es ${shortLoc(r.loc)}.`; tick(10); log('sur', 'Iván', `escaneó ${code} en lugar de ${r.loc}. Bloqueado.`, 'red'); return; }
+    K.err = null; K.phase = 'pal'; K.typed = ''; K.showType = false; tick(Math.round(travelSec(isAnt(r.loc) ? '2A10-1' : r.loc) * 0.7)); log('sur', 'Iván', `llegó a ${shortLoc(r.loc)}.`);
+  },
+  pkScanPal(v) {
+    const K = S.sur.pk, rows = pickList(), r = rows[K.i]; if (!r || K.phase !== 'pal') return; const code = v === '__typed' ? normCode(K.typed) : (v || r.box);
+    if (!inPal(code, r)) { K.err = parseBox(code) ? `Escaneaste la caja ${code}, de otra tarima. En esta parada va la tarima de ${shortLoc(r.loc)} (OC ${r.lote}).` : `Escaneaste ${code}. No es una etiqueta de caja de Austral. En esta parada va la tarima de ${shortLoc(r.loc)} (OC ${r.lote}).`; tick(10); log('sur', 'Iván', `escaneó la caja ${code}: no es de la tarima de la parada. Bloqueado.`, 'red'); return; }
+    K.err = null; K.typed = ''; K.showType = false; tick(50);
+    log('sur', 'Iván', `tomó ${r.surtir} cajas de la tarima de ${shortLoc(r.loc)} (caja ${code}).`, 'green'); S.kpi.search++; S.kpi.m2++;
+    const cur = LOC[r.loc]; if (r.sobran) { K.phase = 'left'; if (cur) cur.cajas = r.sobran; } else { LOC[r.loc] = null; S.moved[r.loc] = `Surtido ${HM(S.clock)} · ${DRIVER}`; K.i++; K.phase = 'loc'; }
+  },
+  pkLeft(v) {
+    const K = S.sur.pk, r = pickList()[K.i]; if (!r || K.phase !== 'left') return; const sug = nearestFree(isAnt(r.loc) ? '2A20-3' : r.loc, []); const code = v === '__typed' ? normCode(K.typed) : (v || sug);
+    if (!parseLoc(code)) { K.err = `${code} no es una ubicación.`; return; }
+    if (LOC[code]) { K.err = `${shortLoc(code)} ya tiene una tarima (${SKU[LOC[code].sku].d}). Usa una libre, por ejemplo ${shortLoc(sug)}.`; tick(10); log('sur', 'Iván', `intentó dejar sobrantes en ${shortLoc(code)}, ocupada. Bloqueado.`, 'red'); return; }
+    LOC[code] = { sku: r.sku, lote: r.lote, cajas: r.sobran }; LOC[r.loc] = null; S.moved[code] = `Sobrantes ${HM(S.clock)} · ${DRIVER}`; S.moved[r.loc] = `Surtido ${HM(S.clock)} · ${DRIVER}`;
+    K.left[K.i] = code; K.err = null; K.typed = ''; K.showType = false; tick(70);
+    log('sur', 'Iván', `dejó ${r.sobran} cajas sobrantes en ${shortLoc(code)} (nueva ubicación).`, 'green'); K.i++; K.phase = 'loc';
+  },
+  pkWrong() { const K = S.sur.pk, r = pickList()[K.i]; if (!r) return; if (K.phase === 'loc') A.pkScanLoc(isAnt(r.loc) ? 'ANT-05' : (() => { const q = parseLoc(r.loc); return `${q.c}${q.p}${q.pos + 2}-${q.lvl}`; })()); else if (K.phase === 'pal') A.pkScanPal(pickList().find(x => x.loc !== r.loc).box); else { A.pkLeft('2A16-2'); } },
+  pkDeliver() { const U = S.sur; if (U.chk || U.stage !== 4) return; tick(120); U.chk = 'emb'; U.chkScan = 0; U.chkErr = null; log('sur', 'Iván', 'entregó el surtido en Embarques.', 'green'); window.scrollTo(0, 0); },
+  // salida: Embarques verifica contra el A9 y Auditoría libera, antes de cargar
+  embScan() { const U = S.sur, rows = pickList(); if (U.chk !== 'emb' || U.chkScan >= rows.length) return; const r = rows[U.chkScan]; U.chkScan++; U.chkErr = null; tick(25); log('sur', 'Sergio', `(embarques) escaneó la caja ${r.box}: ${r.surtir} cajas, OC ${r.lote}. Coincide con el A9.`, 'green'); },
+  embWrong() { const U = S.sur; if (U.chk !== 'emb') return; U.chkErr = 'Escaneaste una caja de Uva roja, OC 718255. El A9 3471 no la pide. La tarima se queda en el andén y la torre de control recibe el aviso.'; tick(15); log('sur', 'Sergio', '(embarques) escaneó una tarima de Uva roja (OC 718255) que el A9 3471 no pide. Bloqueado.', 'red'); addExc({ sev: 'grey', title: 'Salida bloqueada en Embarques', where: 'A9 3471', text: 'Se escaneó una tarima de Uva roja (OC 718255) que el A9 3471 no pide. No salió.', state: 'Bloqueado a tiempo' }); },
+  embOk() { const U = S.sur, k = pickList().length; if (U.chk !== 'emb' || U.chkScan < k) return; U.chk = 'aud'; U.chkErr = null; tick(30); U.embT = S.clock; log('sur', 'Sergio', `(embarques) verificó ${k} tarimas contra el A9 3471 y las pasó a Auditoría.`); window.scrollTo(0, 0); },
+  audOk() { const U = S.sur; if (U.chk !== 'aud') return; const tot = pickList().reduce((a, r) => a + r.surtir, 0); tick(90); U.tEnd = S.clock; U.chk = null; U.stage = 5; log('sur', 'Elena', `(auditoría) liberó la salida del A9 3471: ${tot} de ${tot} cajas. Fill rate 100%.`, 'green'); log('sur', 'Sistema', 'camión en carga en el andén A. Traspasos del A9 3471 listos para Siconet.'); window.scrollTo(0, 0); },
+  traza() { S.view = 'traza'; window.scrollTo(0, 0); },
+  // fase 2 (propuesta)
+  f2Gen() { S.f2.step = Math.max(1, S.f2.step); S.f2.t = 13 * 60 + 5; toast('A9 3471 armado en unos 5 segundos'); },
+  f2Sheet() { S.f2.sheet = !S.f2.sheet; },
+  noop() { return 'skip'; },
+  f2Inv() { if (S.f2.step < 1) return; S.f2.step = 2; S.f2.tInv = S.clock; toast('Factura armada para capturarse en Dito'); },
+  // controles a cualquier hora
+  ctlArr() { tick(5); addExc({ sev: 'red', ctl: true, title: 'Arribo sin aviso', where: 'Andén C', text: `A las ${HM(S.clock)} se escaneó en el andén C un arribo que ninguna prevalidación anunciaba. El sistema lo marcó al momento.`, act: 'Pedir validación a mesa de control', after: 'Mesa de control avisada' }); toast('Arribo sin aviso en el andén C: marcado al escanear'); },
+  ctlOut() { tick(5); addExc({ sev: 'red', ctl: true, title: 'Salida sin pedido', where: 'Andén A', text: `A las ${HM(S.clock)} se escanearon en el andén A 2 tarimas de Kiwi para cargar y ningún A9 las pide. El sistema lo marcó al momento.`, act: 'Avisar al jefe de turno', after: 'Jefe de turno avisado' }); toast('Salida sin pedido en el andén A: marcada al escanear'); },
+  // torre
+  cell(v) { S.torre.sel = v || null; },
+  excMap(id) { const e = S.exc.find(x => x.id === id); if (!e) return; S.torre.sel = e.where.startsWith('ANT') ? e.where : e.where.split('-')[0]; const el = document.getElementById('mapCard'); if (el) setTimeout(() => { const c = document.querySelector('.c.sel'); if (c) c.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, 30); },
+  excAct(id) {
+    const e = S.exc.find(x => x.id === id); if (!e) return;
+    if (e.after) { e.state = e.after; log('torre', 'Daniel', `${e.title} (${e.where}): ${e.after.toLowerCase()}.`); toast(e.after); return; }
+    if (e.act === 'Ir al arribo') { S.view = 'arribo'; window.scrollTo(0, 0); return; }
+    if (e.act === 'Ir a conteo cíclico') { S.view = 'conteo'; window.scrollTo(0, 0); return; }
+    if (e.act === 'Mandar a conteo') { e.state = 'Conteo asignado a Marta'; S.flags[e.where] = 'amber'; log('torre', 'Daniel', `mandó ${e.where} a conteo.`); toast('Tarea de conteo creada para la almacenista'); return; }
+    if (e.act === 'Asignar a montacarguista') { e.state = 'Asignado a Montacarguista 1'; log('torre', 'Daniel', `asignó la tarima de ${shortLoc(e.where)} a Montacarguista 1.`); toast('Tarea de acomodo creada para Montacarguista 1'); return; }
+    e.state = 'Resuelta'; toast('Marcada como resuelta');
+  },
+  sicMark(id) { S.sicCap[id] = S.clock; log('torre', 'Lucía', `marcó como capturado en Siconet (${id}).`); },
+  sicExport() {
+    const rows = sicRows().filter(r => r.ready && !S.sicCap[r.id] && !S.sicExp[r.id]); if (!rows.length) return;
+    const head = ['fecha', 'hora', 'movimiento', 'referencia', 'oc_lote', 'sku', 'descripcion', 'cajas', 'fe_kg_por_caja', 'kilos', 'almacen_origen', 'almacen_destino', 'escaneos', 'confirmado_por'];
+    const q = s => '"' + String(s).replace(/"/g, '""') + '"';
+    const csv = [head.join(',')].concat(rows.map(r => ['2026-11-11', HM(r.t), r.tipo, r.ref, r.oc, r.sku, SKU[r.sku].d, r.cajas, SKU[r.sku].fe, r.cajas * SKU[r.sku].fe, r.from, r.to, r.scans, r.by].map(q).join(','))).join('\n');
+    try { const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'traspasos-para-siconet-2026-11-11.csv'; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); } catch (err) { /* sin descarga en este navegador */ }
+    window.__lastCsv = csv; rows.forEach(r => { S.sicExp[r.id] = S.clock; }); log('torre', 'Lucía', `exportó ${rows.length} traspasos para Siconet.`); toast(`${rows.length} traspasos exportados en CSV`);
+  },
+  // conteo
+  cntType() { S.cnt.showType = !S.cnt.showType; S.cnt.typed = ''; },
+  cntScanLoc(v) { const C = S.cnt, x = CNT[C.i]; if (!x || C.phase !== 'loc') return; const code = v === '__typed' ? normCode(C.typed) : (v || x.loc); if (code !== x.loc) { C.err = `Escaneaste ${parseLoc(code) ? shortLoc(code) : code}. Toca contar ${shortLoc(x.loc)}.`; log('cnt', 'Marta', `escaneó ${code}: no es la posición. Bloqueado.`, 'red'); return; } C.err = null; C.phase = 'pal'; C.typed = ''; C.showType = false; tick(60); log('cnt', 'Marta', `llegó a ${shortLoc(x.loc)}.`); },
+  cntScanPal(v) { const C = S.cnt, x = CNT[C.i]; if (!x || C.phase !== 'pal') return; const code = v === '__typed' ? normCode(C.typed) : (v || x.box); if (!inPal(code, x)) { C.err = `Esa caja no es de la tarima que el sistema tiene en ${shortLoc(x.loc)}.`; log('cnt', 'Marta', `la caja ${code} no coincide con ${x.loc}.`, 'red'); return; } C.err = null; C.phase = 'count'; C.typed = ''; C.showType = false; tick(20); },
+  cntVal(v) { S.cnt.val = v.replace(/[^\d]/g, ''); return 'skip'; },
+  cntRecord() {
+    const C = S.cnt, x = CNT[C.i]; if (!x || C.phase !== 'count') return; if (C.val === '') { toast('Escribe cuántas cajas contaste'); return; }
+    const got = +C.val, exp = LOC[x.loc].cajas, ok = got === exp; C.res[C.i] = { got, exp, ok, diff: got - exp };
+    S.kpi.accN++; if (ok) S.kpi.accOk++; tick(90);
+    log('cnt', 'Marta', `contó ${got} cajas en ${shortLoc(x.loc)}${ok ? ' · cuadra' : ` · diferencia ${got - exp > 0 ? '+' : ''}${got - exp}`}.`, ok ? 'green' : 'red');
+    if (S.flags[x.loc] === 'amber') delete S.flags[x.loc];
+    if (!ok) { S.flags[x.loc] = 'amber'; addExc({ sev: 'amber', title: 'Diferencia de conteo', where: x.loc, text: `Marta contó ${got} cajas; el sistema tiene ${exp}. Pasa a recuento del supervisor.`, act: 'Recuento hecho' }); }
+    const e3 = S.exc.find(e => e.id === 'e3'); if (e3 && !e3.state && !['2A10-1', '2A12-2'].some(c => S.flags[c])) { e3.state = '2 de 3 contadas hoy'; }
+    C.i++; C.phase = 'loc'; C.val = ''; C.err = null;
+    if (C.i >= CNT.length) log('cnt', 'Sistema', `exactitud del conteo: ${C.res.filter(r => r.ok).length} de ${CNT.length}. Inventario: ${kpiAcc().toFixed(1)}%.`);
+  },
+  cntSim() { const C = S.cnt, x = CNT[C.i]; if (!x) return; if (C.phase === 'loc') A.cntScanLoc(); if (C.phase === 'pal') A.cntScanPal(); const sim = { '2A16-2': 80 }; C.val = String(sim[x.loc] != null ? sim[x.loc] : LOC[x.loc].cajas); A.cntRecord(); },
+  // tour
+  tourStart() { runTour(); },
+  tourPause() { if (S.tour) { S.tour.paused = !S.tour.paused; drawTour(); } },
+  tourPrev() { if (S.tour) tourJump(S.tour.i - 1); return 'skip'; },
+  // Siguiente mientras un paso se está reproduciendo lo salta: termina al instante y sigue con el próximo
+  tourNext() { const T = S.tour; if (!T) return 'skip'; if (T.i + 1 >= TOUR.length && !T.running) { A.tourExit(); return; } if (T.running) { T.skip = true; window.__animX = 300; } T.advance = true; drawTour(); return 'skip'; },
+  tourSpeed() { ANIM_X = ANIM_X === 1 ? 10 : 1; if (!(S.tour && S.tour.skip)) window.__animX = ANIM_X; drawTour(); return 'skip'; },
+  tourPart(v) { const k = tourPartStart(v); if (S.tour && k >= 0) tourJump(k); return 'skip'; },
+  tourExit() { TOUR_GEN++; TOUR_FF = false; if (S.tour) S.tour.on = false; endTour(); }
+};
+
+/* ============ render + events ============ */
+let lastView = null;
+function render() {
+  const app = document.getElementById('app');
+  if (lastView && lastView !== S.view) { const t = document.getElementById('toast'); if (t) t.innerHTML = ''; } lastView = S.view;
+  const V = { arribo: vArribo, acomodo: vAcomodo, surtido: vSurtido, torre: vTorre, conteo: vConteo, fase2: vFase2, traza: vTrazaFile }[S.view];
+  app.innerHTML = topbar() + `<main class="wrap" id="main">${V()}<p class="pfooter">Prototipo con datos ficticios. El flujo se confirma con el equipo de Austral antes de construir.</p></main>`;
+  if (S.hl) { const el = document.querySelector(S.hl); if (el) el.classList.add('tour-hl'); }
+}
+function toast(msg) { const t = document.getElementById('toast'); t.innerHTML = `<div class="toast" role="status">${ESC(msg)}</div>`; clearTimeout(toast._t); toast._t = setTimeout(() => { t.innerHTML = ''; }, 2600); }
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-a]'); if (!el) return;
+  if (S.tour && S.tour.on && !el.closest('#tour')) { A.tourNext(); return; }
+  const fn = A[el.dataset.a]; if (!fn) return;
+  if (el.disabled) return;
+  const r = fn(el.dataset.v, el); if (r !== 'skip') render();
+});
+document.addEventListener('input', e => { const el = e.target.closest('[data-in]'); if (!el) return; const fn = A[el.dataset.in]; if (fn) fn(el.value, el); });
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return; const el = e.target.closest('[data-enter]'); if (!el || el.tagName === 'TEXTAREA') return; e.preventDefault();
+  const fn = A[el.dataset.enter]; if (!fn) return; const r = fn('__typed'); if (r !== 'skip') render();
+});
+
+/* ============ guided tour ============ */
+async function typeInto(sel, text, setter) { for (let i = 1; i <= text.length; i++) { if (!S.tour || !S.tour.on) return; setter(text.slice(0, i)); const el = document.querySelector(sel); if (el) { el.value = text.slice(0, i); el.scrollIntoView({ block: 'center', behavior: 'smooth' }); } await wait(260); } }
+/* Cada paso: hl = lo que se resalta, cap = la frase del presentador, note = «Qué está pasando», en palabras claras. */
+const TOUR = [
+  { go: 'arribo', hl: '#prevalid', cap: 'Mesa de control publica la prevalidación del arribo: OC 718204, 1,029 cajas. Ya no viaja por correo.',
+    note: 'Antes de que llegue el camión, mesa de control ya publicó lo que debe llegar: la orden de compra, el producto y cuántas cajas. Recibo lo ve en pantalla, sin esperar un correo.', run: async () => { await wait(1500); } },
+  { hl: '#countStep', cap: 'Recibo cuenta lo que bajó del camión: 1,026 cajas. La diferencia aparece al momento.',
+    note: 'Recibo cuenta las cajas al bajar el camión y escribe el número. El sistema lo compara al instante con lo anunciado: aquí faltan 3 cajas.', run: async () => { await wait(800); await typeInto('#countIn', '1026', v => { S.arr.counted = v; }); await wait(1000); A.registerCount(); render(); await wait(900); } },
+  { hl: '#discStep', cap: 'La diferencia puede ser por cantidad o por calidad, y queda anotado quién responde. Un clic avisa a mesa de control y a compras.',
+    note: 'Faltan 3 cajas y además 14 llegaron dañadas. Se anota quién responde: aquí el transportista, porque falló el frío del camión. Con un clic se avisa a mesa de control y a compras, y compras lo registra en Siconet.', run: async () => { render(); await wait(1000); await typeInto('#qIn', '14', v => { S.arr.qn = v; }); await wait(800); A.qResp('transportista'); render(); await wait(1500); A.notify(); render(); await wait(1900); } },
+  { hl: '#labelStep', cap: 'Se imprime una etiqueta por caja, con su código de barras; la OC va como lote. La tarima no lleva número propio: se arma al escanear sus cajas.',
+    note: 'Cada caja recibe su etiqueta con código de barras, junto al sello de la orden de compra que ya se le pone hoy. La tarima no lleva número: el sistema la reconoce por sus cajas.', run: async () => { await wait(700); A.printLabels(); } },
+  { hl: '#sampleStep', cap: 'Calidad aparta una caja por tarima, hasta 15. El sistema sabe de qué tarima salió cada una y recuerda devolverla a la misma.',
+    note: 'Calidad se lleva una caja de cada tarima para revisarla, hasta 15. Al escanearlas queda anotado de qué tarima salió cada una, y el sistema recuerda devolverla a esa misma tarima.', run: async () => { for (let k = 0; k < 4; k++) { await wait(850); A.sampleScan(); render(); } await wait(900); A.sampleAll(); render(); await wait(700); } },
+  { hl: '#deliverStep', cap: 'Al entregar al almacén, cada tarima entra a la cola del montacarguista con su destino ya asignado.',
+    note: 'Recibo entrega las 21 tarimas al almacén. Cada una entra a la lista del montacarguista con el lugar al que debe ir.', run: async () => { await wait(700); A.deliver(); } },
+  { go: 'acomodo', hl: '#phone', cap: 'El montacarguista ve una sola tarea: qué tarima tomar y a dónde va.',
+    note: 'En su teléfono, el montacarguista ve una sola tarea a la vez: qué tarima tomar y a dónde llevarla.', run: async () => { await wait(900); } },
+  { hl: '#phone', cap: 'Escanea una caja cualquiera de la tarima: el sistema sabe cuál es y le marca la ruta a Cámara 3, pasillo A, posición 23, nivel 2.',
+    note: 'Escanea cualquier caja de la tarima y el teléfono le marca la ruta. La manzana va a Cámara 3 porque produce etileno. En el recuadro 3D se ve al montacargas recoger la tarima y entrar a la cámara.', run: async () => { await wait(600); A.putScanPallet(); } },
+  { hl: '#pErr', cap: 'Si intenta dejarla en otra posición, el sistema lo bloquea y le dice dónde está la correcta.',
+    note: 'Aquí escanea una posición que no es la suya, un lugar más adelante. El sistema no lo deja continuar y le dice cuál es la correcta.', run: async () => { await wait(600); A.putWrong(); } },
+  { hl: '#pOk', cap: 'Solo con la ubicación correcta se confirma, con hora y con quién lo hizo.',
+    note: 'Regresa a la posición correcta, la escanea y la tarima queda registrada: dónde está, a qué hora se acomodó y quién lo hizo.', run: async () => { await wait(600); A.putScanLoc(); } },
+  { hl: '#phone', cap: 'Hasta entonces no recibe la siguiente tarea.',
+    note: 'Solo cuando la tarima quedó en su lugar aparece la siguiente tarea.', run: async () => { await wait(600); A.putNext(); render(); await wait(900); A.putScanPallet(); } },
+  { hl: '#phone', cap: 'Si la ubicación está llena, lo reporta con un toque.',
+    note: 'El montacarguista llega y la posición ya está ocupada, aunque el sistema la tenía libre. Lo reporta desde el teléfono y el sistema le propone otra posición libre en la misma zona.', run: async () => { await wait(700); A.putSheet('full'); } },
+  { hl: '#phone', cap: 'Acepta la alternativa. El motivo queda para la torre de control.',
+    note: 'Toma la posición alternativa. La que estaba llena sin registro queda marcada para contarla: el inventario se corrige en el momento, no meses después.', run: async () => { await wait(700); A.putFull(); } },
+  { go: 'surtido', hl: '#qcCard', cap: 'Ventas manda el A9. Calidad decide qué orden de compra sale y si va original o a selección.',
+    note: 'Ventas pide dos productos en el A9. Para cada uno, Calidad elige de qué orden de compra sale y si va tal cual o pasa antes por selección. Aquí manda a selección la uva que ya tiene un punto de pudrición.', run: async () => { await wait(1300); A.qcOc('L1|718290'); render(); await wait(1300); A.qcMode('L1|seleccion'); render(); await wait(1300); A.qcOc('L2|717962'); render(); await wait(1300); A.qcMode('L2|original'); render(); await wait(900); } },
+  { hl: '#capCard', cap: 'El capturista recibe una propuesta de surtido armada con las ubicaciones reales.',
+    note: 'Con esa decisión, el sistema arma la orden de surtido: de qué posición sale cada tarima, cuántas cajas se toman y cuántas sobran.', run: async () => { await wait(700); A.qcSend(); } },
+  { hl: '#supCard', cap: 'El supervisor la revisa y la aprueba antes de que llegue al montacarguista.',
+    note: 'El supervisor revisa la propuesta y la aprueba. Nada llega al piso sin esa revisión.', run: async () => { await wait(700); A.capSend(); } },
+  { hl: '#phone', cap: 'El montacarguista surte posición por posición. No busca el producto en toda la cámara.',
+    note: 'El montacarguista va posición por posición. No busca el producto: el teléfono lo lleva, y cada escaneo confirma que es la tarima correcta.', run: async () => { await wait(600); A.supApprove(); render(); await wait(1700); A.pkScanLoc(); render(); await wait(1300); A.pkScanPal(); render(); await wait(1100); A.pkScanLoc(); } },
+  { hl: '#phone', cap: 'Lo que sobra en una tarima se reubica escaneando la nueva posición. Nadie lo anota a mano.',
+    note: 'Si en una tarima sobran cajas, las deja en una posición libre y la escanea. Esa nueva ubicación queda registrada sola.', run: async () => { await wait(600); A.pkScanPal(); render(); await wait(1600); A.pkScanLoc(); render(); await wait(1100); A.pkScanPal(); } },
+  { hl: '#embCard', cap: 'Antes de salir, Embarques escanea una caja de cada tarima y el sistema la compara con el A9. Ya no se cuenta a mano.',
+    note: 'Antes de cargar, Embarques escanea una caja de cada tarima. El sistema revisa que sea el producto, la orden de compra y las cajas que pide el A9.', run: async () => { A.pkLeft(); render(); await wait(1000); A.pkScanLoc(); A.pkScanPal(); render(); await wait(1000); A.pkDeliver(); render(); await wait(1400); const k = pickList().length; for (let i = 0; i < k; i++) { A.embScan(); render(); await wait(1100); } } },
+  { hl: '#audCard', cap: 'Auditoría ve lo que Embarques escaneó y libera la salida. Nada se carga sin esos dos filtros.',
+    note: 'Auditoría ve lo que Embarques escaneó, comparado con el A9, y libera la salida. Hoy esa revisión se hace contando otra vez, con papel y pluma.', run: async () => { await wait(700); A.embOk(); render(); await wait(2600); } },
+  { hl: '#surDone', cap: 'Salida liberada: fill rate y traspasos para Siconet salen solos de los escaneos.',
+    note: 'Con la salida liberada se carga el camión. El resumen del surtido y los movimientos para Siconet salen de los escaneos, sin recapturar nada.', run: async () => { await wait(700); A.audOk(); } },
+  { go: 'conteo', hl: '#phone', cap: 'Conteo cíclico a ciegas: el teléfono no muestra cuántas cajas debería haber.',
+    note: 'Cada día se cuentan unas pocas posiciones. El teléfono no dice cuántas cajas debería haber: se cuenta lo que hay, y el sistema compara después.', run: async () => { await wait(1100); A.cntScanLoc(); render(); await wait(1200); A.cntScanPal(); render(); await wait(600); } },
+  { hl: '#cntResult', cap: 'El sistema compara y calcula la exactitud del inventario. Las diferencias pasan al supervisor.',
+    note: 'En cinco posiciones, cuatro cuadran y una no: había 80 cajas y el sistema tenía 84. Esa diferencia pasa al supervisor, y la exactitud del inventario se actualiza.', run: async () => { const vals = ['96', '110', '80', '49', '72']; for (let i = 0; i < 5; i++) { if (!S.tour || !S.tour.on) return; if (S.cnt.phase === 'loc') A.cntScanLoc(); if (S.cnt.phase === 'pal') A.cntScanPal(); render(); await wait(700); S.cnt.val = vals[i]; const el = document.getElementById('cntIn'); if (el) el.value = vals[i]; await wait(700); A.cntRecord(); render(); await wait(600); } } },
+  { go: 'torre', hl: '#mapCard', cap: 'La torre de control ve el almacén completo: cada posición libre, ocupada o con alerta.',
+    note: 'El plano muestra el almacén completo. Cada columna de rack se ve más oscura cuanto más llena está, y en color las que tienen una alerta. Un clic en una columna muestra qué hay en cada piso.', run: async () => { await wait(1200); } },
+  { hl: '#nightCard', cap: 'Controles a cualquier hora: lo que nadie anunció o ningún pedido pide queda marcado al escanearse, también de madrugada.',
+    note: 'De madrugada, sin controles, un camión que nadie anunció o una carga que ningún pedido pide pasan sin que nadie lo note. Con el sistema quedan marcados en el momento en que se escanea la primera caja.', run: async () => { await wait(1000); } },
+  { hl: '#excCard', cap: 'Las excepciones aparecen solas: tarima sin ubicación, ubicación que no coincide, cajas de muestra sin cerrar.',
+    note: 'Lo que se sale de lo normal aparece aquí sin que nadie lo reporte, con un botón para resolverlo: una tarima sin ubicación, una posición que no coincide, cajas de muestra por devolver.', run: async () => { await wait(1000); } },
+  { hl: '#sicCard', cap: 'Los traspasos del día ya están armados desde los escaneos. Mesa de control no recaptura.',
+    note: 'Los movimientos del día quedan listos para capturarse en Siconet, armados desde los escaneos. Mesa de control ya no los reconstruye desde papeles.', run: async () => { await wait(1000); } },
+  { hl: '#kpis', cap: 'Austral OS · Fase 1: el piso del almacén, medido y sin recapturas.',
+    note: 'Cuatro números que hoy no existen: qué tan exacto está el inventario, cuánto tarda un acomodo, cuántas búsquedas se evitaron y el trabajo de cada montacargas.', run: async () => { await wait(800); } }
+];
+const TOUR_PARTS = [['arribo', 'Arribo'], ['acomodo', 'Acomodo'], ['surtido', 'Surtido'], ['conteo', 'Conteo'], ['torre', 'Torre']];
+function tourPartStart(view) { return TOUR.findIndex(st => st.go === view); }
+async function runTour(from) {
+  from = Math.max(0, Math.min(TOUR.length - 1, from || 0)); const gen = ++TOUR_GEN; const t0 = Date.now();
+  const alive = () => gen === TOUR_GEN && S.tour && S.tour.on;
+  fresh(); S.tour = { on: true, i: from, paused: false, advance: false, running: false, skip: false }; document.body.classList.add('touring'); window.__animX = ANIM_X;
+  if (from > 0) { // replay the earlier steps instantly so the screens are where that step expects them
+    TOUR_FF = true;
+    try { for (let i = 0; i < from; i++) { const st = TOUR[i]; if (st.go) S.view = st.go; if (st.run) await st.run(); if (gen !== TOUR_GEN) return; } render(); }
+    finally { if (gen === TOUR_GEN) TOUR_FF = false; }
+    window.scrollTo(0, 0);
+  }
+  render(); drawTour();
+  for (let i = from; i < TOUR.length; i++) {
+    if (!alive()) return; S.tour.i = i; const st = TOUR[i];
+    if (st.go && S.view !== st.go) { S.view = st.go; window.scrollTo(0, 0); }
+    S.hl = st.hl && document.querySelector(st.hl) ? st.hl : null; S.tour.running = true; drawTour(); render();
+    const el0 = S.hl && document.querySelector(S.hl); if (el0 && S.hl !== '#phone') el0.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    if (st.run) await st.run();
+    if (!alive()) return;
+    // let what this step set moving finish (forklifts, pallets in the 3D view) before it counts as done
+    while (alive() && window.__tourBusy && window.__tourBusy()) await wait(120);
+    if (!alive()) return;
+    S.tour.skip = false; window.__animX = ANIM_X; // a skipped step ends here; the next one plays at the chosen speed
+    S.hl = st.hl || null; S.tour.running = false; render(); drawTour();
+    const el = st.hl && document.querySelector(st.hl);
+    if (el && st.hl !== '#phone') el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    // the tour waits for the presenter: Siguiente plays the next step
+    while (alive() && !S.tour.advance) await wait(100);
+    if (!alive()) return; S.tour.advance = false;
+  }
+  window.__tourMs = Date.now() - t0; endTour();
+}
+function tourJump(i) { if (!S.tour) return; runTour(i).then(() => {}); }
+function drawTour() {
+  const box = document.getElementById('tour'); if (!S.tour || !S.tour.on) { box.innerHTML = ''; return; }
+  const i = S.tour.i, st = TOUR[i], run = S.tour.running;
+  const cur = TOUR_PARTS.reduce((acc, [v], k) => { const a = tourPartStart(v); return a >= 0 && a <= i ? k : acc; }, 0);
+  const parts = TOUR_PARTS.map(([v, t], k) => `<button class="${k === cur ? 'on' : ''}" data-a="tourPart" data-v="${v}">${t}</button>`).join('');
+  const note = st.note ? `<aside class="tournote" id="tourNote"><b>Qué está pasando</b><p>${ESC(st.note)}</p></aside>` : '';
+  box.innerHTML = `${note}<div class="tourcap" role="status" aria-live="polite"><div class="tparts" role="group" aria-label="Ir a una parte">${parts}</div><span class="n">${i + 1} / ${TOUR.length}${run ? ' · <b class="tplay">reproduciendo</b>' : ''}</span><p>${ESC(st.cap)}</p><div class="row-btns tctl" style="flex-wrap:nowrap"><button class="btn sm" data-a="tourPrev" id="tourPrev" ${i === 0 ? 'disabled' : ''} aria-label="Paso anterior">‹ Atrás</button><button class="btn sm tspeed" data-a="tourSpeed" id="tourSpeed" aria-label="Velocidad de las animaciones" title="Velocidad de las animaciones">×${ANIM_X}</button><button class="btn sm primary" data-a="tourNext" id="tourNext" aria-label="${run ? 'Saltar la animación' : 'Paso siguiente'}">${run ? 'Saltar ›' : i + 1 < TOUR.length ? 'Siguiente ›' : 'Terminar'}</button><button class="btn sm" data-a="tourExit" id="tourExit">Salir</button></div><div class="bar"><i style="width:${(i + 1) / TOUR.length * 100}%"></i></div></div>`;
+}
+function endTour() { if (S.tour) S.tour.on = false; S.tour = null; S.hl = null; window.__animX = 1; document.body.classList.remove('touring'); drawTour(); render(); }
+
+fresh(); render();
+</script>
+</body>
+</html>
